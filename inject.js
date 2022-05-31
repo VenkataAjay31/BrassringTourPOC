@@ -33,5 +33,6 @@ function loadCSSInclude(cssPath, callback)
     }
 }
 
-loadJSInclude("https://cdn.jsdelivr.net/npm/shepherd.js@8.3.1/dist/js/shepherd.min.js")
+loadJSInclude("https://venkataajay31.github.io/BrassringTourPOC/lib/shepherd.min.js")
+loadJSInclude("https://venkataajay31.github.io/BrassringTourPOC/app/Tour.js")
 loadCSSInclude("https://venkataajay31.github.io/BrassringTourPOC/shepherd.css")
