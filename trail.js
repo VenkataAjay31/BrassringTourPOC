@@ -11,7 +11,7 @@ tour.addStep({
 id : 1, 
 text: 'Hey! Welcome to TinDog.',
 attachTo: {
-element: '#_4rCVYtbsBZ2QseMPgbuD8A45',
+element: '#icon-link',
 on: 'bottom'
 },
 
