@@ -38,3 +38,5 @@ loadJSInclude("https://venkataajay31.github.io/BrassringTourPOC/js/app/tour.js")
 
 loadCSSInclude("https://venkataajay31.github.io/BrassringTourPOC/css/lib/shepherd.css")
 loadCSSInclude("https://venkataajay31.github.io/BrassringTourPOC/css/lib/custom.css")
+
+tour.start();
