@@ -1,3 +1,6 @@
+//Functions//
+
+//Javascript//
 function loadJSInclude(scriptPath, callback)
 {
     var scriptNode = document.createElement('SCRIPT');
@@ -14,8 +17,9 @@ function loadJSInclude(scriptPath, callback)
         scriptNode.onload = callback;
     }
 }
+loadJSInclude("https://cdn.jsdelivr.net/npm/shepherd.js@8.3.1/dist/js/shepherd.min.js")
 
-
+//CSS//
 function loadCSSInclude(cssPath, callback)
 {
     var scriptNode = document.createElement('link');
@@ -32,19 +36,17 @@ function loadCSSInclude(cssPath, callback)
         scriptNode.onload = callback;
     }
 }
-
-loadJSInclude("https://cdn.jsdelivr.net/npm/shepherd.js@8.3.1/dist/js/shepherd.min.js")
 loadCSSInclude("https://cdn.jsdelivr.net/npm/shepherd.js@8.3.1/dist/css/shepherd.css")
 
- const tour = new Shepherd.Tour({
+
+//Tour Guide//
+const tour = new Shepherd.Tour({
   useModalOverlay: true,
   defaultStepOptions: {
   classes: 'shadow-md bg-purple-dark',
   scrollTo: true
 }
 });
-
-
 
 //Step-1//
 tour.addStep({
