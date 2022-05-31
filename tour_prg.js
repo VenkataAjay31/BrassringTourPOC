@@ -13,7 +13,7 @@ tour.addStep({
 id : 1, 
 text: 'Hey! Welcome to TinDog.',
 attachTo: {
-element: '#icon-link',
+element: '#quicksearch',
 on: 'bottom'
 },
 
