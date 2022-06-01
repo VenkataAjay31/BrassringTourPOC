@@ -71,7 +71,7 @@ buttons: [
 
 tour.addStep({
 id : 4, 
-text: 'You can choose output columns with selcting the columns and ordering them as needed here. <img src="https://venkataajay31.github.io/BrassringTourPOC/images/EditDisplayIconWorkflow.gif">',
+text: 'You can choose output columns with selcting the columns and ordering them as needed here. <img src="https://venkataajay31.github.io/BrassringTourPOC/images/EditDisplayIconWorkflow.gif" width="350" height="350">',
 attachTo: {
 element: '.gridActionButtons button[icon-btn="settings"]',
 on: 'bottom'
