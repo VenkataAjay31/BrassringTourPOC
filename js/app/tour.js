@@ -37,13 +37,13 @@ on: 'bottom'
 },
 cancelIcon:{enabled : true},
 buttons: [
+ {
+  text: 'Previous',
+  action: tour.back
+},
 {
   text: 'Next',
   action: tour.next
-},
-{
-  text: 'Previous',
-  action: tour.back
 }
 ]
 });
@@ -58,13 +58,13 @@ on: 'bottom'
 },
 cancelIcon:{enabled : true},
 buttons: [
+ {
+  text: 'Previous',
+  action: tour.back
+},
 {
   text: 'Next',
   action: tour.next
-},
-{
-  text: 'Previous',
-  action: tour.back
 }
 ]
 });
@@ -78,13 +78,13 @@ on: 'bottom'
 },
 cancelIcon:{enabled : true},
 buttons: [
+ {
+  text: 'Previous',
+  action: tour.back
+},
 {
   text: 'Next',
   action: tour.next
-},
-{
-  text: 'Previous',
-  action: tour.back
 }
 ]
 });
