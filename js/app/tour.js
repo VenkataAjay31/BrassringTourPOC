@@ -4,7 +4,7 @@ const tour = new Shepherd.Tour({
   useModalOverlay: true,
   defaultStepOptions: {
   classes: 'shadow-md bg-purple-dark',
-  scrollTo: false
+  scrollTo: true
 }
 });
 
@@ -22,7 +22,7 @@ on: 'bottom'
 buttons: [
 {
   text: 'Next',
-  action: tour.next
+  action: tour.next()
 }
 ]
 });
@@ -39,11 +39,11 @@ on: 'bottom'
 buttons: [
 {
   text: 'Next',
-  action: tour.next
+  action: tour.next()
 },
 {
   text: 'Previous',
-  action: tour.back
+  action: tour.back()
 }
 ]
 });
@@ -60,11 +60,11 @@ on: 'bottom'
 buttons: [
 {
   text: 'Next',
-  action: tour.next
+  action: tour.next()
 },
 {
   text: 'Previous',
-  action: tour.back
+  action: tour.back()
 }
 ]
 });
