@@ -26,3 +26,47 @@ buttons: [
 }
 ]
 });
+
+//Step-2//
+tour.addStep({
+id : 1, 
+text: 'You can pull preferred widgets from here, which will appear under widgets below.',
+attachTo: {
+element: 'button[icon-btn="settings"]',
+on: 'bottom'
+},
+
+buttons: [
+{
+  text: 'Next',
+  action: tour.next
+},
+{
+  text: 'Previous',
+  action: tour.previous
+}
+]
+});
+
+//Step-3//
+tour.addStep({
+id : 1, 
+text: 'In all these modernized grids we have enabled the context menu. Where you can right on a row and take actions specific to that row.',
+attachTo: {
+element: '#reqListGrid div.ui-grid-viewport div.ui-grid-canvas div[ui-grid-row="row"]',
+on: 'bottom'
+},
+
+buttons: [
+{
+  text: 'Next',
+  action: tour.next
+},
+{
+  text: 'Previous',
+  action: tour.previous
+}
+]
+});
+
+
