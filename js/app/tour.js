@@ -4,7 +4,7 @@ const tour = new Shepherd.Tour({
   useModalOverlay: true,
   defaultStepOptions: {
   classes: 'shadow-md bg-purple-dark',
-  scrollTo: true
+  scrollTo: false
 }
 });
 
