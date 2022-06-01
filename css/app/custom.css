@@ -1,1 +1,16 @@
+.GuidedTour {
+    position: absolute;
+    right: 120px;
+    top: 10px;
+    padding: 5px;
+    border: 3px solid;
+    background-color: var(--cds-ui-04,#8d8d8d);
+    cursor: pointer;
+    color: var(--cds-text-01,#161616);
+}
 
+.GuidedTour::after {
+    content: "\f04b";
+    font-family: 'FontAwesome';
+    padding: 3px;
+}
