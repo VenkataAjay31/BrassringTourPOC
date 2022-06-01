@@ -71,7 +71,7 @@ buttons: [
 
 tour.addStep({
 id : 4, 
-text: 'In all these modernized grids we have enabled the context menu. Where you can right on a row and take actions specific to that row.',
+text: 'You can choose output columns with selcting the columns and ordering them as needed here. <img src="https://venkataajay31.github.io/BrassringTourPOC/images/EditDisplayIconWorkflow.gif">',
 attachTo: {
 element: '.gridActionButtons button[icon-btn="settings"]',
 on: 'bottom'
