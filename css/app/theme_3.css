@@ -7,7 +7,7 @@
     background: linear-gradient(45deg, rgb(16, 36, 62), transparent);
 }
 
-shepherd-element {
+.shepherd-element {
     background: linear-gradient(29deg, rgb(202, 240, 248), rgb(0, 52, 89));
     backdrop-filter: blur(10px);
     border-radius: 10px;
