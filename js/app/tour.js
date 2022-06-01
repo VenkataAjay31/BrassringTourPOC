@@ -68,25 +68,3 @@ buttons: [
 }
 ]
 });
-
-//Step-4//
-tour.addStep({
-id : 4, 
-text: 'You can choose output columns with selcting the columns and ordering them as needed here.',
-attachTo: {
-element: '.gridActionButtons button[icon-btn="settings"]',
-on: 'bottom'
-},
-
-buttons: [
-{
-  text: 'Next',
-  action: tour.next
-},
-{
-  text: 'Previous',
-  action: tour.back
-}
-]
-});
-
