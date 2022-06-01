@@ -43,7 +43,7 @@ buttons: [
 },
 {
   text: 'Previous',
-  action: tour.previous
+  action: tour.back
 }
 ]
 });
@@ -64,7 +64,7 @@ buttons: [
 },
 {
   text: 'Previous',
-  action: tour.previous
+  action: tour.back
 }
 ]
 });
