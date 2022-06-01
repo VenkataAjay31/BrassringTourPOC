@@ -1,0 +1,30 @@
+
+.element.style {
+    position: absolute;
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: translate(0px, 106px);
+    background: linear-gradient(45deg, rgb(16, 36, 62), transparent);
+}
+
+shepherd-element {
+    background: linear-gradient(29deg, rgb(202, 240, 248), rgb(0, 52, 89));
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border-width: 4px 0 0 0;
+    margin: 10px 0px !important;
+    border-style: solid;
+    border-color: #017395;
+}
+
+.shepherd-button {
+    border: 0 solid;
+    /* border-color: #01739500; */
+    background: linear-gradient(45deg, #01729485, transparent);
+    border-radius: 3px;
+    color: hsl(194deg 100% 86%);
+    cursor: pointer;
+    margin-right: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    transition: all .5s ease;
+}
