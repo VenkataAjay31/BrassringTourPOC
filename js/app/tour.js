@@ -69,4 +69,24 @@ buttons: [
 ]
 });
 
+//Step-4//
+tour.addStep({
+id : 4, Y
+text: '<img src="https://venkataajay31.github.io/BrassringTourPOC/images/EditDisplayIconWorkflow.gif"/> <br/> You can choose output columns with selcting the columns and ordering them as needed here.',
+attachTo: {
+element: '.gridActionButtons button[icon-btn="settings"]',
+on: 'bottom'
+},
+
+buttons: [
+{
+  text: 'Next',
+  action: tour.next
+},
+{
+  text: 'Previous',
+  action: tour.back
+}
+]
+});
 
