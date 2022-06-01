@@ -1,10 +1,10 @@
  $(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"tour.start()\">Guided Tour</div>")
 
 const tour = new Shepherd.Tour({
-  useModalOverlay: true,
-  defaultStepOptions: {
-  classes: 'shadow-md bg-purple-dark',
-  scrollTo: true
+useModalOverlay: true,
+defaultStepOptions: {
+classes: 'shadow-md bg-purple-dark',
+scrollTo: true
 }
 });
 
