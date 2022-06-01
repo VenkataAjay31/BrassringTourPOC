@@ -22,7 +22,7 @@ on: 'bottom'
 buttons: [
 {
   text: 'Next',
-  action: tour.next()
+  action: tour.next
 }
 ]
 });
@@ -39,7 +39,7 @@ on: 'bottom'
 buttons: [
 {
   text: 'Next',
-  action: tour.next()
+  action: tour.next
 },
 {
   text: 'Previous',
@@ -60,7 +60,7 @@ on: 'bottom'
 buttons: [
 {
   text: 'Next',
-  action: tour.next()
+  action: tour.next
 },
 {
   text: 'Previous',
