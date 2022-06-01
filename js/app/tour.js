@@ -68,3 +68,23 @@ buttons: [
 }
 ]
 });
+
+tour.addStep({
+id : 4, 
+text: 'In all these modernized grids we have enabled the context menu. Where you can right on a row and take actions specific to that row.',
+attachTo: {
+element: '.gridActionButtons button[icon-btn="settings"]',
+on: 'bottom'
+},
+
+buttons: [
+{
+  text: 'Next',
+  action: tour.next
+},
+{
+  text: 'Previous',
+  action: tour.back
+}
+]
+});
