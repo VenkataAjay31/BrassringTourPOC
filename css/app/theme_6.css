@@ -18,13 +18,12 @@
 }
 
 .shepherd-button {
-    border: 0 solid;
-    /* border-color: #01739500; */
-    background: linear-gradient(45deg, #01729485, transparent);
+    border: 0px solid;
+    background: linear-gradient(45deg, rgba(1, 114, 148, 0.52), transparent);
     border-radius: 3px;
-    color: hsl(194deg 100% 86%);
+    color: rgb(184, 238, 255);
     cursor: pointer;
     margin-right: 0.5rem;
     padding: 0.5rem 1.5rem;
-    transition: all .5s ease;
+    transition: all 0.5s ease 0s;
 }
