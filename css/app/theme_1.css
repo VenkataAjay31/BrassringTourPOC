@@ -1,10 +1,10 @@
 .shepherd-element{
     margin: 10px 0px !important;
-    background: linear-gradient(135deg, #caf0f8, #003459);
+/*     background: linear-gradient(135deg, #caf0f8, #003459);
     backdrop-filter: blur(10px);
     border-radius: 25px;
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid #caf0f8;
-    opacity: 80px;
+    opacity: 80px;*/
     
-}
+} 
