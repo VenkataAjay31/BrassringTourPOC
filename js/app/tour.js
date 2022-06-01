@@ -18,7 +18,7 @@ attachTo: {
 element: '#icon-link',
 on: 'bottom'
 },
-
+cancelIcon:{enabled : true},
 buttons: [
 {
   text: 'Next',
@@ -35,7 +35,7 @@ attachTo: {
 element: 'button[icon-btn="settings"]',
 on: 'bottom'
 },
-
+cancelIcon:{enabled : true},
 buttons: [
 {
   text: 'Next',
@@ -56,7 +56,7 @@ attachTo: {
 element: '#reqListGrid div.ui-grid-viewport div.ui-grid-canvas div[ui-grid-row="row"]',
 on: 'bottom'
 },
-
+cancelIcon:{enabled : true},
 buttons: [
 {
   text: 'Next',
@@ -76,7 +76,7 @@ attachTo: {
 element: '.gridActionButtons button[icon-btn="settings"]',
 on: 'bottom'
 },
-
+cancelIcon:{enabled : true},
 buttons: [
 {
   text: 'Next',
