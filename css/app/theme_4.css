@@ -1,0 +1,22 @@
+.shepherd-element {
+    background: #EFFFFD;
+    border-radius: 7px;
+    box-shadow: 0 1px 4pxrgba(0,0,0,.2);
+    max-width: 400px;
+    opacity: 0;
+    outline: none;
+    transition: opacity .3s,visibility .3s;
+    visibility: hidden;
+    width: 100%;
+    z-index: 9999;
+    margin: 10px 0px !important;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+
+.shepherd-arrow:before {
+    content: "";
+    transform: rotate(45deg);
+    background: #EFFFFD;
+}
