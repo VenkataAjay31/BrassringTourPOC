@@ -27,8 +27,8 @@
     border-radius: 3px;
     color: hsl(0deg 0% 100% / 95%);
     cursor: pointer;
-    margin-right: 0.5rem;
-    padding: 0.5rem 1.5rem;
+    margin-right: 0.5rem !important;
+    padding: 0.5rem 1.5rem !important;
     transition: all .5s ease;
     box-shadow: 1px 5px 6px 1px #ffffff1f !important;
 }
@@ -51,7 +51,7 @@
 }
 
 .shepherd-has-title .shepherd-content .shepherd-cancel-icon {
-        color: #dddddd;
+        color: #dddddd !important;
 }
 
 
