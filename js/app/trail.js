@@ -4,7 +4,7 @@ $(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"tou
 var tour_steps=[
   {
   "selector":"#icon-link",
-  "Title":"<h4><b>Welcome!!</b></h4>",
+  "Title":"<h3><b>Welcome!!</b></h3>",
   "HTMLText":"tindog is the place for your dongs to find their partners!!",
   "PreviousButton":false,
   "NextButton":true,
