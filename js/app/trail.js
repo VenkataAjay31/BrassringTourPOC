@@ -40,18 +40,17 @@ var tour_steps=[
 
 //creating the tour object
 const tour = new Shepherd.Tour({
-  useModalOverlay: true,
-  defaultStepOptions: {
-  classes: 'shadow-md bg-purple-dark',
-  scrollTo: { 
- behavior: 'smooth', block: 'center'
-},
+useModalOverlay: true,
+defaultStepOptions: {
   cancelIcon:{
-    enabled : true
-  },
-  }
-  });
-
+  enabled : true
+ },
+classes: 'shadow-md bg-purple-dark',
+scrollTo: { 
+ behavior: 'smooth', block: 'center'
+}
+}
+});
 
 function builtbuttons(tour_steps,step_number)
 {
