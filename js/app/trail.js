@@ -4,7 +4,7 @@ $(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"tou
 var tour_steps=[
   {
   "selector":"#icon-link",
-  "Title":"Welcome!!",
+  "Title":"<h4><b>Welcome!!</b></h4>",
   "HTMLText":"tindog is the place for your dongs to find their partners!!",
   "PreviousButton":false,
   "NextButton":true,
@@ -12,7 +12,7 @@ var tour_steps=[
   },
   {
   "selector":"button[icon-btn='settings']",
-  "Title":"Welcome!!",
+  "Title":"<h4><b>Welcome!!</b></h4>",
   "HTMLText":'You can pull preferred widgets from here, which will appear under widgets below.',
   "PreviousButton":true,
   "NextButton":true,
