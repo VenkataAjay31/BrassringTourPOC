@@ -1,4 +1,4 @@
-//$(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"tour.start()\">Guided Tour</div>")
+$(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"tour.start()\">Guided Tour</div>")
 
 //you can do your changes in the steps below 
 var tour_steps=[
