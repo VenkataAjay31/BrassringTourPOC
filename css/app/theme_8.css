@@ -1,40 +1,40 @@
 .shepherd-enabled.shepherd-element {
     opacity: 1;
     visibility: visible;
-    background: #ffffff1f;
-    backdrop-filter: blur(6.5px);
+    background: #ffffff1f !important;
+    backdrop-filter: blur(6.5px) !important;
 }
 
 .shepherd-has-title .shepherd-content .shepherd-header {
-    background: #f4f4f426;
-    backdrop-filter: blur(5px);
-    border-bottom: 3px solid #ffffff66;
+    background: #f4f4f426 !important;
+    backdrop-filter: blur(5px) !important;
+    border-bottom: 3px solid #ffffff66 !important;
 }
 
 .shepherd-button {
-    background: #656565;
-    border: 1px solid #e9e9e91a;
+    background: #656565 !important;
+    border: 1px solid #e9e9e91a !important;
     border-radius: 3px;
     color: hsl(0deg 0% 100% / 95%);
     cursor: pointer;
     margin-right: 0.5rem;
     padding: 0.5rem 1.5rem;
     transition: all .5s ease;
-    box-shadow: 1px 5px 6px 1px #ffffff1f;
+    box-shadow: 1px 5px 6px 1px #ffffff1f !important;
 }
 
 .shepherd-title {
-    color: rgb(255 255 255 / 84%);
+    color: rgb(255 255 255 / 84%) !important;
 }
 
 .shepherd-has-title .shepherd-content .shepherd-header {
-    background: #f4f4f426;
-    backdrop-filter: blur(5px);
-    border-bottom: 3px solid #ffffff66;
+    background: #f4f4f426 !important;
+    backdrop-filter: blur(5px) !important;
+    border-bottom: 3px solid #ffffff66 !important;
 }
 
 .shepherd-text {
-    color: rgb(255 255 255);
+    color: rgb(255 255 255) !important;
     font-size: 1rem;
     line-height: 1.3em;
     padding: 0.75em;
