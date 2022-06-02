@@ -1,3 +1,14 @@
+
+element.style {
+    position: absolute;
+    inset: auto auto 0px 0px;
+    margin: 0px;
+    transform: translate(0px, 408.812px);
+    border: 2px solid rgba(93, 93, 93, 0.39) !important;
+    border-radius: 7px !important;
+}
+
+
 .shepherd-enabled.shepherd-element {
     opacity: 1;
     visibility: visible;
