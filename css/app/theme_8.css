@@ -18,7 +18,7 @@
     display: flex;
     justify-content: flex-end;
     line-height: 2em;
-    padding: 0 0.5rem 0;
+    padding: 0 0.5rem 0 !important;
 }
 
 .shepherd-button {
@@ -42,7 +42,7 @@
     color: rgb(255 255 255) !important;
     font-size: 1rem;
     line-height: 1.3em;
-    padding: 0.75em;
+    padding: 0.75em !impotant;
 }
 .shepherd-has-title .shepherd-content .shepherd-cancel-icon {
     color: hsl(0deg 0% 90%) !important;
