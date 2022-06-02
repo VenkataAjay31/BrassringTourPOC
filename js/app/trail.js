@@ -29,7 +29,7 @@ var tour_steps=[
   {
     "selector":'.gridActionButtons button[icon-btn="settings"]',
     "Title":"Welcome!!",
-    "HTMLText":'You can choose output columns with selcting the columns and ordering them as needed here. <img src="https://venkataajay31.github.io/BrassringTourPOC/images/EditDisplayIconWorkflow.gif" width="300" height="175">',
+    "HTMLText":'You can choose output columns with selcting the columns and ordering them as needed here. <img src="https://venkataajay31.github.io/BrassringTourPOC/images/EditDisplayIconWorkflow.gif" width="300" height="200">',
     "PreviousButton":true,
     "NextButton":false,
     "FinishButton":true
