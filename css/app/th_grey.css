@@ -1,0 +1,37 @@
+.shepherd-has-title .shepherd-content .shepherd-header {
+    background: #e6e6e6;
+    padding: 0 1em;
+}
+.shepherd-header {
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    line-height: 2em;
+    padding: 0.75rem 0.75rem 0;
+}
+.shepherd-element {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 4pxrgba(0,0,0,.2);
+    max-width: 400px;
+    opacity: 0;
+    outline: none;
+    transition: opacity .3s,visibility .3s;
+    visibility: hidden;
+    width: 100%;
+    z-index: 9999;
+    border: 2px solid darkgrey;
+    margin-top: 10px !important;
+}
+.shepherd-button {
+    background: #7F8487;
+    border: 0;
+    border-radius: 3px;
+    color: hsla(0,0%,100%,.75);
+    cursor: pointer;
+    margin-right: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    transition: all .5s ease;
+}
