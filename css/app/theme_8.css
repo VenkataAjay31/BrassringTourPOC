@@ -51,3 +51,22 @@
 .shepherd-element{
     margin: 10px 0 !important;
 }
+
+.shepherd-element.shepherd-has-title[data-popper-placement^=bottom]>.shepherd-arrow:before {
+    background-color: #41414100;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid #5c5c5c;
+    border-left: 8px solid #5c5c5c;
+    border-right: 8px solid transparent;
+}
+
+.shepherd-arrow:before {
+    content: "";
+    transform: rotate(45deg);
+    background: #313131;
+    background-color: #41414100;
+    border-bottom: 8px solid #656565;
+    border-top: 8px solid #5c5c5c00;
+    border-left: 8px solid #5c5c5c00;
+    border-right: 8px solid #656565;
+}
