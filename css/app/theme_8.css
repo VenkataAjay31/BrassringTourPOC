@@ -3,7 +3,6 @@
     visibility: visible;
     background: #ffffff1f !important;
     backdrop-filter: blur(6.5px) !important;
-    margin: 10px 0 !important;
 }
 
 .shepherd-has-title .shepherd-content .shepherd-header {
@@ -49,3 +48,6 @@
     color: hsl(0deg 0% 90%) !important;
 }
 
+.shepherd-element{
+    margin: 10px 0 !important;
+}
