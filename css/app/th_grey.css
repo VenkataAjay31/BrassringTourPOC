@@ -35,3 +35,6 @@
     padding: 0.5rem 1.5rem;
     transition: all .5s ease;
 }
+.shepherd-button:not(:disabled):hover {
+    background-color: #AAAAAA;
+}
