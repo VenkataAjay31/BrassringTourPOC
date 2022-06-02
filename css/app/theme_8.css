@@ -11,6 +11,16 @@
     border-bottom: 3px solid #ffffff66 !important;
 }
 
+.shepherd-header {
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    line-height: 2em;
+    padding: 0 0.5rem 0;
+}
+
 .shepherd-button {
     background: #656565 !important;
     border: 1px solid #e9e9e91a !important;
@@ -41,5 +51,7 @@
 }
 
 .shepherd-has-title .shepherd-content .shepherd-cancel-icon {
-    color: hsl(0deg 0% 100% / 75%);
+        color: #dddddd;
 }
+
+
