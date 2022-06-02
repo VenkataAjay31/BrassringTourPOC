@@ -3,8 +3,16 @@
 const tour = new Shepherd.Tour({
 useModalOverlay: true,
 defaultStepOptions: {
+  cancelIcon:{
+  enabled : true
+ },
+title: "this is the title",
+
+
 classes: 'shadow-md bg-purple-dark',
-scrollTo: true
+scrollTo: { 
+ behavior: 'smooth', block: 'center'
+}
 }
 });
 
@@ -18,7 +26,6 @@ attachTo: {
 element: '#icon-link',
 on: 'bottom'
 },
-cancelIcon:{enabled : true},
 buttons: [
 {
   text: 'Next',
@@ -35,7 +42,6 @@ attachTo: {
 element: 'button[icon-btn="settings"]',
 on: 'bottom'
 },
-cancelIcon:{enabled : true},
 buttons: [
  {
   text: 'Previous',
@@ -56,7 +62,6 @@ attachTo: {
 element: '#reqListGrid div.ui-grid-viewport div.ui-grid-canvas div[ui-grid-row="row"]',
 on: 'bottom'
 },
-cancelIcon:{enabled : true},
 buttons: [
  {
   text: 'Previous',
@@ -76,7 +81,6 @@ attachTo: {
 element: '.gridActionButtons button[icon-btn="settings"]',
 on: 'bottom'
 },
-cancelIcon:{enabled : true},
 buttons: [
  {
   text: 'Previous',
