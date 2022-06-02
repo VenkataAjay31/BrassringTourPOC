@@ -6,7 +6,7 @@ defaultStepOptions: {
   cancelIcon:{
   enabled : true
  },
-title: "this is the title",
+title: '<h3> This is the title</h3>',
 
 
 classes: 'shadow-md bg-purple-dark',
