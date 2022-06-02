@@ -1,4 +1,4 @@
-$(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"tour.start()\">Guided Tour</div>")
+//$(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"tour.start()\">Guided Tour</div>")
 
 //you can do your changes in the steps below 
 var tour_steps=[
@@ -98,5 +98,4 @@ while (step_number<tour_steps.length)
   //going to the next step
   step_number++;
 }
-
   
