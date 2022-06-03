@@ -47,7 +47,7 @@ defaultStepOptions: {
  },
 classes: 'shadow-md bg-purple-dark',
 scrollTo: { 
- behavior: 'smooth', block: 'center'
+ block: 'center'
 }
 }
 });
