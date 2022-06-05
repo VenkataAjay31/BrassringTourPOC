@@ -1,7 +1,6 @@
  $(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"tour.start()\">Guided Tour</div>")
 
 const tour = new Shepherd.Tour({
-useModalOverlay: false,
 defaultStepOptions: {
   cancelIcon:{
   enabled : true
