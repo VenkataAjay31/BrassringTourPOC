@@ -6,6 +6,7 @@
     border: 3px solid;
     background-color: var(--cds-ui-04,#8d8d8d);
     cursor: pointer;
+ 
     color: var(--cds-text-01,#161616);
 }
 
@@ -13,4 +14,10 @@
     content: "\f04b";
     font-family: 'FontAwesome';
     padding: 3px;
+}
+
+
+svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
+{
+    opacity: 0.5 !important;
 }
