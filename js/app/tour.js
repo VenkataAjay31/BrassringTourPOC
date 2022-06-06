@@ -6,7 +6,7 @@ defaultStepOptions: {
   cancelIcon:{
   enabled : true
  },
-title: '<h3> This is the title</h3>',
+title: '<h3>Canvas Tour</h3>',
 
 
 classes: 'shadow-md bg-purple-dark',
