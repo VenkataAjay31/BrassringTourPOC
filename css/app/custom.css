@@ -20,5 +20,5 @@
 svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
 {
     opacity: 0.3 !important;
-    transition: none;
+    transition: none !important;
 }
