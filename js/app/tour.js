@@ -59,7 +59,7 @@ tour.addStep({
 id : 3, 
 text: 'In all these modernized grids we have enabled the context menu. Where you can right on a row and take actions specific to that row.',
 attachTo: {
-element: '#reqListGrid div.ui-grid-viewport div.ui-grid-canvas div[ui-grid-row="row"]',
+element: '.content-padded',
 on: 'bottom'
 },
 buttons: [
