@@ -1,6 +1,6 @@
 .shepherd-has-title .shepherd-content .shepherd-header {
     background: #e6e6e6;
-    padding: 0 1em;
+    padding: 0.5em 1em 0 1em;
 }
 .shepherd-header {
     align-items: center;
@@ -9,7 +9,6 @@
     display: flex;
     justify-content: flex-end;
     line-height: 2em;
-    padding: 0.75rem 0.75rem 0;
 }
 .shepherd-element {
     background: #fff;
