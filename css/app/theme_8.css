@@ -64,13 +64,19 @@ element.style {
 }
 
 .shepherd-element.shepherd-has-title[data-popper-placement^=bottom]>.shepherd-arrow:before {
-    background-color: #41414100;
+    background-color: #41414100 !important;
     border-bottom: 8px solid transparent;
     border-top: 8px solid #5c5c5c;
     border-left: 8px solid #5c5c5c;
     border-right: 8px solid transparent;
 }
 
+
+shepherd-arrow:before {
+    content: "";
+    transform: rotate(45deg);
+    background: #fff0;
+}
 .shepherd-arrow:before {
     content: "";
     transform: rotate(45deg);
