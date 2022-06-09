@@ -1,102 +1,177 @@
-$(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"tour.start()\">Guided Tour</div>")
+//////////////
+$(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"HomeTour.start()\">Guided Tour</div>")
+
+/////////////////////////////////
 
 //you can do your changes in the steps below 
-var tour_steps=[
+var requisitions_tour_steps={
+  "Steps":[
   {
-  "selector":"#icon-link",
-  "Title":"<h3><b>Welcome!!</b></h3>",
-  "HTMLText":"tindog is the place for your dongs to find their partners!!",
-  "PreviousButton":false,
-  "NextButton":true,
-  "FinishButton":false
+    "selector":"#x",
+    "Title":"About Requisitions page...",
+    "HTMLText":"Do you wanna continue to explore this page?",
+    "PreviousButton":false,
+    "NextButton":true,
+    "FinishButton":true,
+    "whenTourHandedOver": true
   },
   {
-  "selector":"button[icon-btn='settings']",
-  "Title":"<h4><b>Welcome!!</b></h4>",
-  "HTMLText":'You can pull preferred widgets from here, which will appear under widgets below.',
-  "PreviousButton":true,
-  "NextButton":true,
-  "FinishButton":false
-  },
-  {
-    "selector":'#reqListGrid div.ui-grid-viewport div.ui-grid-canvas div[ui-grid-row="row"]',
-    "Title":"Welcome!!",
-    "HTMLText":'In all these modernized grids we have enabled the context menu. Where you can right on a row and take actions specific to that row.',
-    "PreviousButton":true,
+    "selector":".reqStatusToggle.ng-scope",
+    "Title":"About Requisitions page...",
+    "HTMLText":"you can search files according to their status",
+    "PreviousButton":false,
     "NextButton":true,
     "FinishButton":false
   },
-  {
-    "selector":'.gridActionButtons button[icon-btn="settings"]',
+],
+NextTour: ""
+}
+
+var home_tour_steps={
+  "Steps":[
+    {
+    "selector":"#icon-link",
     "Title":"Welcome!!",
-    "HTMLText":'You can choose output columns with selcting the columns and ordering them as needed here. <img src="https://venkataajay31.github.io/BrassringTourPOC/images/EditDisplayIconWorkflow.gif" width="300" height="200">',
+    "HTMLText":"tindog is the place for your dongs to find their partners!!",
+    "PreviousButton":false,
+    "NextButton":true,
+    "FinishButton":false
+    },
+    {
+    "selector":"button[icon-btn='settings']",
+    "Title":"Welcome!!",
+    "HTMLText":'You can pull preferred widgets from here, which will appear under widgets below.',
     "PreviousButton":true,
-    "NextButton":false,
-    "FinishButton":true
+    "NextButton":true,
+    "FinishButton":false
+    },
+    {
+      "selector":'#reqListGrid div.ui-grid-viewport div.ui-grid-canvas div[ui-grid-row="row"]',
+      "Title":"Welcome!!",
+      "HTMLText":'In all these modernized grids we have enabled the context menu. Where you can right on a row and take actions specific to that row.',
+      "PreviousButton":true,
+      "NextButton":true,
+      "FinishButton":false
+    },
+    {
+      "selector":'a.welcomeContentTabs span[icon-btn="folders"]',
+      "Title":"Welcome!!",
+      "HTMLText":'Click here to explore requisitions section',
+      "PreviousButton":false,
+      "NextButton":false,
+      "FinishButton":false,
+    }
+  ],
+  NextTour: 'RequisitionsTour'
   }
-]
+  
+//////////////////////////////////////////////////////////////
+
+  function builtbuttons(tour,home_tour_steps,step_number)
+  {
+    let custom_buttons=[]
+    if(home_tour_steps[step_number]['PreviousButton'])//check the status of the button 
+      {
+        custom_buttons.push({text: 'back',action: tour.back})//if the button id set to true,then add the button
+      }
+      if(home_tour_steps[step_number]['NextButton'])
+      {
+        custom_buttons.push({text: 'Next',action: tour.next})
+      }
+      if(home_tour_steps[step_number]['FinishButton'])
+      {
+        custom_buttons.push({text: 'Finish',action: tour.complete})
+      }
+  
+      return custom_buttons;
+  }
+
+
+///////////////////////////////////////////////////////
 
 //No need to do any changes in the below code
 
-//creating the tour object
-const tour = new Shepherd.Tour({
-useModalOverlay: true,
-defaultStepOptions: {
-  cancelIcon:{
-  enabled : true
- },
-classes: 'shadow-md bg-purple-dark',
-scrollTo: { 
- behavior: 'smooth', block: 'center'
-}
-}
-});
+let HomeTour = createTour(home_tour_steps);
+let RequisitionsTour = createTour(requisitions_tour_steps);
+window.alert(RequisitionsTour)
+///////////////////////////////////////////////////////////
 
-function builtbuttons(tour_steps,step_number)
+function createTour(steps)
 {
-  let custom_buttons=[]
-  if(tour_steps[step_number]['PreviousButton'])//check the status of the button 
-    {
-      custom_buttons.push({text: 'back',action: tour.back})//if the button id set to true,then add the button
-    }
-    if(tour_steps[step_number]['NextButton'])
-    {
-      custom_buttons.push({text: 'Next',action: tour.next})
-    }
-    if(tour_steps[step_number]['FinishButton'])
-    {
-      custom_buttons.push({text: 'Finish',action: tour.complete})
-    }
-
-    return custom_buttons;
+  var tour = new Shepherd.Tour({
+    useModalOverlay: true,
+    defaultStepOptions: {
+    cancelIcon: {
+      enabled: true
+    },
+    classes: 'shadow-md bg-purple-dark',
+    scrollTo: {
+      behavior: 'smooth', block: 'center'
+    }}});
+tour = addSteps(tour,steps);
+return tour;
 }
 
-//initializing a variable to access the steps
-let step_number=0;
+/////////////////////////////////////////////////////////////
 
-while (step_number<tour_steps.length)
+function addSteps(tour,definedSteps)
+{
+  //initializing a variable to access the steps
+step_number=0;
+
+while (step_number<definedSteps.Steps.length)
 {
   //checking if the selector is present in the document or not
-  let selector_status = document.querySelector(tour_steps[step_number]['selector']);
+  ////let selector_status = document.querySelector(definedSteps.Steps[step_number]['selector']);
   //if selector is present, we will add the step
-  if (selector_status!=null)
-  {
+  ////if (selector_status!=null)
+  ////{
       //adding buttons according to the steps
-      let custom_buttons=builtbuttons(tour_steps,step_number);
+      let custom_buttons=builtbuttons(tour,definedSteps.Steps,step_number);
       
       //adding the step
-      tour.addStep({
-        id: step_number,
-        title: tour_steps[step_number]['Title'],
-        text: tour_steps[step_number]['HTMLText'],
-        attachTo: {
-          element: tour_steps[step_number]['selector'],
-          on: 'bottom'
-        },
-        buttons: custom_buttons
-      });
-    }
+      if(step_number!=(definedSteps.Steps.length-1))
+      {
+        tour.addStep({
+          id: step_number,
+          title: definedSteps.Steps[step_number]['Title'],
+          text: definedSteps.Steps[step_number]['HTMLText'],
+          attachTo: {
+            element: definedSteps.Steps[step_number]['selector'],
+            on: 'bottom'
+          },
+          buttons: custom_buttons
+        });
+      }
+      else
+      {
+        tour.addStep({
+          id: step_number,
+          title: definedSteps.Steps[step_number]['Title'],
+          text: definedSteps.Steps[step_number]['HTMLText'],
+          attachTo: {
+            element: definedSteps.Steps[step_number]['selector'],
+            on: 'bottom'
+          },
+          buttons: custom_buttons,
+          when: {
+            show: () => document
+              .querySelectorAll('a.welcomeContentTabs span[icon-btn="folders"]')
+              .forEach(b => b.addEventListener("click", function(){
+                tour.complete();
+                if(definedSteps.NextTour=="RequisitionsTour")
+                {
+                  RequisitionsTour.start();
+                }
+              }))
+          }
+        });
+      }
+
+    ////}
   //going to the next step
   step_number++;
+}
+return tour;
 }
   
