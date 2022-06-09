@@ -46,7 +46,7 @@ var home_tour_steps={
     "FinishButton":false
     },
     {
-      "selector":'#reqListGrid div.ui-grid-viewport div.ui-grid-canvas div[ui-grid-row="row"]',
+      "selector":'#reqListGrid div.ui-grid-render-container:nth-child(2) div.ui-grid-canvas .ui-grid-row.row-0',
       "Title":"Welcome!!",
       "HTMLText":'In all these modernized grids we have enabled the context menu. Where you can right on a row and take actions specific to that row.',
       "PreviousButton":true,
