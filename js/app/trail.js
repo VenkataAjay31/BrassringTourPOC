@@ -104,7 +104,7 @@ function createTour(steps)
     },
     classes: 'shadow-md bg-purple-dark',
     scrollTo: {
-      behavior: 'smooth', block: 'center'
+      behavior: 'auto', block: 'center'
     }}});
 tour = addSteps(tour,steps);
 return tour;
