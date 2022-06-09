@@ -1,7 +1,7 @@
 //////////////
 $(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"HomeTour.start()\">Guided Tour</div>")
 
-/////////////////////////////////
+////////////objects that consist the data of the steps/////////////////////
 
 //you can do your changes in the steps below 
 var requisitions_tour_steps={
@@ -65,7 +65,7 @@ var home_tour_steps={
   NextTour: 'RequisitionsTour'
   }
   
-//////////////////////////////////////////////////////////////
+//////////////customizing the buttons according to the steps/////////////////
 
   function builtbuttons(tour,home_tour_steps,step_number)
   {
@@ -87,14 +87,12 @@ var home_tour_steps={
   }
 
 
-///////////////////////////////////////////////////////
-
-//No need to do any changes in the below code
+/////////////////////initializing tour objects///////////////////////////
 
 let HomeTour = createTour(home_tour_steps);
 let RequisitionsTour = createTour(requisitions_tour_steps);
-window.alert(RequisitionsTour)
-///////////////////////////////////////////////////////////
+
+//////////////////////////cresting tour objects/////////////////////////////////
 
 function createTour(steps)
 {
@@ -112,7 +110,7 @@ tour = addSteps(tour,steps);
 return tour;
 }
 
-/////////////////////////////////////////////////////////////
+///////////////////adding steps to the tour////////////////////////
 
 function addSteps(tour,definedSteps)
 {
@@ -174,4 +172,3 @@ while (step_number<definedSteps.Steps.length)
 }
 return tour;
 }
-  
