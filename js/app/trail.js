@@ -7,21 +7,22 @@ $(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"Hom
 var requisitions_tour_steps={
   "Steps":[
   {
-    "selector":"#x",
+    "Selector":"#x",
     "Title":"About Requisitions page...",
     "HTMLText":"Do you wanna continue to explore this page?",
     "PreviousButton":false,
     "NextButton":true,
     "FinishButton":true,
-    "whenTourHandedOver": true
+    "Position" :'bottom'
   },
   {
-    "selector":".reqStatusToggle.ng-scope",
+    "Selector":".reqStatusToggle.ng-scope",
     "Title":"About Requisitions page...",
     "HTMLText":"you can search files according to their status",
     "PreviousButton":false,
     "NextButton":true,
-    "FinishButton":false
+    "FinishButton":false,
+    "Position" :'bottom'
   },
 ],
 NextTour: ""
@@ -30,36 +31,49 @@ NextTour: ""
 var home_tour_steps={
   "Steps":[
     {
-    "selector":"#icon-link",
+    "Selector":".personalizeWidgetSwitch",
     "Title":"Welcome!!",
     "HTMLText":"tindog is the place for your dongs to find their partners!!",
     "PreviousButton":false,
     "NextButton":true,
-    "FinishButton":false
+    "FinishButton":false,
+    "Position" :'bottom'
     },
     {
-    "selector":"button[icon-btn='settings']",
+    "Selector":"#icon-settings",
     "Title":"Welcome!!",
     "HTMLText":'You can pull preferred widgets from here, which will appear under widgets below.',
     "PreviousButton":true,
     "NextButton":true,
-    "FinishButton":false
+    "FinishButton":false,
+    "Position" :'bottom'
     },
     {
-      "selector":'#reqListGrid div.ui-grid-render-container:nth-child(2) div.ui-grid-canvas .ui-grid-row.row-0',
+      "Selector":'.welcomeWidgetActions',
       "Title":"Welcome!!",
       "HTMLText":'In all these modernized grids we have enabled the context menu. Where you can right on a row and take actions specific to that row.',
       "PreviousButton":true,
       "NextButton":true,
-      "FinishButton":false
+      "FinishButton":false,
+      "Position" :'bottom'
     },
     {
-      "selector":'a.welcomeContentTabs span[icon-btn="folders"]',
+      "Selector":'div.welcomeWidget div[aria-hidden="false"] button[icon-btn="arrowright"]',
+      "Title":"Welcome!!",
+      "HTMLText":'Click here to explore requisitions section',
+      "PreviousButton":true,
+      "NextButton":true,
+      "FinishButton":false,
+      "Position" :'bottom'
+    },
+    {
+      "Selector":'a.welcomeContentTabs:nth-child(2)',
       "Title":"Welcome!!",
       "HTMLText":'Click here to explore requisitions section',
       "PreviousButton":false,
       "NextButton":false,
       "FinishButton":false,
+      "Position" :'bottom'
     }
   ],
   NextTour: 'RequisitionsTour'
@@ -92,7 +106,7 @@ var home_tour_steps={
 let HomeTour = createTour(home_tour_steps);
 let RequisitionsTour = createTour(requisitions_tour_steps);
 
-//////////////////////////cresting tour objects/////////////////////////////////
+//////////////////////////creating tour objects/////////////////////////////////
 
 function createTour(steps)
 {
@@ -119,10 +133,10 @@ step_number=0;
 
 while (step_number<definedSteps.Steps.length)
 {
-  //checking if the selector is present in the document or not
-  ////let selector_status = document.querySelector(definedSteps.Steps[step_number]['selector']);
-  //if selector is present, we will add the step
-  ////if (selector_status!=null)
+  //checking if the Selector is present in the document or not
+  ////let Selector_status = document.querySelector(definedSteps.Steps[step_number]['Selector']);
+  //if Selector is present, we will add the step
+  ////if (Selector_status!=null)
   ////{
       //adding buttons according to the steps
       let custom_buttons=builtbuttons(tour,definedSteps.Steps,step_number);
@@ -135,8 +149,8 @@ while (step_number<definedSteps.Steps.length)
           title: definedSteps.Steps[step_number]['Title'],
           text: definedSteps.Steps[step_number]['HTMLText'],
           attachTo: {
-            element: definedSteps.Steps[step_number]['selector'],
-            on: 'bottom'
+            element: definedSteps.Steps[step_number]['Selector'],
+            on: definedSteps.Steps[step_number]['Position']
           },
           buttons: custom_buttons
         });
@@ -148,18 +162,23 @@ while (step_number<definedSteps.Steps.length)
           title: definedSteps.Steps[step_number]['Title'],
           text: definedSteps.Steps[step_number]['HTMLText'],
           attachTo: {
-            element: definedSteps.Steps[step_number]['selector'],
-            on: 'bottom'
+            element: definedSteps.Steps[step_number]['Selector'],
+            on: definedSteps.Steps[step_number]['Position']
           },
           buttons: custom_buttons,
           when: {
             show: () => document
-              .querySelectorAll('a.welcomeContentTabs span[icon-btn="folders"]')
+              .querySelectorAll('a.welcomeContentTabs:nth-child(2)')
               .forEach(b => b.addEventListener("click", function(){
                 tour.complete();
                 if(definedSteps.NextTour=="RequisitionsTour")
                 {
-                  RequisitionsTour.start();
+                  var interval = setInterval(function () {
+                    if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
+                        clearInterval(interval);
+                        RequisitionsTour.start();
+                    }
+                }, 100);
                 }
               }))
           }
