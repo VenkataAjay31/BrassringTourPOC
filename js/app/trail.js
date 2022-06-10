@@ -81,18 +81,29 @@ var home_tour_steps={
   
 //////////////customizing the buttons according to the steps/////////////////
 
-  function builtbuttons(tour,home_tour_steps,step_number)
+  function builtbuttons(tour,tour_steps,step_number)
   {
     let custom_buttons=[]
-    if(home_tour_steps[step_number]['PreviousButton'])//check the status of the button 
+    if(tour_steps[step_number]['PreviousButton'])//check the status of the button 
       {
         custom_buttons.push({text: 'back',action: tour.back})//if the button id set to true,then add the button
       }
-      if(home_tour_steps[step_number]['NextButton'])
+      if(tour_steps[step_number]['NextButton'])
       {
-        custom_buttons.push({text: 'Next',action: tour.next})
+        custom_buttons.push({text: 'Next',action()
+        { /////check if the next element is present
+          if((document.querySelector(tour_steps[step_number+1]['Selector']))!=null)
+          {
+            tour.next();
+          }
+          else// if the element is not found, the step is removed 
+          {
+            tour.removeStep(step_number+1);
+            tour.next();
+          }
+        }})
       }
-      if(home_tour_steps[step_number]['FinishButton'])
+      if(tour_steps[step_number]['FinishButton'])
       {
         custom_buttons.push({text: 'Finish',action: tour.complete})
       }
@@ -140,7 +151,7 @@ while (step_number<definedSteps.Steps.length)
   ////{
       //adding buttons according to the steps
       let custom_buttons=builtbuttons(tour,definedSteps.Steps,step_number);
-      
+      let check_selector=definedSteps.Steps[step_number]['Selector'];
       //adding the step
       if(step_number!=(definedSteps.Steps.length-1))
       {
@@ -167,8 +178,9 @@ while (step_number<definedSteps.Steps.length)
           },
           buttons: custom_buttons,
           when: {
-            show: () => document
-              .querySelectorAll('a.welcomeContentTabs:nth-child(2)')
+            show: () => 
+            document
+              .querySelectorAll(check_selector)
               .forEach(b => b.addEventListener("click", function(){
                 tour.complete();
                 if(definedSteps.NextTour=="RequisitionsTour")
