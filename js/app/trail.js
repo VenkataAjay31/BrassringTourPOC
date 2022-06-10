@@ -20,8 +20,8 @@ var requisitions_tour_steps={
     "Title":"About Requisitions page...",
     "HTMLText":"you can search files according to their status",
     "PreviousButton":false,
-    "NextButton":true,
-    "FinishButton":false,
+    "NextButton":false,
+    "FinishButton":true,
     "Position" :'bottom'
   },
 ],
