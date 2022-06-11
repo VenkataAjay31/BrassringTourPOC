@@ -1,0 +1,96 @@
+.GuidedTour {
+    position: absolute;
+    right: 120px;
+    top: 10px;
+    padding: 5px;
+    border: 3px solid;
+    background-color: var(--cds-ui-04,#8d8d8d);
+    cursor: pointer;
+ 
+    color: var(--cds-text-01,#161616);
+}
+
+.GuidedTour::after {
+    content: "\f04b";
+    font-family: 'FontAwesome';
+    padding: 3px;
+}
+
+
+svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
+{
+    opacity: 0.3 !important;
+    transition: none !important;
+}
+
+.shepherd-has-title .shepherd-content .shepherd-header {
+    background: linear-gradient(181deg, #00c2d8,#005fd9);
+    border-bottom: 3.5px solid #b8daff99;
+    padding: 0em 1em 0px 1em;
+}
+
+
+.shepherd-header {
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: flex-end;
+    line-height: 2em;
+}
+
+.shepherd-button {
+    background: linear-gradient(174deg, #00c2d8,#005fd9);
+    border: 1px solid #00b1d8;
+    border-radius: 9px;
+    color: hsl(0deg 0% 0%);
+    cursor: pointer;
+    margin-right: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    transition: all .5s ease;
+    font-weight: 500;
+}
+
+
+}
+.shepherd-element {
+    background: #ffffff; 
+    border-radius: 15px !important;
+    max-width: 400px;
+    opacity: 0;
+    outline: none;
+    transition: opacity .3s,visibility .3s;
+    visibility: hidden;
+    width: 100%;
+    z-index: 9999;
+    /* border: 2px solid #3a3a3a; */
+    margin-top: 10px !important;
+    backdrop-filter: blur(43px);
+    
+.shepherd-button:not(:disabled):hover {
+    background: linear-gradient(174deg, #44edff,#0075b1);
+    color: #002537;
+    border: 1px solid #44edff;
+}
+
+.shepherd-has-title .shepherd-content .shepherd-cancel-icon {
+    color: hsl(203deg 100% 12%);
+}
+
+.shepherd-has-title .shepherd-content .shepherd-cancel-icon:hover {
+    color: rgb(255 255 255);
+}
+
+
+.shepherd-text {
+    color: rgb(0 0 0);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3em;
+    padding: 0.75em;
+}
+
+
+.shepherd-element.shepherd-has-title[data-popper-placement^=bottom]>.shepherd-arrow:before {
+    background-color: #ffffff;
+}
