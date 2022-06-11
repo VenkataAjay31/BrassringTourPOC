@@ -51,6 +51,11 @@ svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
     font-weight: 500;
 }
 
+.shepherd-button:hover {
+    background: linear-gradient(174deg, #44edff,#0075b1) !important;
+    color: #002537;
+    border: 1px solid #44edff;
+}
 
 }
 .shepherd-element {
@@ -67,18 +72,14 @@ svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
     margin-top: 10px !important;
     backdrop-filter: blur(43px);
     
-.shepherd-button:not(:disabled):hover {
-    background: linear-gradient(174deg, #44edff,#0075b1);
-    color: #002537;
-    border: 1px solid #44edff;
-}
+
 
 .shepherd-has-title .shepherd-content .shepherd-cancel-icon {
-    color: hsl(203deg 100% 12%);
+    color: hsl(203deg 100% 12%) !important;
 }
 
 .shepherd-has-title .shepherd-content .shepherd-cancel-icon:hover {
-    color: rgb(255 255 255);
+    color: rgb(255 255 255) !important;
 }
 
 
