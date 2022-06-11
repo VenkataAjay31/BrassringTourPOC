@@ -26,8 +26,10 @@ svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
 .shepherd-has-title .shepherd-content .shepherd-header {
     background: linear-gradient(181deg, #00c2d8,#005fd9);
     border-bottom: 3.5px solid #b8daff99;
-    padding: 0.5em 1em 0 1em;
+    padding: 0em 1em 0px 1em;
 }
+
+
 .shepherd-header {
     align-items: center;
     border-top-left-radius: 15px;
@@ -68,6 +70,7 @@ svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
 .shepherd-button:not(:disabled):hover {
     background: linear-gradient(174deg, #44edff,#0075b1);
     color: #002537;
+    border: 1px solid #44edff;
 }
 
 .shepherd-has-title .shepherd-content .shepherd-cancel-icon {
