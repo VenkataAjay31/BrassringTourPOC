@@ -40,7 +40,7 @@ svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
 }
 
 .shepherd-button {
-    background: linear-gradient(174deg, #00c2d8,#005fd9);
+    background: linear-gradient(174deg, #00c2d8,#005fd9) !important;
     border: 1px solid #00b1d8;
     border-radius: 9px;
     color: hsl(0deg 0% 0%);
@@ -53,7 +53,7 @@ svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
 
 .shepherd-button:hover {
     background: linear-gradient(174deg, #44edff,#0075b1) !important;
-    color: #002537;
+    color: #002537 !important;
     border: 1px solid #44edff;
 }
 
@@ -68,17 +68,16 @@ svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
     visibility: hidden;
     width: 100%;
     z-index: 9999;
-    /* border: 2px solid #3a3a3a; */
     margin-top: 10px !important;
     backdrop-filter: blur(43px);
     
 
 
-.shepherd-has-title .shepherd-content .shepherd-cancel-icon {
+.shepherd-cancel-icon {
     color: hsl(203deg 100% 12%) !important;
 }
 
-.shepherd-has-title .shepherd-content .shepherd-cancel-icon:hover {
+.shepherd-has-title.shepherd-content .shepherd-cancel-icon:hover {
     color: rgb(255 255 255) !important;
 }
 
@@ -93,5 +92,5 @@ svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
 
 
 .shepherd-element.shepherd-has-title[data-popper-placement^=bottom]>.shepherd-arrow:before {
-    background-color: #ffffff;
+    background-color: #ffffff !important;
 }
