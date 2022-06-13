@@ -58,7 +58,7 @@ svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
 }
 
 }
-.shepherd-element {
+.shepherd-has-cancel-icon.shepherd-has-title.shepherd-element.shadow-md.bg-purple-dark.shepherd-enabled {
     background: #ffffff; 
     border-radius: 15px !important;
     max-width: 400px;
@@ -73,7 +73,7 @@ svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
     
 
 
-.shepherd-cancel-icon {
+.shepherd-has-title .shepherd-content .shepherd-cancel-icon {
     color: hsl(203deg 100% 12%) !important;
 }
 
