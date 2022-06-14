@@ -78,7 +78,21 @@ var home_tour_steps={
   ],
   NextTour: 'RequisitionsTour'
   }
-  
+/////////////////////////////////////////
+
+function waitForElementToDisplay(selector) {
+  return new Promise(function(resolve) {
+    (function checkIfElementExists() {
+      if (document.querySelector(selector) !== null) {
+        console.log('Element is displayed now');
+        resolve();
+      } else {
+        setTimeout(checkIfElementExists, 500);
+      }
+    })();
+  })
+}
+
 //////////////customizing the buttons according to the steps/////////////////
 
   function builtbuttons(tour,tour_steps,step_number)
@@ -192,9 +206,10 @@ while (step_number<definedSteps.Steps.length)
                     }
                 }, 100);
                 }
-              }))
+              },{once:true}))
           }
         });
+
       }
 
     ////}
