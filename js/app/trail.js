@@ -78,20 +78,6 @@ var home_tour_steps={
   ],
   NextTour: 'RequisitionsTour'
   }
-/////////////////////////////////////////
-
-function waitForElementToDisplay(selector) {
-  return new Promise(function(resolve) {
-    (function checkIfElementExists() {
-      if (document.querySelector(selector) !== null) {
-        console.log('Element is displayed now');
-        resolve();
-      } else {
-        setTimeout(checkIfElementExists, 500);
-      }
-    })();
-  })
-}
 
 //////////////customizing the buttons according to the steps/////////////////
 
@@ -158,11 +144,6 @@ step_number=0;
 
 while (step_number<definedSteps.Steps.length)
 {
-  //checking if the Selector is present in the document or not
-  ////let Selector_status = document.querySelector(definedSteps.Steps[step_number]['Selector']);
-  //if Selector is present, we will add the step
-  ////if (Selector_status!=null)
-  ////{
       //adding buttons according to the steps
       let custom_buttons=builtbuttons(tour,definedSteps.Steps,step_number);
       let check_selector=definedSteps.Steps[step_number]['Selector'];
@@ -211,8 +192,6 @@ while (step_number<definedSteps.Steps.length)
         });
 
       }
-
-    ////}
   //going to the next step
   step_number++;
 }
