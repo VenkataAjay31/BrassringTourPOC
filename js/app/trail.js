@@ -1,4 +1,3 @@
-
 $(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"HomeTour.start()\">Guided Tour</div>")
 
 ////////////objects that consist the data of the steps/////////////////////
@@ -19,8 +18,8 @@ var my_candidates_tour_steps={
       },
       {
           "Selector":'.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"]:nth-child(4)',
-          "Title":"Welcome!!",
-          "HTMLText":'Click on the talent record link to get redesigned talent record',
+          "Title":"Talent Record link",
+          "HTMLText":'Select a candidate’s name to view redesigned talent record and its tour.',
           "PreviousButton":true,
           "NextButton":true,
           "FinishButton":false,
@@ -42,8 +41,8 @@ var talent_record={
         },
         {
             "Selector":'.widgetTabLink',
-            "Title":"Welcome!!",
-            "HTMLText":'Edit Tabs',
+            "Title":"All Tabs",
+            "HTMLText":'We reimagined the entire set of tabs for a new look.',
             "PreviousButton":true,
             "NextButton":true,
             "FinishButton":false,
@@ -69,7 +68,7 @@ var talent_record={
         },
         {
             "Selector":'.collabAddNote.ng-scope',
-            "Title":"Collaborative_notes",
+            "Title":"The Notes has a host of new features. Select the type of notes you want to make.",
             "HTMLText":'Edit Tabs',
             "PreviousButton":true,
             "NextButton":true,
@@ -170,8 +169,8 @@ var talent_record={
         },
         {
             "Selector":'.candidateNavButtons',
-            "Title":'previous_candidate and next_cadidate',
-            "HTMLText":'Edit Tabs',
+            "Title":'Talent Record - Previous Candidate/Next Candidate',
+            "HTMLText":'Navigate among the candidates in the grid without having to go back to the grid, using the previous and next buttons.',
             "PreviousButton":true,
             "NextButton":true,
             "FinishButton":false,
@@ -193,8 +192,8 @@ var requisitions_tour_steps={
   "Steps":[
   {
     "Selector":"#x",
-    "Title":"About Requisitions page...",
-    "HTMLText":"Do you wanna continue to explore this page?",
+    "Title":"Requisitions page",
+    "HTMLText":"Would you like to continue the tour in requistions page?",
     "PreviousButton":false,
     "NextButton":true,
     "FinishButton":true,
@@ -202,8 +201,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":".reqStatusToggle.ng-scope",
-    "Title":"About Requisitions page...",
-    "HTMLText":"You can choose the desired req status all on the same page",
+    "Title":"Req Status",
+    "HTMLText":"Choose All Statuses or a specific status to view the Reqs in that status and then toggle between All Reqs and My Reqs below.",
     "PreviousButton":false,
     "NextButton":true,
     "FinishButton":false,
@@ -211,8 +210,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":"#gridStatusFilter-button",
-    "Title":"About Requisitions page...",
-    "HTMLText":"Here you can choose 'All Reqs' or 'My Reqs'. This will be applied in conjunction with the Req Status you choose above.",
+    "Title":"All Vs My",
+    "HTMLText": 'Here you can choose "All Reqs" or "My Reqs". This is applied in conjunction with the Req Status you choose above.',
     "PreviousButton":false,
     "NextButton":true,
     "FinishButton":false,
@@ -220,8 +219,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":'#reqListGrid div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0',
-    "Title":"About Requisitions page...",
-    "HTMLText":"Click anywhere on your chosen row and the context menu will appear, with different actions that you can take on that row. Also the actions are now grouped as per the behavior. ",
+    "Title":"Single Row Actions",
+    "HTMLText":"Right Click anywhere on any row of the grid and a context menu appears. Various actions that you can take on that row are displayed. Also, actions are grouped into appropriate categories.",
     "PreviousButton":false,
     "NextButton":true,
     "FinishButton":false,
@@ -229,8 +228,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":'div[role="rowgroup"] div[class="ui-grid-canvas"]',
-    "Title":"About Requisitions page...",
-    "HTMLText":"Choose the rows from their respective check boxes and you will see the action header(with grouped actions) dynamically popping above the grid.",
+    "Title":"Multiple Row Actions",
+    "HTMLText":"Select either a single row or multiple rows to see the action header dynamically popping above the grid. This header displays all the actions you can take based on your selection (grouped into appropriate categories).",
     "PreviousButton":false,
     "NextButton":true,
     "FinishButton":false,
@@ -238,7 +237,7 @@ var requisitions_tour_steps={
   },
   {
     "Selector":'div.gridFilterActions [icon-btn="filter"]',
-    "Title":"About Requisitions page...",
+    "Title":"Saved Filters",
     "HTMLText":"Save, Manage and Apply your filters all in the same place.",
     "PreviousButton":false,
     "NextButton":true,
@@ -247,7 +246,7 @@ var requisitions_tour_steps={
   },
   {
     "Selector":'div.gridFilterInput [icon-btn="search"]',
-    "Title":"About Requisitions page...",
+    "Title":"Filter Visible Grid (Search icon)",
     "HTMLText":"Filter the grid in your view easily from this quick filter.",
     "PreviousButton":false,
     "NextButton":true,
@@ -256,17 +255,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":'div.gridActionButtons [icon-btn="export"]',
-    "Title":"About Requisitions page...",
-    "HTMLText":"This will easily export the grid to excel.",
-    "PreviousButton":false,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom'
-  },
-  {
-    "Selector":'div.gridActionButtons [ng-if="showAddReqAction"]',
-    "Title":"About Requisitions page...",
-    "HTMLText":"Launching Add req is too easy now.",
+    "Title":"Export to Excel",
+    "HTMLText":"Select this icon to export the grid to MS Excel.",
     "PreviousButton":false,
     "NextButton":true,
     "FinishButton":false,
@@ -274,17 +264,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":'div.gridActionButtons [icon-btn="settings"]',
-    "Title":"About Requisitions page...",
-    "HTMLText":"The display columns in the grid can be picked from here in your desired order.",
-    "PreviousButton":false,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom'
-  },
-  {
-    "Selector":".gridPagination",
-    "Title":"About Requisitions page...",
-    "HTMLText":"You can easily choose 'Items per page' and  go to your 'Desired Page' from this Grid Paginator.",
+    "Title":"Personalize Columns",
+    "HTMLText":"Choose and re-order the columns of your grid from here.",
     "PreviousButton":false,
     "NextButton":true,
     "FinishButton":false,
@@ -381,8 +362,8 @@ var home_tour_steps={
   "Steps":[
     {
     "Selector":".personalizeWidgetSwitch",
-    "Title":"Welcome!!",
-    "HTMLText":"tindog is the place for your dongs to find their partners!!",
+    "Title":"Toggle Light/Dark Mode ",
+    "HTMLText":"You can now choose your preferred mode from Light and Dark modes, where all the pages in our application respects your preference every time you login.",
     "PreviousButton":false,
     "NextButton":true,
     "FinishButton":false,
@@ -390,8 +371,8 @@ var home_tour_steps={
     },
     {
     "Selector":"#icon-settings",
-    "Title":"Welcome!!",
-    "HTMLText":'You can pull preferred widgets from here, which will appear under widgets below.',
+    "Title":"Handy Widgets",
+    "HTMLText":'Select the widgets that you’d like to see on the homepage. Choose from existing widgets or customize.',
     "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
@@ -399,8 +380,8 @@ var home_tour_steps={
     },
     {
       "Selector":'.welcomeWidgetActions',
-      "Title":"Welcome!!",
-      "HTMLText":'In all these modernized grids we have enabled the context menu. Where you can right on a row and take actions specific to that row.',
+      "Title":"Filter Date Range",
+      "HTMLText":'Select the calendar icon to customize the date range for each widget. The widget remembers your choice until you change the date range.',
       "PreviousButton":true,
       "NextButton":true,
       "FinishButton":false,
@@ -408,8 +389,8 @@ var home_tour_steps={
     },
     {
       "Selector":'div.welcomeWidget div[aria-hidden="false"] button[icon-btn="arrowright"]',
-      "Title":"Welcome!!",
-      "HTMLText":'Click here to explore requisitions section',
+      "Title":"Expand to Grid ",
+      "HTMLText":'Select this icon to see the detailed view of any widget. This opens either a grid or a page that has more information.',
       "PreviousButton":true,
       "NextButton":true,
       "FinishButton":false,
@@ -417,8 +398,8 @@ var home_tour_steps={
     },
     {
       "Selector":'a.welcomeContentTabs:nth-child(2)',
-      "Title":"Welcome!!",
-      "HTMLText":'Click here to explore requisitions section',
+      "Title":"Reqs",
+      "HTMLText":'Select this link and tour the requisition section.',
       "PreviousButton":false,
       "NextButton":false,
       "FinishButton":false,
