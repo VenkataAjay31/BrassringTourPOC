@@ -221,7 +221,7 @@ var requisitions_tour_steps={
     "Selector":'#reqListGrid div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0',
     "Title":"Single Row Actions",
     "HTMLText":"Right Click anywhere on any row of the grid and a context menu appears. Various actions that you can take on that row are displayed. Also, actions are grouped into appropriate categories.",
-    "PreviousButton":false,
+    "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
     "Position" :'bottom'
