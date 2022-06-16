@@ -347,8 +347,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":"a.welcomeContentTabs:nth-child(3)",
-    "Title":"Talent Record",
-    "HTMLText":"Select a candidate’s name to view redesigned talent record and its tour. ",
+    "Title":"My Candidate Tour",
+    "HTMLText":"Click here to launch My Candidates Tour ",
     "PreviousButton":false,
     "NextButton":false,
     "FinishButton":false,
