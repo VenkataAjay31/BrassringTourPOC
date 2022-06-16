@@ -230,7 +230,7 @@ var requisitions_tour_steps={
     "Selector":'div[role="rowgroup"] div[class="ui-grid-canvas"]',
     "Title":"Multiple Row Actions",
     "HTMLText":"Select either a single row or multiple rows to see the action header dynamically popping above the grid. This header displays all the actions you can take based on your selection (grouped into appropriate categories).",
-    "PreviousButton":false,
+    "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
     "Position" :'bottom'
@@ -239,7 +239,7 @@ var requisitions_tour_steps={
     "Selector":'div.gridFilterActions [icon-btn="filter"]',
     "Title":"Saved Filters",
     "HTMLText":"Save, Manage and Apply your filters all in the same place.",
-    "PreviousButton":false,
+    "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
     "Position" :'bottom'
@@ -248,7 +248,7 @@ var requisitions_tour_steps={
     "Selector":'div.gridFilterInput [icon-btn="search"]',
     "Title":"Filter Visible Grid (Search icon)",
     "HTMLText":"Filter the grid in your view easily from this quick filter.",
-    "PreviousButton":false,
+    "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
     "Position" :'bottom'
@@ -257,7 +257,7 @@ var requisitions_tour_steps={
     "Selector":'div.gridActionButtons [icon-btn="export"]',
     "Title":"Export to Excel",
     "HTMLText":"Select this icon to export the grid to MS Excel.",
-    "PreviousButton":false,
+    "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
     "Position" :'bottom'
@@ -266,7 +266,7 @@ var requisitions_tour_steps={
     "Selector":'div.gridActionButtons [icon-btn="settings"]',
     "Title":"Personalize Columns",
     "HTMLText":"Choose and re-order the columns of your grid from here.",
-    "PreviousButton":false,
+    "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
     "Position" :'bottom'
