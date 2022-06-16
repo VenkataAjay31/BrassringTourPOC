@@ -59,10 +59,10 @@ var talent_record={
         },
         {
             "Selector":' .widgetTab.tab2',
-            "Title":"notes",
-            "HTMLText":'Edit Tabs',
-            "PreviousButton":true,
-            "NextButton":true,
+            "Title":"Click on notes tab",
+            "HTMLText":'The Notes has a host of new features. Select the type of notes you want to make.',
+            "PreviousButton":false,
+            "NextButton":false,
             "FinishButton":false,
             "Position" :'bottom'
         },
@@ -76,39 +76,39 @@ var talent_record={
             "Position" :'bottom'
         },
         {
-            "Selector":'.widgetTabsContent .widgetTab.tab1.active',
-            "Title":'profile',
+            "Selector":'.widgetTabsContent .widgetTab.tab1',
+            "Title":'Click on profile tab',
             "HTMLText":'Edit Tabs',
-            "PreviousButton":true,
-            "NextButton":true,
+            "PreviousButton":false,
+            "NextButton":false,
             "FinishButton":false,
             "Position" :'bottom'
         },
   
         {
             "Selector":'.widgetTab.tab5',
-            "Title":"submissions tab",
+            "Title":"Click on submissions tab",
             "HTMLText":'Edit Tabs',
-            "PreviousButton":true,
-            "NextButton":true,
+            "PreviousButton":false,
+            "NextButton":false,
             "FinishButton":false,
             "Position" :'bottom'
         },
         {
-            "Selector":'.widgetTab.tab6.active',
-            "Title":"sIntegrations_tab",
+            "Selector":'.widgetTab.tab6',
+            "Title":"Click on integrations tab",
             "HTMLText":'Edit Tabs',
-            "PreviousButton":true,
-            "NextButton":true,
+            "PreviousButton":false,
+            "NextButton":false,
             "FinishButton":false,
             "Position" :'bottom'
         },
         {
-            "Selector":'.widgetTab.tab7.active',
-            "Title":'ReqSpecificView_tab',
+            "Selector":'.widgetTab.tab7',
+            "Title":'Click on ReqSpecific View',
             "HTMLText":'Edit Tabs',
-            "PreviousButton":true,
-            "NextButton":true,
+            "PreviousButton":false,
+            "NextButton":false,
             "FinishButton":false,
             "Position" :'bottom'
         },
