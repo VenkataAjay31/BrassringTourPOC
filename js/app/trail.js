@@ -20,8 +20,8 @@ var my_candidates_tour_steps={
           "Selector":'.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"]:nth-child(4)',
           "Title":"Talent Record link",
           "HTMLText":'Select a candidate’s name to view redesigned talent record and its tour.',
-          "PreviousButton":true,
-          "NextButton":true,
+          "PreviousButton":false,
+          "NextButton":false,
           "FinishButton":false,
           "Position" :'bottom'
       },
@@ -169,7 +169,7 @@ var talent_record={
         },
         {
             "Selector":'.candidateNavButtons',
-            "Title":'Talent Record - Previous Candidate/Next Candidate',
+            "Title":'Previous Candidate/Next Candidate',
             "HTMLText":'Navigate among the candidates in the grid without having to go back to the grid, using the previous and next buttons.',
             "PreviousButton":true,
             "NextButton":true,
