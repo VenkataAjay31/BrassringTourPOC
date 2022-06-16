@@ -278,7 +278,8 @@ var requisitions_tour_steps={
     "PreviousButton":false,
     "NextButton":true,
     "FinishButton":false,
-    "Position" :'bottom'
+    "Position" :'bottom',
+    "IfNullSkipRemainingTour": true
   },
 /////////////////////
   {
@@ -346,8 +347,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":"a.welcomeContentTabs:nth-child(3)",
-    "Title":"About Requisitions page...",
-    "HTMLText":"you can search files according to their status",
+    "Title":"Talent Record",
+    "HTMLText":"Select a candidate’s name to view redesigned talent record and its tour. ",
     "PreviousButton":false,
     "NextButton":false,
     "FinishButton":false,
