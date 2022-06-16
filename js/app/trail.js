@@ -417,7 +417,7 @@ var home_tour_steps={
     let custom_buttons=[]
     if(tour_steps[step_number]['PreviousButton'])//check the status of the button 
       {
-        custom_buttons.push({text: 'Previous",action: tour.back})//if the button id set to true,then add the button
+        custom_buttons.push({text: "Previous",action: tour.back})//if the button id set to true,then add the button
       }
       if(tour_steps[step_number]['NextButton'])
       {
