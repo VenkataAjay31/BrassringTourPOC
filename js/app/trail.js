@@ -486,7 +486,7 @@ while (step_number<definedSteps.Steps.length)
       {
         tour.addStep({
           id: step_number,
-          title: definedSteps.Steps[step_number]['Title'],
+          title: '<h3>'+definedSteps.Steps[step_number]['Title']+'</h3>',
           text: definedSteps.Steps[step_number]['HTMLText'],
           attachTo: {
             element: definedSteps.Steps[step_number]['Selector'],
@@ -499,7 +499,7 @@ while (step_number<definedSteps.Steps.length)
       {
         tour.addStep({
           id: step_number,
-          title: definedSteps.Steps[step_number]['Title'],
+          title: '<h3>'+definedSteps.Steps[step_number]['Title']+'</h3>',
           text: definedSteps.Steps[step_number]['HTMLText'],
           attachTo: {
             element: definedSteps.Steps[step_number]['Selector'],
