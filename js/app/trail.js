@@ -40,7 +40,7 @@ var talent_record={
             "Position" :'bottom'
         },
         {
-            "Selector":'.widgetTabLink',
+            "Selector":'.widgetTabData',
             "Title":"All Tabs",
             "HTMLText":'We reimagined the entire set of tabs for a new look.',
             "PreviousButton":true,
