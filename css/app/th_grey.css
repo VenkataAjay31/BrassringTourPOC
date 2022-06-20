@@ -66,8 +66,8 @@ svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
 .shepherd-element.shepherd-has-title[data-popper-placement^=bottom]>.shepherd-arrow:before {
     background-color: #41414100 !important;
     border-bottom: 8px solid transparent;
-    border-top: 8px solid #5c5c5c;
-    border-left: 8px solid #5c5c5c;
+    border-top: 8px solid #dedede;
+    border-left: 8px solid #dedede;
     border-right: 8px solid transparent;
 }
 
@@ -83,7 +83,7 @@ shepherd-arrow:before {
     background: #313131;
     background-color: #41414100;
     border-bottom: 8px solid #656565;
-    border-top: 8px solid #5c5c5c00;
-    border-left: 8px solid #5c5c5c00;
+    border-top: 8px solid #e6e6e6;
+    border-left: 8px solid #e6e6e6;
     border-right: 8px solid #656565;
 }
