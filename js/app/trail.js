@@ -37,9 +37,9 @@ var talent_record={
             "Selector":'#x',
             "Title":"Welcome!!",
             "HTMLText":'This is redesigned talent record',
-            "PreviousButton":true,
+            "PreviousButton":false,
             "NextButton":true,
-            "FinishButton":false,
+            "FinishButton":true,
             "Position" :'bottom',
             "Trigger": false,
             "NavigateTo" : ""
@@ -92,7 +92,7 @@ var talent_record={
             "Selector":'.widgetTab.tab5',
             "Title":"submissions tab",
             "HTMLText":'Edit Tabs',
-            "PreviousButton":true,
+            "PreviousButton":false,
             "NextButton":true,
             "FinishButton":false,
             "Position" :'bottom',
@@ -147,7 +147,7 @@ var talent_record={
             "Selector":'.widgetItemCards .widgetItemCard.offerItemCard.ng-scope',
             "Title":'offer widget',
             "HTMLText":'Edit Tabs',
-            "PreviousButton":true,
+            "PreviousButton":false,
             "NextButton":true,
             "FinishButton":false,
             "Position" :'bottom',
@@ -158,7 +158,7 @@ var talent_record={
           "Selector":'button[icon-btn="flow"].icon-btn.icon-small',
           "Title":'flow',
           "HTMLText":'Edit Tabs',
-          "PreviousButton":true,
+          "PreviousButton":false,
           "NextButton":true,
           "FinishButton":false,
           "Position" :'bottom',
@@ -616,7 +616,7 @@ while (step_number<definedSteps.Steps.length)
                 if(definedSteps.NextTour=="TalentRecordTour")
                 {
                   var interval = setInterval(function () {
-                    if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
+                    if (document.querySelector('.widgetTabData')) {
                         clearInterval(interval);
                         TalentRecordTour.start();
                     }
