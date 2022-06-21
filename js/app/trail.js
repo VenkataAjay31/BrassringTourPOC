@@ -19,8 +19,8 @@ var my_candidates_tour_steps={
       },
       {
           "Selector":'.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"]:nth-child(4)',
-          "Title":"Welcome!!",
-          "HTMLText":'Click on the talent record link to get redesigned talent record',
+          "Title":"Talent Record link",
+          "HTMLText":"Select a candidate's name to view redesigned talent record and its tour.",
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":false,
@@ -45,9 +45,9 @@ var talent_record={
             "NavigateTo" : ""
         },
         {
-            "Selector":'.widgetTabLink',
-            "Title":"Welcome!!",
-            "HTMLText":'Edit Tabs',
+            "Selector":'.widgetTabData',
+            "Title":"All Tabs",
+            "HTMLText":'We reimagined the entire set of tabs for a new look.',
             "PreviousButton":true,
             "NextButton":true,
             "FinishButton":false,
@@ -68,8 +68,8 @@ var talent_record={
         },
         {
             "Selector":' .widgetTab.tab2',
-            "Title":"notes",
-            "HTMLText":'Edit Tabs',
+            "Title":"Click on notes tab",
+            "HTMLText":'The Notes has a host of new features. Select the type of notes you want to make.',
             "PreviousButton":false,
             "NextButton":false,
             "FinishButton":false,
@@ -80,7 +80,7 @@ var talent_record={
         {
             "Selector":'.collabAddNote.ng-scope',
             "Title":"Collaborative_notes",
-            "HTMLText":'Edit Tabs',
+            "HTMLText":'The Notes has a host of new features. Select the type of notes you want to make.',
             "PreviousButton":true,
             "NextButton":true,
             "FinishButton":false,
@@ -88,18 +88,6 @@ var talent_record={
             "Trigger": false,
             "NavigateTo" : ""
         },
-        {
-            "Selector":'.widgetTabsContent .widgetTab.tab1.active',
-            "Title":'profile',
-            "HTMLText":'Edit Tabs',
-            "PreviousButton":true,
-            "NextButton":true,
-            "FinishButton":false,
-            "Position" :'bottom',
-            "Trigger": false,
-            "NavigateTo" : ""
-        },
-  
         {
             "Selector":'.widgetTab.tab5',
             "Title":"submissions tab",
@@ -124,7 +112,7 @@ var talent_record={
         },
         {
             "Selector":'.widgetTab.tab7',
-            "Title":'ReqSpecificView_tab',
+            "Title":'click on ReqSpecificView_tab',
             "HTMLText":'Edit Tabs',
             "PreviousButton":false,
             "NextButton":false,
@@ -190,8 +178,8 @@ var talent_record={
         },
         {
             "Selector":'.candidateNavButtons',
-            "Title":'previous_candidate and next_cadidate',
-            "HTMLText":'Edit Tabs',
+            "Title":'Talent Record - Previous Candidate/Next Candidate',
+            "HTMLText":'Navigate among the candidates in the grid without having to go back to the grid, using the previous and next buttons.',
             "PreviousButton":true,
             "NextButton":false,
             "FinishButton":true,
@@ -226,8 +214,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":".reqStatusToggle.ng-scope",
-    "Title":"About Requisitions page...",
-    "HTMLText":"You can choose the desired req status all on the same page",
+    "Title":"Req Status.",
+    "HTMLText":"Choose All Statuses or a specific status to view the Reqs in that status and then toggle between All Reqs and My Reqs below.",
     "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
@@ -237,8 +225,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":"#gridStatusFilter-button",
-    "Title":"About Requisitions page...",
-    "HTMLText":"Here you can choose 'All Reqs' or 'My Reqs'. This will be applied in conjunction with the Req Status you choose above.",
+    "Title":"All Vs My",
+    "HTMLText":'Here you can choose "All Reqs" or "My Reqs". This is applied in conjunction with the Req Status you choose above.',
     "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
@@ -248,8 +236,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":'#reqListGrid div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0',
-    "Title":"About Requisitions page...",
-    "HTMLText":"Click anywhere on your chosen row and the context menu will appear, with different actions that you can take on that row. Also the actions are now grouped as per the behavior. ",
+    "Title":"Single Row Actions",
+    "HTMLText":'Right Click anywhere on any row of the grid and a context menu appears. Various actions that you can take on that row are displayed. Also, actions are grouped into appropriate categories.',
     "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
@@ -259,8 +247,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":'#reqListGrid div[role="grid"]:nth-child(1) .ui-grid-canvas .ui-grid-row.row-0',
-    "Title":"About Requisitions page...",
-    "HTMLText":"Choose the rows from their respective check boxes and you will see the action header(with grouped actions) dynamically popping above the grid.",
+    "Title":"Multiple Row Actions",
+    "HTMLText":"Select either a single row or multiple rows to see the action header dynamically popping above the grid. This header displays all the actions you can take based on your selection (grouped into appropriate categories).",
     "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
@@ -270,7 +258,7 @@ var requisitions_tour_steps={
   },
   {
     "Selector":'div.gridFilterActions [icon-btn="filter"]',
-    "Title":"About Requisitions page...",
+    "Title":"Saved Filters",
     "HTMLText":"Save, Manage and Apply your filters all in the same place.",
     "PreviousButton":true,
     "NextButton":true,
@@ -281,7 +269,7 @@ var requisitions_tour_steps={
   },
   {
     "Selector":'div.gridFilterInput [icon-btn="search"]',
-    "Title":"About Requisitions page...",
+    "Title":"Filter Visible Grid (Search icon)",
     "HTMLText":"Filter the grid in your view easily from this quick filter.",
     "PreviousButton":true,
     "NextButton":true,
@@ -292,8 +280,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":'div.gridActionButtons [icon-btn="export"]',
-    "Title":"About Requisitions page...",
-    "HTMLText":"This will easily export the grid to excel.",
+    "Title":"Export to Excel",
+    "HTMLText":"Select this icon to export the grid to MS Excel.",
     "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
@@ -303,7 +291,7 @@ var requisitions_tour_steps={
   },
   {
     "Selector":'div.gridActionButtons [ng-if="showAddReqAction"]',
-    "Title":"About Requisitions page...",
+    "Title":"jbwhfb",
     "HTMLText":"Launching Add req is too easy now.",
     "PreviousButton":true,
     "NextButton":true,
@@ -314,30 +302,8 @@ var requisitions_tour_steps={
   },
   {
     "Selector":'div.gridActionButtons [icon-btn="settings"]',
-    "Title":"About Requisitions page...",
-    "HTMLText":"The display columns in the grid can be picked from here in your desired order.",
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-  {
-    "Selector":".gridPagination",
-    "Title":"About Requisitions page...",
-    "HTMLText":"You can easily choose 'Items per page' and  go to your 'Desired Page' from this Grid Paginator.",
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-  {
-    "Selector":'div[id="1655195476068-0-uiGrid-00WM-cell"] div[compile-html="row.entity[col.field]"]',
-    "Title":"About Requisitions page...",
-    "HTMLText":"you can search files according to their status",
+    "Title":"Personalize Columns",
+    "HTMLText":"Choose and re-order the columns of your grid from here.",
     "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
@@ -443,8 +409,8 @@ var home_tour_steps={
   "Steps":[
     {
     "Selector":".personalizeWidgetSwitch",
-    "Title":"Welcome!!",
-    "HTMLText":"tindog is the place for your dongs to find their partners!!",
+    "Title":"Toggle Light/Dark Mode",
+    "HTMLText":"You can now choose your preferred mode from Light and Dark modes, where all the pages in our application respects your preference every time you login.",
     "PreviousButton":false,
     "NextButton":true,
     "FinishButton":false,
@@ -454,8 +420,8 @@ var home_tour_steps={
     },
     {
     "Selector":"#icon-settings",
-    "Title":"Welcome!!",
-    "HTMLText":'You can pull preferred widgets from here, which will appear under widgets below.',
+    "Title":"Handy Widgets",
+    "HTMLText":'Select the widgets that you’d like to see on the homepage. Choose from existing widgets or customize.',
     "PreviousButton":true,
     "NextButton":true,
     "FinishButton":false,
@@ -465,8 +431,8 @@ var home_tour_steps={
     },
     {
       "Selector":'.welcomeWidgetActions',
-      "Title":"Welcome!!",
-      "HTMLText":'In all these modernized grids we have enabled the context menu. Where you can right on a row and take actions specific to that row.',
+      "Title":"Filter Date Range",
+      "HTMLText":'Select the calendar icon to customize the date range for each widget. The widget remembers your choice until you change the date range.',
       "PreviousButton":true,
       "NextButton":true,
       "FinishButton":false,
@@ -476,8 +442,8 @@ var home_tour_steps={
     },
     {
       "Selector":'div.welcomeWidget div[aria-hidden="false"] button[icon-btn="arrowright"]',
-      "Title":"Welcome!!",
-      "HTMLText":'Click here to explore requisitions section',
+      "Title":"Expand to Grid",
+      "HTMLText":'Select this icon to see the detailed view of any widget. This opens either a grid or a page that has more information.',
       "PreviousButton":true,
       "NextButton":true,
       "FinishButton":false,
@@ -487,8 +453,8 @@ var home_tour_steps={
     },
     {
       "Selector":'a.welcomeContentTabs:nth-child(2)',
-      "Title":"Welcome!!",
-      "HTMLText":'Click here to explore requisitions section',
+      "Title":"Reqs",
+      "HTMLText":'Select this link and tour the requisition section.',
       "PreviousButton":false,
       "NextButton":false,
       "FinishButton":false,
@@ -575,10 +541,9 @@ while (step_number<definedSteps.Steps.length)
       //adding the step
       if(definedSteps.Steps[step_number]['Trigger']==false)
       {
-        console.log('entered non trigger block');
         tour.addStep({
           id: step_number,
-          title: definedSteps.Steps[step_number]['Title'],
+          title: '<h3>'+definedSteps.Steps[step_number]['Title']+'</h3>',
           text: definedSteps.Steps[step_number]['HTMLText'],
           attachTo: {
             element: definedSteps.Steps[step_number]['Selector'],
@@ -594,7 +559,6 @@ while (step_number<definedSteps.Steps.length)
         {
           next_selector=definedSteps.Steps[step_number+1]['Selector'];
         }
-        console.log('entered trigger block');
         let navigate=definedSteps.Steps[step_number]['NavigateTo'];
         tour.addStep({
           id: step_number,
@@ -610,31 +574,23 @@ while (step_number<definedSteps.Steps.length)
             document
               .querySelectorAll(check_selector)
               .forEach(b => b.addEventListener("click", function(){
-                console.log('entered event block');
                 if(navigate=="NextStep")//checking if the trigger is for nextstep
                 {
-                  console.log('entered if block');
-                  console.log(step_number)
-                  console.log(definedSteps.Steps.length-1)
                   var interval = setInterval(function () {
                     if (document.querySelector(next_selector)) {
                         clearInterval(interval);
-                        console.log('entered interval');
                         tour.next();
                     }
                 }, 100);
                 }
                 else//if the trigger is for nexttour
                 {
-                  console.log('entered else block');
                   tour.complete();
                   if(definedSteps.NextTour=="RequisitionsTour")
                   {
-                    console.log('entered if in else block');
                     var interval = setInterval(function () {
                       if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
                           clearInterval(interval);
-                          console.log('entered interval');
                           RequisitionsTour.start();
                       }
                   }, 100);
