@@ -338,6 +338,19 @@ var requisitions_tour_steps={
     "NavigateTo" : ""
   },
 /////////////////////
+   {
+    "Selector":'.candcnt_total.candidateCount:nth-child(1)',
+    "Title":"Total Link",
+    "HTMLText":"Click here to launch candidates inside the req",
+    "PreviousButton":true,
+    "NextButton":true,
+    "FinishButton":false,
+    "Position" :'bottom',
+    "CanClickTarget": true,
+    "Trigger": true,
+    "NavigateTo" : "NextStep"
+  },
+
   {
     "Selector":'div.gridActionButtons [icon-btn="flow"]',
     "Title":"About Requisitions page...",
