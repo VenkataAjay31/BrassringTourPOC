@@ -18,7 +18,7 @@ var my_candidates_tour_steps={
           "NavigateTo" : ""  
       },
       {
-          "Selector":'.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"]:nth-child(4)',
+          "Selector":'.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"]:nth-child(4) .trlink.tooltip.candname',
           "Title":"Talent Record link",
           "HTMLText":"Select a candidate's name to view redesigned talent record and its tour.",
           "PreviousButton":false,
