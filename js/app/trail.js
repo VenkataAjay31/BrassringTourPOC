@@ -278,7 +278,19 @@ var requisitions_tour_steps={
     "NavigateTo" : ""
   },
   {
-    "Selector":'div.gridFilterActions [icon-btn="filter"]',
+    "Selector":'div.gridFilterActions [icon-btn="filter"]:not(.ng-hide)',
+    "Title":"Saved Filters",
+    "HTMLText":"Save, Manage and Apply your filters all in the same place.",
+    "PreviousButton":true,
+    "NextButton":true,
+    "FinishButton":false,
+    "Position" :'bottom',
+    "CanClickTarget": true,
+    "Trigger": false,
+    "NavigateTo" : ""
+  },
+  {
+    "Selector":'div.gridFilterButtonHeader',
     "Title":"Saved Filters",
     "HTMLText":"Save, Manage and Apply your filters all in the same place.",
     "PreviousButton":true,
@@ -564,6 +576,20 @@ let MyCandidatesTour = createTour(my_candidates_tour_steps)
 let TotalLinkTour=createTour(total_link_tour_steps)
 let TalentRecordTour = createTour(talent_record)
 
+let active_tour=HomeTour;
+
+//////////////////////////////////////
+document.onkeydown = function(evt) {
+  evt = evt || window.event;
+  if (evt.keyCode == 27) {
+      console.log('Esc key pressed.');
+      if (active_tour.isActive())
+      {
+        active_tour.complete();
+      }
+      active_tour=HomeTour;
+  }
+};
 //////////////////////////creating tour objects/////////////////////////////////
 
 function createTour(steps)
@@ -649,6 +675,7 @@ while (step_number<definedSteps.Steps.length)
                     var interval = setInterval(function () {
                       if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
                           clearInterval(interval);
+                          active_tour=RequisitionsTour;
                           RequisitionsTour.start();
                       }
                   }, 100);
@@ -658,6 +685,7 @@ while (step_number<definedSteps.Steps.length)
                   var interval = setInterval(function () {
                     if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
                         clearInterval(interval);
+                        active_tour=TotalLinkTour;
                         TotalLinkTour.start();
                     }
                 }, 100);
@@ -667,6 +695,7 @@ while (step_number<definedSteps.Steps.length)
                   var interval = setInterval(function () {
                     if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
                         clearInterval(interval);
+                        active_tour=MyCandidatesTour;
                         MyCandidatesTour.start();
                     }
                 }, 100);
@@ -676,6 +705,7 @@ while (step_number<definedSteps.Steps.length)
                   var interval = setInterval(function () {
                     if (document.querySelector('.widgetTabData')) {
                         clearInterval(interval);
+                        active_tour=TalentRecordTour;
                         TalentRecordTour.start();
                     }
                 }, 100);
