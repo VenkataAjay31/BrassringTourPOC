@@ -532,12 +532,27 @@ var home_tour_steps={
 
 //////////////customizing the buttons according to the steps/////////////////
 
-  function builtbuttons(tour,tour_steps,step_number)
+   function builtbuttons(tour,tour_steps,step_number)
   {
     let custom_buttons=[]
     if(tour_steps[step_number]['PreviousButton'])//check the status of the button 
       {
-        custom_buttons.push({text: 'Previous',action: tour.back})//if the button id set to true,then add the button
+        custom_buttons.push({text: 'Previous',action()
+        { /////check if the next element is present
+          if((document.querySelector(tour_steps[step_number-1]['Selector']))!=null)
+          {
+            tour.back();
+          }
+          else// if the element is not found, the step is removed 
+          {
+            let i=step_number-1;
+            while ((document.querySelector(tour_steps[i]['Selector']))==null)
+            {
+              i--;
+            }
+            tour.show(i);
+          }
+        }})//if the button id set to true,then add the button
       }
       if(tour_steps[step_number]['NextButton'])
       {
@@ -552,10 +567,9 @@ var home_tour_steps={
             let i=step_number+1;
             while ((document.querySelector(tour_steps[i]['Selector']))==null)
             {
-              tour.removeStep(i);
               i++;
             }
-            tour.next()
+            tour.show(i);
           }
         }})
       }
@@ -566,7 +580,6 @@ var home_tour_steps={
   
       return custom_buttons;
   }
-
 
 /////////////////////initializing tour objects///////////////////////////
 
