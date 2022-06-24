@@ -33,7 +33,7 @@ var my_candidates_tour_steps={
     ],
     NextTour: "TalentRecordTour"
 }
-var talent_record={
+var talent_record_tour_steps={
     "Steps":[
         {
             "Selector":'#x',
@@ -99,7 +99,7 @@ var talent_record={
             "Selector":'.widgetTab.tab5',
             "Title":"submissions tab",
             "HTMLText":'Edit Tabs',
-            "PreviousButton":false,
+            "PreviousButton":true,
             "NextButton":true,
             "FinishButton":false,
             "Position" :'bottom',
@@ -159,7 +159,7 @@ var talent_record={
             "Selector":'.widgetItemCards .widgetItemCard.offerItemCard.ng-scope',
             "Title":'offer widget',
             "HTMLText":'Edit Tabs',
-            "PreviousButton":false,
+            "PreviousButton":true,
             "NextButton":true,
             "FinishButton":false,
             "Position" :'bottom',
@@ -171,7 +171,7 @@ var talent_record={
           "Selector":'button[icon-btn="flow"].icon-btn.icon-small',
           "Title":'flow',
           "HTMLText":'Edit Tabs',
-          "PreviousButton":false,
+          "PreviousButton":true,
           "NextButton":true,
           "FinishButton":false,
           "Position" :'bottom',
@@ -280,17 +280,17 @@ var requisitions_tour_steps={
   {
     "Selector":'div.gridFilterActions [icon-btn="filter"]:not(.ng-hide)',
     "Title":"Saved Filters",
-    "HTMLText":"Save, Manage and Apply your filters all in the same place.",
-    "PreviousButton":true,
-    "NextButton":true,
+    "HTMLText":"Click to Save, Manage and Apply your filters all in the same place.",
+    "PreviousButton":false,
+    "NextButton":false,
     "FinishButton":false,
     "Position" :'bottom',
     "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
+    "Trigger": true,
+    "NavigateTo" : "NextStep"
   },
   {
-    "Selector":'div.gridFilterButtonHeader',
+    "Selector":'.manageFilters.ng-scope',
     "Title":"Saved Filters",
     "HTMLText":"Save, Manage and Apply your filters all in the same place.",
     "PreviousButton":true,
@@ -532,7 +532,7 @@ var home_tour_steps={
 
 //////////////customizing the buttons according to the steps/////////////////
 
-   function builtbuttons(tour,tour_steps,step_number)
+  function builtbuttons(tour,tour_steps,step_number)
   {
     let custom_buttons=[]
     if(tour_steps[step_number]['PreviousButton'])//check the status of the button 
@@ -543,7 +543,7 @@ var home_tour_steps={
           {
             tour.back();
           }
-          else// if the element is not found, the step is removed 
+          else// if the element is not found, the step is skipped 
           {
             let i=step_number-1;
             while ((document.querySelector(tour_steps[i]['Selector']))==null)
@@ -562,7 +562,7 @@ var home_tour_steps={
           {
             tour.next();
           }
-          else// if the element is not found, the step is removed 
+          else// if the element is not found, the step is skipped
           {
             let i=step_number+1;
             while ((document.querySelector(tour_steps[i]['Selector']))==null)
@@ -581,28 +581,78 @@ var home_tour_steps={
       return custom_buttons;
   }
 
+
 /////////////////////initializing tour objects///////////////////////////
 
 let HomeTour = createTour(home_tour_steps);
 let RequisitionsTour = createTour(requisitions_tour_steps);
 let MyCandidatesTour = createTour(my_candidates_tour_steps)
 let TotalLinkTour=createTour(total_link_tour_steps)
-let TalentRecordTour = createTour(talent_record)
+let TalentRecordTour = createTour(talent_record_tour_steps)
 
 let active_tour=HomeTour;
+let active_tour_steps=home_tour_steps;
+/////////////////key down events/////////////////////
 
-//////////////////////////////////////
 document.onkeydown = function(evt) {
   evt = evt || window.event;
   if (evt.keyCode == 27) {
-      console.log('Esc key pressed.');
-      if (active_tour.isActive())
-      {
-        active_tour.complete();
-      }
-      active_tour=HomeTour;
+    console.log('Esc key pressed.');
+    if (active_tour.isActive())
+    {
+      active_tour.complete();
+    }
+    active_tour=HomeTour;
+    active_tour_steps=home_tour_steps;
   }
+  if (evt.keyCode == 39) {
+      console.log('right arrow is pressed!!!');
+      console.log(Shepherd.activeTour.steps.indexOf(Shepherd.activeTour.currentStep));
+      let i=Shepherd.activeTour.steps.indexOf(Shepherd.activeTour.currentStep);// getting the current step index
+      if((document.querySelector(active_tour_steps.Steps[i]['Selector']))!=null)
+      {
+        console.log(active_tour_steps.Steps[i]['Title'])
+        console.log('going to this step')
+        active_tour.show(i);
+      }
+      else// if the element is not found, the step is skipped
+      {
+        while ((document.querySelector(active_tour_steps.Steps[i]['Selector']))==null)
+        {
+          console.log(active_tour_steps.Steps[i]['Title'])
+          console.log('skipping this step')
+          i++;
+        }
+        active_tour.show(i);
+      }
+  }
+  if (evt.keyCode == 37) {
+    console.log('left arrow is pressed!!!');
+    console.log(Shepherd.activeTour.steps.indexOf(Shepherd.activeTour.currentStep));
+    let i=Shepherd.activeTour.steps.indexOf(Shepherd.activeTour.currentStep);// getting the current step index
+    if((document.querySelector(active_tour_steps.Steps[i]['Selector']))!=null)
+    {
+      console.log(active_tour_steps.Steps[i]['Title'])
+      console.log('going to this step')
+      active_tour.show(i);
+    }
+    else// if the element is not found, the step is skipped
+    {
+      while ((document.querySelector(active_tour_steps.Steps[i]['Selector']))==null)
+      {
+        console.log(active_tour_steps.Steps[i]['Title'])
+        console.log('skipping this step')
+        i--;
+      }
+      active_tour.show(i);
+    }
+}
 };
+
+///////////////////////////////
+
+
+
 //////////////////////////creating tour objects/////////////////////////////////
 
 function createTour(steps)
@@ -682,6 +732,8 @@ while (step_number<definedSteps.Steps.length)
                 }
                 else//if the trigger is for nexttour
                 {
+                  console.log('getting the current step')
+                  console.log(Shepherd.activeTour.steps.indexOf(Shepherd.activeTour.currentStep));
                   tour.complete();
                   if(definedSteps.NextTour=="RequisitionsTour")
                   {
@@ -689,6 +741,7 @@ while (step_number<definedSteps.Steps.length)
                       if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
                           clearInterval(interval);
                           active_tour=RequisitionsTour;
+                          active_tour_steps=requisitions_tour_steps;
                           RequisitionsTour.start();
                       }
                   }, 100);
@@ -699,6 +752,7 @@ while (step_number<definedSteps.Steps.length)
                     if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
                         clearInterval(interval);
                         active_tour=TotalLinkTour;
+                        active_tour_steps=total_link_tour_steps;
                         TotalLinkTour.start();
                     }
                 }, 100);
@@ -706,9 +760,10 @@ while (step_number<definedSteps.Steps.length)
                 if(definedSteps.NextTour=="MyCandidatesTour")
                 {
                   var interval = setInterval(function () {
-                    if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
+                    if ($('.pageHeaderTitle.ng-scope:contains("My Candidates")')) {
                         clearInterval(interval);
                         active_tour=MyCandidatesTour;
+                        active_tour_steps=my_candidates_tour_steps;
                         MyCandidatesTour.start();
                     }
                 }, 100);
@@ -719,6 +774,7 @@ while (step_number<definedSteps.Steps.length)
                     if (document.querySelector('.widgetTabData')) {
                         clearInterval(interval);
                         active_tour=TalentRecordTour;
+                        active_tour_steps=talent_record_tour_steps;
                         TalentRecordTour.start();
                     }
                 }, 100);
