@@ -19,7 +19,7 @@
 
 svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
 {
-    opacity: 0.3 !important;
+    opacity: 0.6 !important;
     transition: none !important;
-    backdrop-filter: blur(6.5px) !important;
+    backdrop-filter: blur(30px) !important;
 }
