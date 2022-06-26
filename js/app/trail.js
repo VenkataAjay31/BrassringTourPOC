@@ -4,12 +4,383 @@ $(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"Hom
 
 //you can do your changes in the steps below 
 
+//////////////Home_tour_steps///////////
+
+var home_tour_steps={
+    "Steps":[
+      {
+      "Selector":".personalizeWidgetSwitch",
+      "Title":"Toggle Light/Dark Mode",
+      "HTMLText":"You can now choose your preferred mode from Light and Dark modes, where all the pages in our application respects your preference every time you login.",
+      "PreviousButton":false,
+      "NextButton":true,
+      "FinishButton":false,
+      "Position" :'bottom',
+      "CanClickTarget": true,
+      "Trigger": false,
+      "Question": false,
+      "NavigateTo" : ""
+      },
+      {
+      "Selector":"#icon-settings",
+      "Title":"Handy Widgets",
+      "HTMLText":'Select the widgets that you’d like to see on the homepage. Choose from existing widgets or customize.',
+      "PreviousButton":true,
+      "NextButton":true,
+      "FinishButton":false,
+      "Position" :'bottom',
+      "CanClickTarget": true,
+      "Trigger": false,
+      "Question": false,
+      "NavigateTo" : ""
+      },
+      {
+        "Selector":'.welcomeWidgetActions',
+        "Title":"Filter Date Range",
+        "HTMLText":'Select the calendar icon to customize the date range for each widget. The widget remembers your choice until you change the date range.',
+        "PreviousButton":true,
+        "NextButton":true,
+        "FinishButton":false,
+        "Position" :'bottom',
+        "CanClickTarget": true,
+        "Trigger": false,
+        "Question": false,
+        "NavigateTo" : ""
+      },
+      {
+        "Selector":'div.welcomeWidget div[aria-hidden="false"] button[icon-btn="arrowright"]',
+        "Title":"Expand to Grid",
+        "HTMLText":'Select this icon to see the detailed view of any widget. This opens either a grid or a page that has more information.',
+        "PreviousButton":true,
+        "NextButton":true,
+        "FinishButton":false,
+        "Position" :'bottom',
+        "CanClickTarget": true,
+        "Trigger": false,
+        "Question": false,
+        "NavigateTo" : ""
+      },
+      {
+        "Selector":false,
+        "Title":"End of the tour",
+        "HTMLText":'Do you want to go to the next tour',
+        "PreviousButton":false,
+        "NextButton":false,
+        "FinishButton":true,
+        "Position" :'bottom',
+        "CanClickTarget": true,
+        "Question": true, ////// dialogue box pops up when the current tour ends and askes whether you want to go to the next tour
+        "Trigger": false,
+        "NavigateTo" : ""
+      },
+      {
+        "Selector":'a.welcomeContentTabs:nth-child(2)',
+        "Title":"Reqs",
+        "HTMLText":'Select this link and tour the requisition section.',
+        "PreviousButton":false,
+        "NextButton":false,
+        "FinishButton":false,
+        "Position" :'bottom',
+        "CanClickTarget": true,
+        "Trigger": true,
+        "Question": false,
+        "NavigateTo" : "NextTour"
+      }
+    ],
+    NextTour: 'RequisitionsTour'
+    }
+
+/////////////// Requsitions_tour_steps//////////
+
+    var requisitions_tour_steps={
+        "Steps":[
+        {
+          "Selector":"#x",
+          "Title":"This is the requisitions page.",
+          "HTMLText":"Now lets do some exploration of this page ",
+          "PreviousButton":false,
+          "NextButton":true,
+          "FinishButton":true,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "Question": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":".reqStatusToggle.ng-scope",
+          "Title":"Req Status.",
+          "HTMLText":"Choose All Statuses or a specific status to view the Reqs in that status and then toggle between All Reqs and My Reqs below.",
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "Question": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":"#gridStatusFilter-button",
+          "Title":"All Vs My",
+          "HTMLText":'Here you can choose "All Reqs" or "My Reqs". This is applied in conjunction with the Req Status you choose above.',
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "Question": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'#reqListGrid div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0',
+          "Title":"Single Row Actions",
+          "HTMLText":'Right Click anywhere on any row of the grid and a context menu appears. Various actions that you can take on that row are displayed. Also, actions are grouped into appropriate categories.',
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "Question": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'#reqListGrid div[role="grid"]:nth-child(1) .ui-grid-canvas .ui-grid-row.row-0',
+          "Title":"Multiple Row Actions",
+          "HTMLText":"Select either a single row or multiple rows to see the action header dynamically popping above the grid. This header displays all the actions you can take based on your selection (grouped into appropriate categories).",
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "Question": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'div.gridFilterActions [icon-btn="filter"]:not(.ng-hide)',
+          "Title":"Saved Filters",
+          "HTMLText":"Click to Save, Manage and Apply your filters all in the same place.",
+          "PreviousButton":false,
+          "NextButton":false,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : "NextStep"
+        },
+        {
+          "Selector":'.manageFilters.ng-scope',
+          "Title":"Saved Filters",
+          "HTMLText":"Save, Manage and Apply your filters all in the same place.",
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'div.gridFilterInput [icon-btn="search"]',
+          "Title":"Filter Visible Grid (Search icon)",
+          "HTMLText":"Filter the grid in your view easily from this quick filter.",
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'div.gridActionButtons [icon-btn="export"]',
+          "Title":"Export to Excel",
+          "HTMLText":"Select this icon to export the grid to MS Excel.",
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'div.gridActionButtons [ng-if="showAddReqAction"]',
+          "Title":"jbwhfb",
+          "HTMLText":"Launching Add req is too easy now.",
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'div.gridActionButtons [icon-btn="settings"]',
+          "Title":"Personalize Columns",
+          "HTMLText":"Choose and re-order the columns of your grid from here.",
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "NavigateTo" : ""
+        },
+      /////////////////////
+         {
+          "Selector":'.candcnt_total.candidateCount:nth-child(1)',
+          "Title":"Total Link",
+          "HTMLText":"Click here to launch candidates inside the req",
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : "NextStep"
+        },
+      
+        {
+          "Selector":'div.gridActionButtons [icon-btn="flow"]',
+          "Title":"Flow_icon",
+          "HTMLText":"you can know the flow by clicking on it",
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'div.widgetStatusCircleContainer [ng-click="selectWidgetStatus(status)"]',
+          "Title":"Flow_bubble",
+          "HTMLText":"press that bubble to know more",
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'div.kanbanStepButtons button[icon-btn="angleright"].icon-btn.icon-small',
+          "Title":"right arrow",
+          "HTMLText":"you can expand",
+          "PreviousButton":false,
+          "NextButton":false,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : "NextStep"
+        },
+        {
+          "Selector":'div.kanbanStepButtons button[icon-btn="angleleft"].icon-btn.icon-small',
+          "Title":"left arrow",
+          "HTMLText":"you can compress",
+          "PreviousButton":false,
+          "NextButton":false,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : "NextStep"
+        },
+        
+        // {
+        //   "Selector":'div[id="1655103910080-0-uiGrid-00HG-cell"]',
+        //   "Title":"About Requisitions page...",
+        //   "HTMLText":"you can search files according to their status",
+        //   "PreviousButton":true,
+        //   "NextButton":true,
+        //   "FinishButton":false,
+        //   "Position" :'bottom',
+        //   "CanClickTarget": true,
+        //   "Trigger": false,
+        //   "NavigateTo" : ""
+        // },
+        // {
+        //   "Selector":'div.gridActionButtons [icon-btn="card"]',
+        //   "Title":"About Requisitions page...",
+        //   "HTMLText":"you can search files according to their status",
+        //   "PreviousButton":true,
+        //   "NextButton":true,
+        //   "FinishButton":false,
+        //   "Position" :'bottom',
+        //   "CanClickTarget": true,
+        //   "Trigger": false,
+        //   "NavigateTo" : ""
+        // },
+        // {
+        //   "Selector":'div.kanbanStepButtons button[icon-btn="angleright"]',
+        //   "Title":"About Requisitions page...",
+        //   "HTMLText":"you can search files according to their status",
+        //   "PreviousButton":true,
+        //   "NextButton":true,
+        //   "FinishButton":false,
+        //   "Position" :'bottom',
+        //   "CanClickTarget": true,
+        //   "Trigger": false,
+        //   "NavigateTo" : ""
+        // },
+        // {
+        //   "Selector":'div.kanbanStepButtons button[icon-btn="angleleft"]',
+        //   "Title":"About Requisitions page...",
+        //   "HTMLText":"you can search files according to their status",
+        //   "PreviousButton":true,
+        //   "NextButton":true,
+        //   "FinishButton":false,
+        //   "Position" :'bottom',
+        //   "CanClickTarget": true,
+        //   "Trigger": false,
+        //   "NavigateTo" : ""
+        // },
+        {
+            "Selector":false,
+            "Title":"end of req tour",
+            "HTMLText":"requisition tour has come to end, do you want to continue?",
+            "PreviousButton":false,
+            "NextButton":false,
+            "FinishButton":true,
+            "Position" :'bottom',
+            "CanClickTarget": true,
+            "Trigger": false,
+            "Question": true,  ////// dialogue box pops up when the current tour ends and askes whether you want to go to the next tour
+            "NavigateTo" : ""
+        },
+        {
+          "Selector":"a.welcomeContentTabs:nth-child(3)",
+          "Title":"my candidates option",
+          "HTMLText":"click here to know more about my_candidates",
+          "PreviousButton":false,
+          "NextButton":false,
+          "FinishButton":true,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "Question": false,
+          "NavigateTo" : "NextTour"
+        }
+      
+      ],
+      NextTour: "MyCandidatesTour"
+      }
+
+////////////   My_candidates_tour_steps///////////
+
 var my_candidates_tour_steps={
   "Steps":[
       {
           "Selector":"#x",
-          "Title":"About My_Candidates",
-          "HTMLText":"Do you wanna continue to explore this page?",
+          "Title":"Welcome to MY_cadidates",
+          "HTMLText":"Lets explore this page a bit more",
           "PreviousButton":false,
           "NextButton":true,
           "FinishButton":true,
@@ -24,7 +395,7 @@ var my_candidates_tour_steps={
           "HTMLText":"Select a candidate's name to view redesigned talent record and its tour.",
           "PreviousButton":false,
           "NextButton":false,
-          "FinishButton":false,
+          "FinishButton":true,
           "Position" :'bottom',
           "CanClickTarget": true,
           "Trigger": true,
@@ -33,12 +404,15 @@ var my_candidates_tour_steps={
     ],
     NextTour: "TalentRecordTour"
 }
+
+/////////////// talent_record_tour_steps///////////////////////
+
 var talent_record_tour_steps={
     "Steps":[
         {
             "Selector":'#x',
             "Title":"Welcome!!",
-            "HTMLText":'This is redesigned talent record',
+            "HTMLText":'This is redesigned talent record and lets explore this page.',
             "PreviousButton":false,
             "NextButton":true,
             "FinishButton":true,
@@ -215,333 +589,8 @@ var total_link_tour_steps={
 }
 
 
-var requisitions_tour_steps={
-  "Steps":[
-  {
-    "Selector":"#x",
-    "Title":"About Requisitions page...",
-    "HTMLText":"Do you wanna continue to explore this page?",
-    "PreviousButton":false,
-    "NextButton":true,
-    "FinishButton":true,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-  {
-    "Selector":".reqStatusToggle.ng-scope",
-    "Title":"Req Status.",
-    "HTMLText":"Choose All Statuses or a specific status to view the Reqs in that status and then toggle between All Reqs and My Reqs below.",
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-  {
-    "Selector":"#gridStatusFilter-button",
-    "Title":"All Vs My",
-    "HTMLText":'Here you can choose "All Reqs" or "My Reqs". This is applied in conjunction with the Req Status you choose above.',
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-  {
-    "Selector":'#reqListGrid div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0',
-    "Title":"Single Row Actions",
-    "HTMLText":'Right Click anywhere on any row of the grid and a context menu appears. Various actions that you can take on that row are displayed. Also, actions are grouped into appropriate categories.',
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-  {
-    "Selector":'#reqListGrid div[role="grid"]:nth-child(1) .ui-grid-canvas .ui-grid-row.row-0',
-    "Title":"Multiple Row Actions",
-    "HTMLText":"Select either a single row or multiple rows to see the action header dynamically popping above the grid. This header displays all the actions you can take based on your selection (grouped into appropriate categories).",
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-  {
-    "Selector":'div.gridFilterActions [icon-btn="filter"]:not(.ng-hide)',
-    "Title":"Saved Filters",
-    "HTMLText":"Click to Save, Manage and Apply your filters all in the same place.",
-    "PreviousButton":false,
-    "NextButton":false,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": true,
-    "NavigateTo" : "NextStep"
-  },
-  {
-    "Selector":'.manageFilters.ng-scope',
-    "Title":"Saved Filters",
-    "HTMLText":"Save, Manage and Apply your filters all in the same place.",
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-  {
-    "Selector":'div.gridFilterInput [icon-btn="search"]',
-    "Title":"Filter Visible Grid (Search icon)",
-    "HTMLText":"Filter the grid in your view easily from this quick filter.",
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-  {
-    "Selector":'div.gridActionButtons [icon-btn="export"]',
-    "Title":"Export to Excel",
-    "HTMLText":"Select this icon to export the grid to MS Excel.",
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-  {
-    "Selector":'div.gridActionButtons [ng-if="showAddReqAction"]',
-    "Title":"jbwhfb",
-    "HTMLText":"Launching Add req is too easy now.",
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-  {
-    "Selector":'div.gridActionButtons [icon-btn="settings"]',
-    "Title":"Personalize Columns",
-    "HTMLText":"Choose and re-order the columns of your grid from here.",
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-/////////////////////
-   {
-    "Selector":'.candcnt_total.candidateCount:nth-child(1)',
-    "Title":"Total Link",
-    "HTMLText":"Click here to launch candidates inside the req",
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": true,
-    "NavigateTo" : "NextStep"
-  },
 
-  {
-    "Selector":'div.gridActionButtons [icon-btn="flow"]',
-    "Title":"Flow_icon",
-    "HTMLText":"you can know the flow by clicking on it",
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-  {
-    "Selector":'div.widgetStatusCircleContainer [ng-click="selectWidgetStatus(status)"]',
-    "Title":"Flow_bubble",
-    "HTMLText":"press that bubble to know more",
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-  },
-  {
-    "Selector":'div.kanbanStepButtons button[icon-btn="angleright"].icon-btn.icon-small',
-    "Title":"right arrow",
-    "HTMLText":"you can expand",
-    "PreviousButton":false,
-    "NextButton":false,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": true,
-    "NavigateTo" : "NextStep"
-  },
-  {
-    "Selector":'div.kanbanStepButtons button[icon-btn="angleleft"].icon-btn.icon-small',
-    "Title":"left arrow",
-    "HTMLText":"you can compress",
-    "PreviousButton":false,
-    "NextButton":false,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": true,
-    "NavigateTo" : "NextStep"
-  },
-  
-  // {
-  //   "Selector":'div[id="1655103910080-0-uiGrid-00HG-cell"]',
-  //   "Title":"About Requisitions page...",
-  //   "HTMLText":"you can search files according to their status",
-  //   "PreviousButton":true,
-  //   "NextButton":true,
-  //   "FinishButton":false,
-  //   "Position" :'bottom',
-  //   "CanClickTarget": true,
-  //   "Trigger": false,
-  //   "NavigateTo" : ""
-  // },
-  // {
-  //   "Selector":'div.gridActionButtons [icon-btn="card"]',
-  //   "Title":"About Requisitions page...",
-  //   "HTMLText":"you can search files according to their status",
-  //   "PreviousButton":true,
-  //   "NextButton":true,
-  //   "FinishButton":false,
-  //   "Position" :'bottom',
-  //   "CanClickTarget": true,
-  //   "Trigger": false,
-  //   "NavigateTo" : ""
-  // },
-  // {
-  //   "Selector":'div.kanbanStepButtons button[icon-btn="angleright"]',
-  //   "Title":"About Requisitions page...",
-  //   "HTMLText":"you can search files according to their status",
-  //   "PreviousButton":true,
-  //   "NextButton":true,
-  //   "FinishButton":false,
-  //   "Position" :'bottom',
-  //   "CanClickTarget": true,
-  //   "Trigger": false,
-  //   "NavigateTo" : ""
-  // },
-  // {
-  //   "Selector":'div.kanbanStepButtons button[icon-btn="angleleft"]',
-  //   "Title":"About Requisitions page...",
-  //   "HTMLText":"you can search files according to their status",
-  //   "PreviousButton":true,
-  //   "NextButton":true,
-  //   "FinishButton":false,
-  //   "Position" :'bottom',
-  //   "CanClickTarget": true,
-  //   "Trigger": false,
-  //   "NavigateTo" : ""
-  // },
-  {
-    "Selector":"a.welcomeContentTabs:nth-child(3)",
-    "Title":"my candidates option",
-    "HTMLText":"click here to know more about my_candidates",
-    "PreviousButton":false,
-    "NextButton":false,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": true,
-    "NavigateTo" : "NextTour"
-  }
 
-],
-NextTour: "MyCandidatesTour"
-}
-
-var home_tour_steps={
-  "Steps":[
-    {
-    "Selector":".personalizeWidgetSwitch",
-    "Title":"Toggle Light/Dark Mode",
-    "HTMLText":"You can now choose your preferred mode from Light and Dark modes, where all the pages in our application respects your preference every time you login.",
-    "PreviousButton":false,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-    },
-    {
-    "Selector":"#icon-settings",
-    "Title":"Handy Widgets",
-    "HTMLText":'Select the widgets that you’d like to see on the homepage. Choose from existing widgets or customize.',
-    "PreviousButton":true,
-    "NextButton":true,
-    "FinishButton":false,
-    "Position" :'bottom',
-    "CanClickTarget": true,
-    "Trigger": false,
-    "NavigateTo" : ""
-    },
-    {
-      "Selector":'.welcomeWidgetActions',
-      "Title":"Filter Date Range",
-      "HTMLText":'Select the calendar icon to customize the date range for each widget. The widget remembers your choice until you change the date range.',
-      "PreviousButton":true,
-      "NextButton":true,
-      "FinishButton":false,
-      "Position" :'bottom',
-      "CanClickTarget": true,
-      "Trigger": false,
-      "NavigateTo" : ""
-    },
-    {
-      "Selector":'div.welcomeWidget div[aria-hidden="false"] button[icon-btn="arrowright"]',
-      "Title":"Expand to Grid",
-      "HTMLText":'Select this icon to see the detailed view of any widget. This opens either a grid or a page that has more information.',
-      "PreviousButton":true,
-      "NextButton":true,
-      "FinishButton":false,
-      "Position" :'bottom',
-      "CanClickTarget": true,
-      "Trigger": false,
-      "NavigateTo" : ""
-    },
-    {
-      "Selector":'a.welcomeContentTabs:nth-child(2)',
-      "Title":"Reqs",
-      "HTMLText":'Select this link and tour the requisition section.',
-      "PreviousButton":false,
-      "NextButton":false,
-      "FinishButton":false,
-      "Position" :'bottom',
-      "CanClickTarget": true,
-      "Trigger": true,
-      "NavigateTo" : "NextTour"
-    }
-  ],
-  NextTour: 'RequisitionsTour'
-  }
 
 //////////////customizing the buttons according to the steps/////////////////
 
@@ -552,7 +601,7 @@ var home_tour_steps={
       {
         custom_buttons.push({text: 'Previous',action()
         { /////check if the next element is present
-          if((document.querySelector(tour_steps[step_number-1]['Selector']))!=null)
+          if((document.querySelector(tour_steps[step_number-1]['Selector']))!=null )
           {
             tour.back();
           }
@@ -567,6 +616,7 @@ var home_tour_steps={
           }
         }})//if the button id set to true,then add the button
       }
+      
       if(tour_steps[step_number]['NextButton'])
       {
         custom_buttons.push({text: 'Next',action()
@@ -580,7 +630,14 @@ var home_tour_steps={
             let i=step_number+1;
             while ((document.querySelector(tour_steps[i]['Selector']))==null)
             {
-              i++;
+              if(tour_steps[i]['Question']){ ////// if the next step has a question i.e., whether to go to the next tour then this loop will be broken the the step pops up
+                break;
+              }
+              else{
+                i++;
+
+
+              }
             }
             tour.show(i);
           }
@@ -590,6 +647,13 @@ var home_tour_steps={
       {
         custom_buttons.push({text: 'Finish',action: tour.complete})
       }
+
+      if(tour_steps[step_number]['Question']) ////// if question in the tour_steps is true then an extra button will be added to the step
+      {
+        custom_buttons.push({text: 'Yes',action: tour.next})
+      }
+
+      
   
       return custom_buttons;
   }
@@ -632,9 +696,14 @@ document.onkeydown = function(evt) {
       {
         while ((document.querySelector(active_tour_steps.Steps[i]['Selector']))==null)
         {
+          if(active_tour_steps.Steps[i]['Question']) {  ////// if the next step has a question i.e., whether to go to the next tour then this loop will be broken the the step pops up
+            break;
+          }
+          else{
           console.log(active_tour_steps.Steps[i]['Title'])
           console.log('skipping this step')
           i++;
+          }
         }
         active_tour.show(i);
       }
@@ -736,13 +805,17 @@ while (step_number<definedSteps.Steps.length)
               .forEach(b => b.addEventListener("click", function(){
                 if(navigate=="NextStep")//checking if the trigger is for nextstep
                 {
+                  if(next_selector==false){  //// if the selector obj is false that means it is the step before the start of next tour                            
+                    tour.next();             //// so the step will not wait for any selector to display, it just pops up the dialouge box.
+                  }  
+                  else{
                   var interval = setInterval(function () {
                     if (document.querySelector(next_selector)) {
                         clearInterval(interval);
                         tour.next();
                     }
                 }, 100);
-                }
+                }}
                 else//if the trigger is for nexttour
                 {
                   console.log('getting the current step')
