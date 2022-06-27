@@ -344,8 +344,8 @@ var home_tour_steps={
         },
         {
           "Selector":"a.welcomeContentTabs:nth-child(3)",
-          "Title":"my candidates option",
-          "HTMLText":"click here to know more about my_candidates",
+          "Title":"My Candidates",
+          "HTMLText":"click here to tour the My Candidates Section",
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":true,
