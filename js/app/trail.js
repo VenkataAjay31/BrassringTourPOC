@@ -172,8 +172,20 @@ var home_tour_steps={
         },
         {
           "Selector":'div.gridFilterInput [icon-btn="search"]',
-          "Title":"Filter Visible Grid (Search icon)",
+          "Title":"Filter Visible Grid",
           "HTMLText":"Filter the grid in your view easily from this quick filter.",
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'div.gridActionButtons [icon-btn="settings"]',
+          "Title":"Personalize Columns",
+          "HTMLText":"Choose and re-order the columns of your grid from here.",
           "PreviousButton":true,
           "NextButton":true,
           "FinishButton":false,
@@ -203,18 +215,6 @@ var home_tour_steps={
           "FinishButton":false,
           "Position" :'bottom',
           "CanClickTarget": false,
-          "Trigger": false,
-          "NavigateTo" : ""
-        },
-        {
-          "Selector":'div.gridActionButtons [icon-btn="settings"]',
-          "Title":"Personalize Columns",
-          "HTMLText":"Choose and re-order the columns of your grid from here.",
-          "PreviousButton":true,
-          "NextButton":true,
-          "FinishButton":false,
-          "Position" :'bottom',
-          "CanClickTarget": true,
           "Trigger": false,
           "NavigateTo" : ""
         },
@@ -602,7 +602,7 @@ var talent_record_tour_steps={
         },
         {
             "Selector":'.candidateNavButtons',
-            "Title":'Talent Record - Previous Candidate/Next Candidate',
+            "Title":'Previous Candidate/Next Candidate',
             "HTMLText":'Navigate among the candidates in the grid without having to go back to the grid, using the previous and next buttons.',
             "PreviousButton":true,
             "NextButton":false,
