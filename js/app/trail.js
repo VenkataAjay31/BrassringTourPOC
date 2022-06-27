@@ -11,7 +11,7 @@ var home_tour_steps={
        {
       "Selector":"#xx",
       "Title":"Guided Tour",
-      "HTMLText":"We have redesigned the look feel of the application and have introduced major changes. Please contine the tour till the end to explore all our new features. <br/> <small>Use Escape symbor to exit the tour</small>",
+      "HTMLText":"We have redesigned the look feel of the application and there are major changes. Please contine the tour till the end to explore all our new features. <br/> <small>Use escape symbol to exit the tour at any point in time</small<br/> Escape to exit the tour and you can use arrow keys to move back and forth in the tour.
       "PreviousButton":false,
       "NextButton":true,
       "FinishButton":false,
@@ -24,8 +24,8 @@ var home_tour_steps={
        {
       "Selector":".welcomeContentTabContainer",
       "Title":"Tabbed View",
-      "HTMLText":"Each of these primary tabs are redesigned and we have tours for the redesigned tabs. <br/> Escape to exit the tour and you can use arrow keys to move back and forth in the tour.</small>",
-      "PreviousButton":false,
+      "HTMLText":"Each of these primary tabs are redesigned and we have tours for the redesigned tabs.</small>",
+      "PreviousButton":true,
       "NextButton":true,
       "FinishButton":false,
       "Position" :'bottom',
@@ -38,7 +38,7 @@ var home_tour_steps={
       "Selector":".personalizeWidgetSwitch",
       "Title":"Toggle Light/Dark Mode",
       "HTMLText":"You can now choose your preferred mode from Light and Dark modes, where all the pages in our application respects your preference every time you login.",
-      "PreviousButton":false,
+      "PreviousButton":true,
       "NextButton":true,
       "FinishButton":false,
       "Position" :'bottom',
