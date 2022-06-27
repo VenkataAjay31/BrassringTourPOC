@@ -16,6 +16,9 @@
     padding: 3px;
 }
 
+.shepherd-modal-overlay-container{
+    z-index: 9999999;
+}
 
 svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
 {
@@ -70,7 +73,6 @@ svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
     border-left: 8px solid #e6e6e6;
     border-right: 8px solid transparent;
 }
-
 
 shepherd-arrow:before {
     content: "";
