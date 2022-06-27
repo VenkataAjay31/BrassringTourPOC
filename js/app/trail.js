@@ -8,6 +8,32 @@ $(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"Hom
 
 var home_tour_steps={
     "Steps":[
+       {
+      "Selector":"#xx",
+      "Title":"Guided Tour",
+      "HTMLText":"We have redesigned the look feel of the application and have introduced major changes. Please contine the tour till the end to explore all our new features. <br/> <small>Use Escape symbor to exit the tour</small>",
+      "PreviousButton":false,
+      "NextButton":true,
+      "FinishButton":false,
+      "Position" :'bottom',
+      "CanClickTarget": true,
+      "Trigger": false,
+      "Question": false,
+      "NavigateTo" : ""
+      },       
+       {
+      "Selector":".welcomeContentTabContainer",
+      "Title":"Tabbed View",
+      "HTMLText":"Each of these primary tabs are redesigned and we have tours for the redesigned tabs. <br/> Escape to exit the tour and you can use arrow keys to move back and forth in the tour.</small>",
+      "PreviousButton":false,
+      "NextButton":true,
+      "FinishButton":false,
+      "Position" :'bottom',
+      "CanClickTarget": true,
+      "Trigger": false,
+      "Question": false,
+      "NavigateTo" : ""
+      },
       {
       "Selector":".personalizeWidgetSwitch",
       "Title":"Toggle Light/Dark Mode",
