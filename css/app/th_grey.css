@@ -45,7 +45,7 @@ svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
     transition: opacity .3s,visibility .3s;
     visibility: hidden;
     width: 100%;
-    z-index: 9999;
+    z-index: 9999999;
     border: 2px solid darkgrey;
     margin-top: 10px !important;
 }
