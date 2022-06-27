@@ -63,7 +63,7 @@ var home_tour_steps={
       {
         "Selector":false,
         "Title":"End of Home tour",
-        "HTMLText":'Do you want to go to the requisition tour?',
+        "HTMLText":'Do you want to go to the Requisition tour?',
         "PreviousButton":false,
         "NextButton":false,
         "FinishButton":true,
@@ -331,8 +331,8 @@ var home_tour_steps={
         // },
         {
             "Selector":false,
-            "Title":"end of req tour",
-            "HTMLText":"requisition tour has come to end, do you want to continue?",
+            "Title":"End of requisition tour",
+            "HTMLText":"Do you want to go to the My Candidates tour?",
             "PreviousButton":false,
             "NextButton":false,
             "FinishButton":true,
