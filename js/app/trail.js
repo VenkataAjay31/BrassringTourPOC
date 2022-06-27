@@ -234,8 +234,8 @@ var home_tour_steps={
       
         {
           "Selector":'div.gridActionButtons [icon-btn="flow"]',
-          "Title":"Flow_icon",
-          "HTMLText":"you can know the flow by clicking on it",
+          "Title":"HR status bubbles",
+          "HTMLText":"Select this icon to display a bird’s eye view of the number of candidates in each HR status",
           "PreviousButton":true,
           "NextButton":true,
           "FinishButton":false,
@@ -246,8 +246,8 @@ var home_tour_steps={
         },
         {
           "Selector":'div.widgetStatusCircleContainer [ng-click="selectWidgetStatus(status)"]',
-          "Title":"Flow_bubble",
-          "HTMLText":"press that bubble to know more",
+          "Title":"Actionable Bubble",
+          "HTMLText":"Click on a bubble to toggle its selection. Based on the selection, the candidates are filtered in or filtered out of the grid.",
           "PreviousButton":true,
           "NextButton":true,
           "FinishButton":false,
