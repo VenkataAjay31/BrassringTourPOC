@@ -196,13 +196,13 @@ var home_tour_steps={
         },
         {
           "Selector":'div.gridActionButtons [ng-if="showAddReqAction"]',
-          "Title":"jbwhfb",
+          "Title":"Add Req",
           "HTMLText":"Launching Add req is too easy now.",
           "PreviousButton":true,
           "NextButton":true,
           "FinishButton":false,
           "Position" :'bottom',
-          "CanClickTarget": true,
+          "CanClickTarget": false,
           "Trigger": false,
           "NavigateTo" : ""
         },
