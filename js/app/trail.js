@@ -513,9 +513,57 @@ var talent_record_tour_steps={
           "FinishButton":false,
           "Position" :'bottom',
           "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : "NextStep"
+        },
+        {
+          "Selector":'.personalizeWidgetContainer.personalizeColumnContainer.show',
+          "Title":'Configure Overview Card',
+          "HTMLText":'Here you can customize your cards as per your requirements.',
+          "PreviousButton":false,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": false,
           "Trigger": false,
           "NavigateTo" : ""
-      },
+        },
+        {
+          "Selector":'.personalizeColumnsLeft.grayPanel',
+          "Title":'Select Fields',
+          "HTMLText":'Here you can select your cards.',
+          "PreviousButton":false,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'top',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'.personalizeColumnsRight',
+          "Title":'Order Fields',
+          "HTMLText":'Here you can order your cards.',
+          "PreviousButton":false,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'top',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'.personalizeWidgetsContent.personalizeColumnContent.ng-scope .personalizeWidgetsFooter button.ts-btn.ts-btn-secondary',
+          "Title":'click here',
+          "HTMLText":'',
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'top',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : "NextStep"
+        },
         {
             "Selector":'.widgetItemCards .widgetItemCard.offerItemCard.ng-scope',
             "Title":'offer widget',
