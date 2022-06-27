@@ -62,8 +62,8 @@ var home_tour_steps={
       },
       {
         "Selector":false,
-        "Title":"End of the tour",
-        "HTMLText":'Do you want to go to the next tour',
+        "Title":"End of Home tour",
+        "HTMLText":'Do you want to go to the requisition tour?',
         "PreviousButton":false,
         "NextButton":false,
         "FinishButton":true,
@@ -94,19 +94,6 @@ var home_tour_steps={
 
     var requisitions_tour_steps={
         "Steps":[
-        {
-          "Selector":"#x",
-          "Title":"This is the requisitions page.",
-          "HTMLText":"Now lets do some exploration of this page ",
-          "PreviousButton":false,
-          "NextButton":true,
-          "FinishButton":true,
-          "Position" :'bottom',
-          "CanClickTarget": true,
-          "Trigger": false,
-          "Question": false,
-          "NavigateTo" : ""
-        },
         {
           "Selector":".reqStatusToggle.ng-scope",
           "Title":"Req Status.",
