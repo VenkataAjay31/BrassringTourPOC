@@ -24,7 +24,7 @@ var home_tour_steps={
        {
       "Selector":".welcomeContentTabs:nth-child(n+1)",
       "Title":"Tabbed View",
-      "HTMLText":"Each of these primary tabs are redesigned and we have tours for the redesigned tabs.</small>",
+      "HTMLText":"Most commonly used items from hamburger menu are pulled here for quick access and we have modular tours for the redesigned tabs.</small>",
       "PreviousButton":true,
       "NextButton":true,
       "FinishButton":false,
