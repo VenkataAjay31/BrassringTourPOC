@@ -16,7 +16,7 @@
     padding: 3px;
 }
 
-.shepherd-text .mainBody ul {
+.mainBody .shepherd-text ul {
     list-style-type: square !important;
     margin: 20px !important;
     padding: 0px !important;
