@@ -11,7 +11,7 @@ var home_tour_steps={
        {
       "Selector":"#xx",
       "Title":"Guided Tour",
-      "HTMLText":"We have redesigned the look feel of the application to make your life easy. Please contine the tour till the end to explore all the new designe. <br/> <ul><li>You can use escape key to exit the tour</li><li>You can use arrow keys to move back and forth in the tour.</li></ul>",
+      "HTMLText":"We have redesigned the look feel of the application to make your life easy. Please continue the tour till the end to explore all the new design. <br/> <ul><li>You can use escape key to exit the tour</li><li>You can use arrow keys to move back and forth in the tour.</li></ul>",
       "PreviousButton":false,
       "NextButton":true,
       "FinishButton":false,
