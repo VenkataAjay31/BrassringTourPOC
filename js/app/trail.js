@@ -22,7 +22,7 @@ var home_tour_steps={
       "NavigateTo" : ""
       },       
        {
-      "Selector":".welcomeContentTabContainer",
+      "Selector":".welcomeContentTabs:nth-child(n)",
       "Title":"Tabbed View",
       "HTMLText":"Each of these primary tabs are redesigned and we have tours for the redesigned tabs.</small>",
       "PreviousButton":true,
