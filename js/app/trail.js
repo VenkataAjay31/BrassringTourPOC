@@ -121,7 +121,7 @@ var home_tour_steps={
     var requisitions_tour_steps={
         "Steps":[
         {
-          "Selector":".reqStatusToggle.ng-scope",
+          "Selector":".reqmaincontent .reqStatusToggle.ng-scope",
           "Title":"Req Status.",
           "HTMLText":"Choose All Statuses or a specific status to view the Reqs in that status and then toggle between All Reqs and My Reqs below.",
           "PreviousButton":true,
@@ -134,7 +134,7 @@ var home_tour_steps={
           "NavigateTo" : ""
         },
         {
-          "Selector":"#gridStatusFilter-button",
+          "Selector":".reqmaincontent #gridStatusFilter-button",
           "Title":"All Vs My",
           "HTMLText":'Here you can choose "All Reqs" or "My Reqs". This is applied in conjunction with the Req Status you choose above.',
           "PreviousButton":true,
@@ -147,7 +147,7 @@ var home_tour_steps={
           "NavigateTo" : ""
         },
         {
-          "Selector":'#reqListGrid div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0',
+          "Selector":'.reqmaincontent #reqListGrid div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0',
           "Title":"Single Row Actions",
           "HTMLText":'Right Click anywhere on any row of the grid and a context menu appears. Various actions that you can take on that row are displayed. Also, actions are grouped into appropriate categories.',
           "PreviousButton":true,
@@ -160,7 +160,7 @@ var home_tour_steps={
           "NavigateTo" : ""
         },
         {
-          "Selector":'#reqListGrid div[role="grid"]:nth-child(1) .ui-grid-canvas .ui-grid-row.row-0',
+          "Selector":'.reqmaincontent #reqListGrid div[role="grid"]:nth-child(1) .ui-grid-canvas .ui-grid-row.row-0',
           "Title":"Multiple Row Actions",
           "HTMLText":"Select either a single row or multiple rows to see the action header dynamically popping above the grid. This header displays all the actions you can take based on your selection (grouped into appropriate categories).",
           "PreviousButton":true,
@@ -173,7 +173,7 @@ var home_tour_steps={
           "NavigateTo" : ""
         },
         {
-          "Selector":'div.gridFilterActions [icon-btn="filter"]:not(.ng-hide)',
+          "Selector":'.reqmaincontent div.gridFilterActions [icon-btn="filter"]:not(.ng-hide)',
           "Title":"Saved Filters",
           "HTMLText":"Click to Save, Manage and Apply your filters all in the same place.",
           "PreviousButton":false,
@@ -185,7 +185,7 @@ var home_tour_steps={
           "NavigateTo" : "NextStep"
         },
         {
-          "Selector":'.manageFilters.ng-scope',
+          "Selector":'.reqmaincontent .manageFilters.ng-scope',
           "Title":"Saved Filters",
           "HTMLText":"Save, Manage and Apply your filters all in the same place.",
           "PreviousButton":true,
@@ -197,7 +197,7 @@ var home_tour_steps={
           "NavigateTo" : ""
         },
         {
-          "Selector":'div.gridFilterInput [icon-btn="search"]',
+          "Selector":'.reqmaincontent div.gridFilterInput [icon-btn="search"]',
           "Title":"Filter Visible Grid",
           "HTMLText":"Filter the grid in your view easily from this quick filter.",
           "PreviousButton":true,
@@ -209,7 +209,7 @@ var home_tour_steps={
           "NavigateTo" : ""
         },
         {
-          "Selector":'div.gridActionButtons [icon-btn="settings"]',
+          "Selector":'.reqmaincontent div.gridActionButtons [icon-btn="settings"]',
           "Title":"Personalize Columns",
           "HTMLText":"Choose and re-order the columns of your grid from here.",
           "PreviousButton":true,
@@ -221,7 +221,7 @@ var home_tour_steps={
           "NavigateTo" : ""
         },
         {
-          "Selector":'div.gridActionButtons [icon-btn="export"]',
+          "Selector":'.reqmaincontent div.gridActionButtons [icon-btn="export"]',
           "Title":"Export to Excel",
           "HTMLText":"Select this icon to export the grid to MS Excel.",
           "PreviousButton":true,
@@ -233,7 +233,7 @@ var home_tour_steps={
           "NavigateTo" : ""
         },
         {
-          "Selector":'div.gridActionButtons [ng-if="showAddReqAction"]',
+          "Selector":'.reqmaincontent div.gridActionButtons [ng-if="showAddReqAction"]',
           "Title":"Add Req",
           "HTMLText":"Launching Add req is too easy now.",
           "PreviousButton":true,
@@ -246,7 +246,7 @@ var home_tour_steps={
         },
       /////////////////////
          {
-          "Selector":'.candcnt_total.candidateCount:nth-child(1)',
+          "Selector":'.reqmaincontent .candcnt_total.candidateCount:nth-child(1)',
           "Title":"Total Link",
           "HTMLText":"Click here to launch candidates inside the req",
           "PreviousButton":false,
