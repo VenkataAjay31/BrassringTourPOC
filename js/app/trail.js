@@ -646,17 +646,6 @@ var talent_record_tour_steps={
     ],
     NextTour: ""
   }
-      
-
-var total_link_tour_steps={
-  "Steps":[
-    {}],
-    NextTour:""
-}
-
-
-
-
 
 //////////////customizing the buttons according to the steps/////////////////
 function ActAsPerBubbleVisibility()
