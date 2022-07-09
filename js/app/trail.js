@@ -255,10 +255,28 @@ var home_tour_steps={
           "Position" :'bottom',
           "CanClickTarget": true,
           "Trigger": true,
-          "NavigateTo" : "NextStep"
+          "NavigateTo" : "TotalLinkTour"
         },
-      
         {
+         "Selector": "a.welcomeContentTabs:nth-child(3)",
+         "Title": "my candidates option",
+         "HTMLText": "click here to know more about my_candidates",
+         "PreviousButton": false,
+         "NextButton": false,
+         "FinishButton": true,
+         "Position": 'bottom',
+          "CanClickTarget": true,
+         "Trigger": true,
+         "Question": false,
+         "NavigateTo": "NextTour"
+        }
+      ],
+      NextTour: "MyCandidatesTour"
+      }
+
+var total_link_tour_steps = {
+    "Steps" : [
+         {
           "Selector":'div.gridActionButtons [icon-btn="flow"]',
           "Title":"HR status bubbles",
           "HTMLText":"Select this icon to display a bird’s eye view of the number of candidates in each HR status",
@@ -268,7 +286,8 @@ var home_tour_steps={
           "Position" :'bottom',
           "CanClickTarget": true,
           "Trigger": false,
-          "NavigateTo" : ""
+          "NavigateTo" : "",
+          "CustomFunction" : ActAsPerBubbleVisibility()
         },
         {
           "Selector":'div.widgetStatusCircleContainer [ng-click="selectWidgetStatus(status)"]',
@@ -381,11 +400,9 @@ var home_tour_steps={
           "Question": false,
           "NavigateTo" : "NextTour"
         }
-      
-      ],
-      NextTour: "MyCandidatesTour"
-      }
-
+    ],
+    NextTour: "MyCandidatesTour"
+}
 ////////////   My_candidates_tour_steps///////////
 
 var my_candidates_tour_steps={
@@ -642,7 +659,10 @@ var total_link_tour_steps={
 
 
 //////////////customizing the buttons according to the steps/////////////////
-
+function ActAsPerBubbleVisibility()
+{
+    alert(123);
+}
   function builtbuttons(tour,tour_steps,step_number)
   {
     let custom_buttons=[]
@@ -712,9 +732,9 @@ var total_link_tour_steps={
 
 let HomeTour = createTour(home_tour_steps);
 let RequisitionsTour = createTour(requisitions_tour_steps);
-let MyCandidatesTour = createTour(my_candidates_tour_steps)
-let TotalLinkTour=createTour(total_link_tour_steps)
-let TalentRecordTour = createTour(talent_record_tour_steps)
+let TotalLinkTour = createTour(total_link_tour_steps);
+let MyCandidatesTour = createTour(my_candidates_tour_steps);
+let TalentRecordTour = createTour(talent_record_tour_steps);
 
 let active_tour=HomeTour;
 let active_tour_steps=home_tour_steps;
@@ -881,16 +901,21 @@ while (step_number<definedSteps.Steps.length)
                       }
                   }, 100);
                   }
-                  if(definedSteps.NextTour=="TotalLinkTour")
-                {
-                  var interval = setInterval(function () {
-                    if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
+                  if (navigate == "TotalLinkTour")
+                  {
+                    tour.complete();
+                    console.log("yoooooo");
+                    console.log("bhyaaaaaa");
+                    var interval = setInterval(function () {
+                    if (document.querySelector('.gridRecordsTitle.ng-binding.ng-scope')) {
+                        console.log("heyyyyyyyy")
                         clearInterval(interval);
-                        active_tour=TotalLinkTour;
-                        active_tour_steps=total_link_tour_steps;
+                        active_tour = TotalLinkTour;
+                        active_tour_steps = total_link_tour_steps;
+                        console.log('starting the tour')
                         TotalLinkTour.start();
-                    }
-                }, 100);
+                      }
+                    }, 100);
                 }
                 if(definedSteps.NextTour=="MyCandidatesTour")
                 {
