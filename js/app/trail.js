@@ -663,11 +663,13 @@ function customFunction(customFunctionName,step)
         {
           step['PreviousButton'] = true;
           step['NextButton'] =  true;
+          step['CanClickTarget'] = false;
         }
         else
         {
           step['PreviousButton'] = false;
           step['NextButton'] =  false;
+          step['Trigger'] = true;
         }
         return step;
   }
