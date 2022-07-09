@@ -915,6 +915,7 @@ while (step_number<definedSteps.Steps.length)
                 else {
                   if (navigate == "TotalLinkTour")
                   {
+                    debugger;  
                     tour.complete();
                     console.log("yoooooo");
                     console.log("bhyaaaaaa");
