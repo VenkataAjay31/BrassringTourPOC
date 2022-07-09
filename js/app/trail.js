@@ -287,7 +287,7 @@ var total_link_tour_steps = {
           "CanClickTarget": true,
           "Trigger": false,
           "NavigateTo" : "",
-          "CustomFunction" : ActAsPerBubbleVisibility()
+          "CustomFunction" : setBasedOnBubbleState(step)
         },
         {
           "Selector":'div.widgetStatusCircleContainer [ng-click="selectWidgetStatus(status)"]',
@@ -648,13 +648,29 @@ var talent_record_tour_steps={
   }
 
 //////////////customizing the buttons according to the steps/////////////////
-function ActAsPerBubbleVisibility()
-{
-    alert(123);
-}
+  function setBasedOnBubbleState(step)
+  {
+        if(document.querySelector('.carbonUI .widgetStatusContainer.show')!=null)
+        {
+          step['PreviousButton'] = true;
+          step['NextButton'] =  true;
+        }
+        else
+        {
+          step['PreviousButton'] = false;
+          step['NextButton'] =  false;
+        }
+        return step;
+  }
+
   function builtbuttons(tour,tour_steps,step_number)
   {
-    let custom_buttons=[]
+    let custom_buttons=[];
+    if(tour_steps[step_number]['CustomFunction'] != 'undefined' && tour_steps[step_number]['CustomFunction']!= "")
+    {
+        tour_steps[step_number] = tour_steps[step_number]['CustomFunction'](tour_steps[step_number]);
+    }
+        
     if(tour_steps[step_number]['PreviousButton'])//check the status of the button 
       {
         custom_buttons.push({text: 'Previous',action()
