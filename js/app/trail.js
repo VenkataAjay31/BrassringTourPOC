@@ -882,9 +882,9 @@ while (step_number<definedSteps.Steps.length)
                               var interval = setInterval(function () {
                               if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
                                   clearInterval(interval);
+                                  let RequisitionsTour = createTour(requisitions_tour_steps);
                                   active_tour=RequisitionsTour;
                                   active_tour_steps=requisitions_tour_steps;
-                                  let RequisitionsTour = createTour(requisitions_tour_steps);
                                   RequisitionsTour.start();
                               }
                           }, 100);
@@ -899,9 +899,9 @@ while (step_number<definedSteps.Steps.length)
                                 if (document.querySelector('#candidateresults .gridRecordsTitle.ng-binding.ng-scope')) {
                                     console.log("heyyyyyyyy")
                                     clearInterval(interval);
+                                    let TotalLinkTour = createTour(total_link_tour_steps);
                                     active_tour = TotalLinkTour;
                                     active_tour_steps = total_link_tour_steps;
-                                    let TotalLinkTour = createTour(total_link_tour_steps);
                                     console.log('starting the tour')
                                     TotalLinkTour.start();
                                   }
@@ -911,9 +911,9 @@ while (step_number<definedSteps.Steps.length)
                                 var interval = setInterval(function () {
                                 if ($('.pageHeaderTitle.ng-scope:contains("My Candidates")')) {
                                     clearInterval(interval);
+                                    let MyCandidatesTour = createTour(my_candidates_tour_steps);
                                     active_tour=MyCandidatesTour;
                                     active_tour_steps=my_candidates_tour_steps;
-                                    let MyCandidatesTour = createTour(my_candidates_tour_steps);
                                     MyCandidatesTour.start();
                                 }
                               }, 100);
@@ -923,9 +923,9 @@ while (step_number<definedSteps.Steps.length)
                             var interval = setInterval(function () {
                             if (document.querySelector('.widgetTabData')) {
                                 clearInterval(interval);
+                                let TalentRecordTour = createTour(talent_record_tour_steps);
                                 active_tour=TalentRecordTour;
                                 active_tour_steps=talent_record_tour_steps;
-                                let TalentRecordTour = createTour(talent_record_tour_steps);
                                 TalentRecordTour.start();
                             }
                         }, 100);
