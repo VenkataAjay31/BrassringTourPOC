@@ -890,22 +890,6 @@ while (step_number<definedSteps.Steps.length)
                       }
                   }, 100);
                   }
-                  if (navigate == "TotalLinkTour")
-                  {
-                    tour.complete();
-                    console.log("yoooooo");
-                    console.log("bhyaaaaaa");
-                    var interval = setInterval(function () {
-                    if (document.querySelector('.gridRecordsTitle.ng-binding.ng-scope')) {
-                        console.log("heyyyyyyyy")
-                        clearInterval(interval);
-                        active_tour = TotalLinkTour;
-                        active_tour_steps = total_link_tour_steps;
-                        console.log('starting the tour')
-                        TotalLinkTour.start();
-                      }
-                    }, 100);
-                }
                 if(definedSteps.NextTour=="MyCandidatesTour")
                 {
                   var interval = setInterval(function () {
@@ -928,6 +912,24 @@ while (step_number<definedSteps.Steps.length)
                     }
                 }, 100);
                 }
+                else {
+                  if (navigate == "TotalLinkTour")
+                  {
+                    tour.complete();
+                    console.log("yoooooo");
+                    console.log("bhyaaaaaa");
+                    var interval = setInterval(function () {
+                    if (document.querySelector('.gridRecordsTitle.ng-binding.ng-scope')) {
+                        console.log("heyyyyyyyy")
+                        clearInterval(interval);
+                        active_tour = TotalLinkTour;
+                        active_tour_steps = total_link_tour_steps;
+                        console.log('starting the tour')
+                        TotalLinkTour.start();
+                      }
+                    }, 100);
+                }
+                }    
               }
             },{once:true}))
           }
