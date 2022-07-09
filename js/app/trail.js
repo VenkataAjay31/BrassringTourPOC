@@ -652,8 +652,9 @@ function customFunction(customFunctionName,step)
 {
     switch(customFunctionName)
     {
-        case "setBasedOnBubbleState" : return setBasedOnBubbleState(step); break;
+        case "setBasedOnBubbleState" : step = setBasedOnBubbleState(step); break;
     }
+    return step;
 }
 
   function setBasedOnBubbleState(step)
