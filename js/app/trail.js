@@ -277,7 +277,7 @@ var home_tour_steps={
 var total_link_tour_steps = {
     "Steps" : [
          {
-          "Selector":'div.gridActionButtons [icon-btn="flow"]',
+          "Selector":'#candidateresults div.gridActionButtons [icon-btn="flow"]',
           "Title":"HR status bubbles",
           "HTMLText":"Select this icon to display a bird’s eye view of the number of candidates in each HR status",
           "PreviousButton":true,
@@ -290,7 +290,7 @@ var total_link_tour_steps = {
           "CustomFunction" : "setBasedOnBubbleState"
         },
         {
-          "Selector":'div.widgetStatusCircleContainer [ng-click="selectWidgetStatus(status)"]',
+          "Selector":'#candidateresults div.widgetStatusCircleContainer [ng-click="selectWidgetStatus(status)"]',
           "Title":"Actionable Bubble",
           "HTMLText":"Click on a bubble to toggle its selection. Based on the selection, the candidates are filtered in or filtered out of the grid.",
           "PreviousButton":true,
@@ -302,7 +302,7 @@ var total_link_tour_steps = {
           "NavigateTo" : ""
         },
         {
-          "Selector":'div.gridActionButtons [icon-btn="card"]',
+          "Selector":'#candidateresults div.gridActionButtons [icon-btn="card"]',
           "Title":"Grouped Card View",
           "HTMLText":"Select this icon to see the redesigned card view, where you can see the candidates grouped into different HR Status",
           "PreviousButton":false,
@@ -682,6 +682,7 @@ function customFunction(customFunctionName,step)
           step['PreviousButton'] = false;
           step['NextButton'] =  false;
           step['Trigger'] = true;
+          step['NavigateTo'] = 'NextStep';
         }
         return step;
   }
