@@ -720,10 +720,6 @@ function ActAsPerBubbleVisibility()
 /////////////////////initializing tour objects///////////////////////////
 
 let HomeTour = createTour(home_tour_steps);
-let RequisitionsTour = createTour(requisitions_tour_steps);
-let TotalLinkTour = createTour(total_link_tour_steps);
-let MyCandidatesTour = createTour(my_candidates_tour_steps);
-let TalentRecordTour = createTour(talent_record_tour_steps);
 
 let active_tour=HomeTour;
 let active_tour_steps=home_tour_steps;
@@ -879,7 +875,7 @@ while (step_number<definedSteps.Steps.length)
                   console.log('getting the current step')
                   console.log(Shepherd.activeTour.steps.indexOf(Shepherd.activeTour.currentStep));
                   tour.complete();
-                   
+
                   switch(definedSteps.NextTour)
                   {
                       case "RequisitionsTour": 
@@ -888,6 +884,7 @@ while (step_number<definedSteps.Steps.length)
                                   clearInterval(interval);
                                   active_tour=RequisitionsTour;
                                   active_tour_steps=requisitions_tour_steps;
+                                  let RequisitionsTour = createTour(requisitions_tour_steps);
                                   RequisitionsTour.start();
                               }
                           }, 100);
@@ -904,6 +901,7 @@ while (step_number<definedSteps.Steps.length)
                                     clearInterval(interval);
                                     active_tour = TotalLinkTour;
                                     active_tour_steps = total_link_tour_steps;
+                                    let TotalLinkTour = createTour(total_link_tour_steps);
                                     console.log('starting the tour')
                                     TotalLinkTour.start();
                                   }
@@ -915,6 +913,7 @@ while (step_number<definedSteps.Steps.length)
                                     clearInterval(interval);
                                     active_tour=MyCandidatesTour;
                                     active_tour_steps=my_candidates_tour_steps;
+                                    let MyCandidatesTour = createTour(my_candidates_tour_steps);
                                     MyCandidatesTour.start();
                                 }
                               }, 100);
@@ -926,6 +925,7 @@ while (step_number<definedSteps.Steps.length)
                                 clearInterval(interval);
                                 active_tour=TalentRecordTour;
                                 active_tour_steps=talent_record_tour_steps;
+                                let TalentRecordTour = createTour(talent_record_tour_steps);
                                 TalentRecordTour.start();
                             }
                         }, 100);
