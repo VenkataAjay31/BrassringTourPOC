@@ -302,6 +302,18 @@ var total_link_tour_steps = {
           "NavigateTo" : ""
         },
         {
+          "Selector":'div.gridActionButtons [icon-btn="card"]',
+          "Title":"Grouped Card View",
+          "HTMLText":"Select this icon to see the redesigned card view, where you can see the candidates grouped into different HR Status",
+          "PreviousButton":false,
+          "NextButton":false,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : ""
+        },
+        {
           "Selector":'div.kanbanStepButtons button[icon-btn="angleright"].icon-btn.icon-small',
           "Title":"right arrow",
           "HTMLText":"you can expand",
