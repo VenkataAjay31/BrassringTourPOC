@@ -287,7 +287,7 @@ var total_link_tour_steps = {
           "CanClickTarget": true,
           "Trigger": false,
           "NavigateTo" : "",
-          "CustomFunction" : setBasedOnBubbleState(step)
+          "CustomFunction" : setBasedOnBubbleState(var step)
         },
         {
           "Selector":'div.widgetStatusCircleContainer [ng-click="selectWidgetStatus(status)"]',
