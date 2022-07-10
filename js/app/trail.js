@@ -118,7 +118,7 @@ var home_tour_steps={
 
 /////////////// Requsitions_tour_steps//////////
 
-    var requisitions_tour_steps={
+var requisitions_tour_steps={
         "Steps":[
         {
           "Selector":".reqmaincontent .reqStatusToggle.ng-scope",
@@ -244,8 +244,7 @@ var home_tour_steps={
           "Trigger": false,
           "NavigateTo" : ""
         },
-      /////////////////////
-         {
+        {
           "Selector":'.reqmaincontent .candcnt_total.candidateCount:nth-child(1)',
           "Title":"Total Link",
           "HTMLText":"Click here to launch candidates inside the req",
@@ -274,9 +273,9 @@ var home_tour_steps={
       NextTour: "MyCandidatesTour"
       }
 
-var total_link_tour_steps = {
-    "Steps" : [
-         {
+var total_link_tour_steps={
+        "Steps":[
+        {
           "Selector":'#candidateresults div.gridActionButtons [icon-btn="flow"]',
           "Title":"HR status bubbles",
           "HTMLText":"Select this icon to display a bird’s eye view of the number of candidates in each HR status",
