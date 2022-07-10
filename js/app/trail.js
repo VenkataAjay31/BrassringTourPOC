@@ -454,7 +454,7 @@ var talent_record_tour_steps={
         {
             "Selector":'.collabAddNote.ng-scope .collabEditor',
             "Title":"Collaborative Notes",
-            "HTMLText":'While typing the notes, You can tag other user(s) using @ symbol. You can insert a shortcut link to the candidate, req, forms or attachments using # option.You can insert a shortcut link to an action using the { option',
+            "HTMLText":'While typing the notes, You can tag other user(s) using @ symbol. You can insert a shortcut link to the candidate, req, forms or attachments using # symbol.You can insert a shortcut link to an action using the { symbol',
             "PreviousButton":true,
             "NextButton":true,
             "FinishButton":false,
@@ -503,7 +503,7 @@ var talent_record_tour_steps={
             "Selector":'.widgetTab.tab6',
             "Title":"Integrations Tab",
             "HTMLText":'This is a brand-new tab in the Talent record. You may see the candidate import history or even manually export the candidate from this tab.',
-            "PreviousButton":true,
+            "PreviousButton":false,
             "NextButton":true,
             "FinishButton":false,
             "Position" :'bottom',
@@ -526,7 +526,7 @@ var talent_record_tour_steps={
         {
             "Selector":'button[icon-btn="settings"].icon-btn.actionLink',
             "Title":'Add/Pick Overview Cards',
-            "HTMLText":'Select among the available overview cards that you want to view, or add a new customized card. The overview cards can be reordered by dragging',
+            "HTMLText":'Choose among the available overview cards that you want to view, also you can create your own custom card.',
             "PreviousButton":false,
             "NextButton":true,
             "FinishButton":false,
@@ -549,7 +549,7 @@ var talent_record_tour_steps={
         },
         {
           "Selector":'button[icon-btn="flow"].icon-btn.icon-small',
-          "Title":'Time line view',
+          "Title":'Actionlog time line view',
           "HTMLText":'Select this to view the candidate action log in a timeline view',
           "PreviousButton":false,
           "NextButton":false,
@@ -560,9 +560,9 @@ var talent_record_tour_steps={
           "NavigateTo" : "Next Step"
         },
         {
-            "Selector":'.widgetTabsContent .widgetTab.tab1',
-            "Title":'profile',
-            "HTMLText":'Edit Tabs',
+            "Selector":'.workflowStepFilter .workflowJumpToField',
+            "Title":'Jump within timeline view',
+            "HTMLText":'Select any HR Status from here to scroll the actionlog timeline view to that HR Status',
             "PreviousButton":true,
             "NextButton":true,
             "FinishButton":false,
