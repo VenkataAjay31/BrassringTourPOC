@@ -358,7 +358,8 @@ var total_link_tour_steps={
           "Position" :'bottom',
           "CanClickTarget": true,
           "Trigger": true,
-          "NavigateTo" : "NextStep"
+          "NavigateTo" : "NextStep",
+          "CustomFunctionBefore": "scrollKanbanLeft";
         },
         {
             "Selector":false,
@@ -713,6 +714,11 @@ function customFunctionBefore(customFunctionName,allSteps,stepNumber)
         }
         return allSteps;
   }
+
+function scrollKanbanLeft(allSteps,stepNumber){
+    $(".kanbanContainer").animate({ scrollLeft: $(".kanbanContainer").scrollLeft() - 400 });
+    return allSteps;
+}
 
   function builtbuttons(tour,tour_steps,step_number)
   {
