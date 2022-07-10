@@ -16,6 +16,12 @@
     padding: 3px;
 }
 
+.SelectableStep::after{
+    content: "\f8cc";
+    font-family: 'FontAwesome';
+    padding: 3px;
+}
+
 .mainBody .shepherd-text ul {
     list-style-type: square !important;
     margin: 20px !important;
