@@ -969,7 +969,8 @@ while (step_number<definedSteps.Steps.length)
                                     let TotalLinkTour = createTour(total_link_tour_steps);
                                     active_tour = TotalLinkTour;
                                     active_tour_steps = total_link_tour_steps;
-                                    console.log('starting the tour')
+                                    console.log('starting the tour');
+                                    console.log(total_link_tour_steps);
                                     TotalLinkTour.start();
                                   }
                                 }, 100);
