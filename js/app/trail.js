@@ -359,7 +359,7 @@ var total_link_tour_steps={
           "CanClickTarget": true,
           "Trigger": true,
           "NavigateTo" : "NextStep",
-          "CustomFunctionBefore": "scrollKanbanLeft"
+          "CustomFunctionDuring": "scrollKanbanLeft"
         },
         {
             "Selector":false,
@@ -715,9 +715,8 @@ function customFunctionBefore(customFunctionName,allSteps,stepNumber)
         return allSteps;
   }
 
-function scrollKanbanLeft(allSteps,stepNumber){
+function scrollKanbanLeft(){
     $(".kanbanContainer").animate({ scrollLeft: $(".kanbanContainer").scrollLeft() - 400 });
-    return allSteps;
 }
 
   function builtbuttons(tour,tour_steps,step_number)
@@ -916,6 +915,7 @@ while (step_number<definedSteps.Steps.length)
           next_selector=definedSteps.Steps[step_number+1]['Selector'];
         }
         let navigate=definedSteps.Steps[step_number]['NavigateTo'];
+        let CustomFunctionDuring= definedSteps.Steps[step_number]['CustomFunctionDuring'];
         tour.addStep({
           id: step_number,
           title: '<h3>'+definedSteps.Steps[step_number]['Title']+'</h3>',
@@ -930,6 +930,15 @@ while (step_number<definedSteps.Steps.length)
             document
               .querySelectorAll(check_selector)
               .forEach(b => b.addEventListener("click", function(){
+                 
+                if(typeof CustomFunctionDuring != 'undefined' && CustomFunctionDuring != '')
+                {
+                   switch(CustomFunctionDuring)
+                  {
+                      case "scrollKanbanLeft" : scrollKanbanLeft(); break;
+                  }
+                }
+                  
                 if(navigate=="NextStep")//checking if the trigger is for nextstep
                 {
                   if(next_selector==false){  //// if the selector obj is false that means it is the step before the start of next tour                            
