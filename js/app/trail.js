@@ -350,7 +350,7 @@ var total_link_tour_steps={
           "CustomFunctionDuring": "scrollKanbanLeft"
         },
         {
-          "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleright"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
+          "Selector":'div.kanbanSteps:not(.ng-hide) button[icon-btn="angleright"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
           "Title":"Expand From HR Status",
           "HTMLText":"Select this to expand the candidates in this status",
           "PreviousButton":false,
