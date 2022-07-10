@@ -377,10 +377,10 @@ var total_link_tour_steps={
         {
           "Selector":"a.welcomeContentTabs:nth-child(3)",
           "Title":"My Candidates",
-          "HTMLText":"click here to tour the My Candidates Section",
+          "HTMLText":"Select this link and tour the my candidates section.",
           "PreviousButton":false,
           "NextButton":false,
-          "FinishButton":true,
+          "FinishButton":false,
           "Position" :'bottom',
           "CanClickTarget": true,
           "Trigger": true,
@@ -391,59 +391,8 @@ var total_link_tour_steps={
     NextTour: "MyCandidatesTour"
 }
 
-var KanbanStep1 = {
-          "Selector":'div.kanbanStepButtons  button[icon-btn="angleright"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
-          "Title":"Expand From HR Status",
-          "HTMLText":"Select this to expand the candidates in this status",
-          "PreviousButton":false,
-          "NextButton":false,
-          "FinishButton":false,
-          "Position" :'bottom',
-          "CanClickTarget": true,
-          "Trigger": true,
-          "NavigateTo" : "NextStep"
-        }
 
-var KanbanStep2 = {
-          "Selector":'div.kanbanStepButtons  button[icon-btn="angleleft"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
-          "Title":"Collapse By HR Status",
-          "HTMLText":"Select this to collapse by HR Status",
-          "PreviousButton":false,
-          "NextButton":false,
-          "FinishButton":false,
-          "Position" :'bottom',
-          "CanClickTarget": true,
-          "Trigger": true,
-          "NavigateTo" : "NextStep"
-        }
-
-var KanbanStep3 = {
-          "Selector":'div.kanbanStepButtons  button[icon-btn="angleright"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
-          "Title":"Expand to 2 column",
-          "HTMLText":"Select this to see the 2 column layout of candidates in HR Status",
-          "PreviousButton":false,
-          "NextButton":false,
-          "FinishButton":false,
-          "Position" :'bottom',
-          "CanClickTarget": true,
-          "Trigger": true,
-          "NavigateTo" : "NextStep"
-        }
-
-var KanbanStep4 = {
-          "Selector":'div.kanbanStepButtons  button[icon-btn="angleleft"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
-          "Title":"Collapse to 1 column",
-          "HTMLText":"Select this to see the 1 column layout of candidates in HR Status",
-          "PreviousButton":false,
-          "NextButton":false,
-          "FinishButton":false,
-          "Position" :'bottom',
-          "CanClickTarget": true,
-          "Trigger": true,
-          "NavigateTo" : "NextStep"
-        }
 ////////////   My_candidates_tour_steps///////////
-
 var my_candidates_tour_steps={
   "Steps":[
       {
@@ -990,10 +939,11 @@ while (step_number<definedSteps.Steps.length)
                                   }
                                 }, 100);
                             }
-                            else{
+                            else{ 
                                 var interval = setInterval(function () {
-                                if ($('.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"]:nth-child(4) .trlink.tooltip.candname')) {
+                                if (document.querySelector('.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"]:nth-child(4) .trlink.tooltip.candname')) {
                                     clearInterval(interval);
+                                    debugger;
                                     let MyCandidatesTour = createTour(my_candidates_tour_steps);
                                     active_tour=MyCandidatesTour;
                                     active_tour_steps=my_candidates_tour_steps;
