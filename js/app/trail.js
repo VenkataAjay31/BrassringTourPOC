@@ -557,7 +557,7 @@ var talent_record_tour_steps={
           "Position" :'bottom',
           "CanClickTarget": true,
           "Trigger": true,
-          "NavigateTo" : "Next Step"
+          "NavigateTo" : "NextStep" 
         },
         {
             "Selector":'.workflowStepFilter .workflowJumpToField',
