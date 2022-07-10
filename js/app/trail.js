@@ -314,8 +314,8 @@ var total_link_tour_steps={
         },
         {
           "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleright"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
-          "Title":"Expand to 2 column",
-          "HTMLText":"Select this to see the 2 column layout of candidates in HR Status",
+          "Title":"Expand to 2 columns",
+          "HTMLText":"Select this icon to expand the card column of a specific status. When expanded, all the cards of a specific status are rearranged into two columns instead of one column.",
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":false,
@@ -327,7 +327,7 @@ var total_link_tour_steps={
         {
           "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleleft"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
           "Title":"Collapse to 1 column",
-          "HTMLText":"Select this to see the 1 column layout of candidates in HR Status",
+          "HTMLText":"Select this icon to collapse a two-column status into a one column.",
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":false,
@@ -338,8 +338,8 @@ var total_link_tour_steps={
         },
         {
           "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleleft"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
-          "Title":"Collapse By HR Status",
-          "HTMLText":"Select this to collapse by HR Status",
+          "Title":"Minimize Column",
+          "HTMLText":"Select this icon to collapse a column completely.",
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":false,
@@ -351,8 +351,8 @@ var total_link_tour_steps={
         },
         {
           "Selector":'div.kanbanSteps:not(.ng-hide) button[icon-btn="angleright"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
-          "Title":"Expand From HR Status",
-          "HTMLText":"Select this to expand the candidates in this status",
+          "Title":"Maximize Column",
+          "HTMLText":"Select this to expand the candidates in this HR status",
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":false,
@@ -416,18 +416,6 @@ var my_candidates_tour_steps={
 var talent_record_tour_steps={
     "Steps":[
         {
-            "Selector":'#x',
-            "Title":"Welcome!!",
-            "HTMLText":'This is redesigned talent record and lets explore this page.',
-            "PreviousButton":false,
-            "NextButton":true,
-            "FinishButton":true,
-            "Position" :'bottom',
-            "CanClickTarget": true,
-            "Trigger": false,
-            "NavigateTo" : ""
-        },
-        {
             "Selector":'.widgetTabData',
             "Title":"All Tabs",
             "HTMLText":'We reimagined the entire set of tabs for a new look.',
@@ -454,7 +442,7 @@ var talent_record_tour_steps={
         {
             "Selector":' .widgetTab.tab2',
             "Title":"Click on notes tab",
-            "HTMLText":'The Notes has a host of new features. Select the type of notes you want to make.',
+            "HTMLText":'The Notes has a host of new features.',
             "PreviousButton":false,
             "NextButton":false,
             "FinishButton":false,
@@ -464,13 +452,25 @@ var talent_record_tour_steps={
             "NavigateTo" : "NextStep"
         },
         {
-            "Selector":'.collabAddNote.ng-scope',
-            "Title":"Collaborative_notes",
-            "HTMLText":'The Notes has a host of new features. Select the type of notes you want to make.',
+            "Selector":'.collabAddNote.ng-scope .collabEditor',
+            "Title":"Collaborative Notes",
+            "HTMLText":'While typing the notes, You can tag other user(s) using @ symbol. You can insert a shortcut link to the candidate, req, forms or attachments using # option.You can insert a shortcut link to an action using the { option',
             "PreviousButton":true,
             "NextButton":true,
             "FinishButton":false,
             "Position" :'bottom',
+            "CanClickTarget": false,
+            "Trigger": false,
+            "NavigateTo" : ""
+        },
+        {
+            "Selector":'.collabAddNote.ng-scope .collabButtons .collabButton:nth-child(1)',
+            "Title":"Note Visibility",
+            "HTMLText":'Before posting the notes, you can control the visibility of the notes by selecting appropriate option from here',
+            "PreviousButton":true,
+            "NextButton":true,
+            "FinishButton":false,
+            "Position" :'top',
             "CanClickTarget": true,
             "Trigger": false,
             "NavigateTo" : ""
@@ -478,19 +478,31 @@ var talent_record_tour_steps={
         {
             "Selector":'.widgetTab.tab5',
             "Title":"submissions tab",
-            "HTMLText":'Edit Tabs',
-            "PreviousButton":true,
-            "NextButton":true,
+            "HTMLText":'This tab displays all the details about all the submissions of this candidate in the form of cards.',
+            "PreviousButton":false,
+            "NextButton":false,
             "FinishButton":false,
             "Position" :'bottom',
+            "CanClickTarget": true,
+            "Trigger": true,
+            "NavigateTo" : "NextStep"
+        },
+        {
+            "Selector":'.widgetSubmissionCards button[ng-click="setSelectedSubmission(submission)"].icon-btn.icon-small',
+            "Title":"Submission specific view",
+            "HTMLText":'Select this to see the candidate resume, candidate profile specific to a submission',
+            "PreviousButton":false,
+            "NextButton":true,
+            "FinishButton":false,
+            "Position" :'top',
             "CanClickTarget": true,
             "Trigger": false,
             "NavigateTo" : ""
         },
         {
             "Selector":'.widgetTab.tab6',
-            "Title":"sIntegrations_tab",
-            "HTMLText":'Edit Tabs',
+            "Title":"Integrations Tab",
+            "HTMLText":'This is a brand-new tab in the Talent record. You may see the candidate import history or even manually export the candidate from this tab.',
             "PreviousButton":true,
             "NextButton":true,
             "FinishButton":false,
@@ -501,8 +513,8 @@ var talent_record_tour_steps={
         },
         {
             "Selector":'.widgetTab.tab7',
-            "Title":'click on ReqSpecificView_tab',
-            "HTMLText":'Edit Tabs',
+            "Title":'Req Specific View',
+            "HTMLText":'View all the activities of the candidate that are specific to this req.',
             "PreviousButton":false,
             "NextButton":false,
             "FinishButton":false,
@@ -513,80 +525,20 @@ var talent_record_tour_steps={
         },
         {
             "Selector":'button[icon-btn="settings"].icon-btn.actionLink',
-            "Title":'Overview settings icon',
-            "HTMLText":'Edit Tabs',
+            "Title":'Add/Pick Overview Cards',
+            "HTMLText":'Select among the available overview cards that you want to view, or add a new customized card. The overview cards can be reordered by dragging',
             "PreviousButton":false,
-            "NextButton":false,
+            "NextButton":true,
             "FinishButton":false,
-            "Position" :'bottom',
+            "Position" :'top',
             "CanClickTarget": true,
-            "Trigger": true,
-            "NavigateTo" : "NextStep"
-        },
-        {
-          "Selector":'.widgetItemCardAddOption',
-          "Title":'Add_cards',
-          "HTMLText":'Edit Tabs',
-          "PreviousButton":true,
-          "NextButton":true,
-          "FinishButton":false,
-          "Position" :'bottom',
-          "CanClickTarget": true,
-          "Trigger": true,
-          "NavigateTo" : "NextStep"
-        },
-        {
-          "Selector":'.personalizeWidgetContainer.personalizeColumnContainer.show',
-          "Title":'Configure Overview Card',
-          "HTMLText":'Here you can customize your cards as per your requirements.',
-          "PreviousButton":false,
-          "NextButton":true,
-          "FinishButton":false,
-          "Position" :'bottom',
-          "CanClickTarget": false,
-          "Trigger": false,
-          "NavigateTo" : ""
-        },
-        {
-          "Selector":'.personalizeColumnsLeft.grayPanel',
-          "Title":'Select Fields',
-          "HTMLText":'Here you can select your cards.',
-          "PreviousButton":false,
-          "NextButton":true,
-          "FinishButton":false,
-          "Position" :'top',
-          "CanClickTarget": true,
-          "Trigger": false,
-          "NavigateTo" : ""
-        },
-        {
-          "Selector":'.personalizeColumnsRight',
-          "Title":'Order Fields',
-          "HTMLText":'Here you can order your cards.',
-          "PreviousButton":false,
-          "NextButton":true,
-          "FinishButton":false,
-          "Position" :'top',
-          "CanClickTarget": true,
-          "Trigger": false,
-          "NavigateTo" : ""
-        },
-        {
-          "Selector":'.personalizeWidgetsContent.personalizeColumnContent.ng-scope .personalizeWidgetsFooter button.ts-btn.ts-btn-secondary',
-          "Title":'click here',
-          "HTMLText":'',
-          "PreviousButton":true,
-          "NextButton":true,
-          "FinishButton":false,
-          "Position" :'top',
-          "CanClickTarget": true,
-          "Trigger": true,
-          "NavigateTo" : "NextStep"
+            "Trigger": false,
+            "NavigateTo" : ""
         },
         {
             "Selector":'.widgetItemCards .widgetItemCard.offerItemCard.ng-scope',
-            "Title":'offer widget',
-            "HTMLText":'Edit Tabs',
+            "Title":'Offer card',
+            "HTMLText":'The candidate offer details against to this req will be displayed here and you can post to candidate zone rite from here.',
             "PreviousButton":true,
             "NextButton":true,
             "FinishButton":false,
@@ -597,15 +549,15 @@ var talent_record_tour_steps={
         },
         {
           "Selector":'button[icon-btn="flow"].icon-btn.icon-small',
-          "Title":'flow',
-          "HTMLText":'Edit Tabs',
-          "PreviousButton":true,
-          "NextButton":true,
+          "Title":'Time line view',
+          "HTMLText":'Select this to view the candidate action log in a timeline view',
+          "PreviousButton":false,
+          "NextButton":false,
           "FinishButton":false,
           "Position" :'bottom',
           "CanClickTarget": true,
-          "Trigger": false,
-          "NavigateTo" : ""
+          "Trigger": true,
+          "NavigateTo" : "Next Step"
         },
         {
             "Selector":'.widgetTabsContent .widgetTab.tab1',
@@ -943,7 +895,6 @@ while (step_number<definedSteps.Steps.length)
                                 var interval = setInterval(function () {
                                 if (document.querySelector('.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"]:nth-child(4) .trlink.tooltip.candname')) {
                                     clearInterval(interval);
-                                    debugger;
                                     let MyCandidatesTour = createTour(my_candidates_tour_steps);
                                     active_tour=MyCandidatesTour;
                                     active_tour_steps=my_candidates_tour_steps;
