@@ -313,9 +313,21 @@ var total_link_tour_steps={
           "NavigateTo" : "NextStep"           
         },
         {
-          "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleright"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
-          "Title":"Expand From HR Status",
-          "HTMLText":"Select this to expand the candidates in this status",
+          "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleright"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
+          "Title":"Expand to 2 column",
+          "HTMLText":"Select this to see the 2 column layout of candidates in HR Status",
+          "PreviousButton":false,
+          "NextButton":false,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : "NextStep"
+        },
+        {
+          "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleleft"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
+          "Title":"Collapse to 1 column",
+          "HTMLText":"Select this to see the 1 column layout of candidates in HR Status",
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":false,
@@ -337,21 +349,9 @@ var total_link_tour_steps={
           "NavigateTo" : "NextStep"
         },
         {
-          "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleright"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
-          "Title":"Expand to 2 column",
-          "HTMLText":"Select this to see the 2 column layout of candidates in HR Status",
-          "PreviousButton":false,
-          "NextButton":false,
-          "FinishButton":false,
-          "Position" :'bottom',
-          "CanClickTarget": true,
-          "Trigger": true,
-          "NavigateTo" : "NextStep"
-        },
-        {
-          "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleleft"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
-          "Title":"Collapse to 1 column",
-          "HTMLText":"Select this to see the 1 column layout of candidates in HR Status",
+          "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleright"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
+          "Title":"Expand From HR Status",
+          "HTMLText":"Select this to expand the candidates in this status",
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":false,
