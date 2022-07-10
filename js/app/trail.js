@@ -798,7 +798,7 @@ while (step_number<definedSteps.Steps.length)
       {
         tour.addStep({
           id: step_number,
-          title: '<h3>'+definedSteps.Steps[step_number]['Title']+'</h3>',
+          title: '<h3>'+definedSteps.Steps[step_number]['Title']+(definedSteps.Steps[step_number]['CanClickTarget'] ? '':'<div class="SelectableStep"></div>')+'</h3>',
           text: definedSteps.Steps[step_number]['HTMLText'],
           attachTo: {
             element: definedSteps.Steps[step_number]['Selector'],
