@@ -992,7 +992,7 @@ while (step_number<definedSteps.Steps.length)
                             }
                             else{
                                 var interval = setInterval(function () {
-                                if ($('.pageHeaderTitle.ng-scope:contains("My Candidates")')) {
+                                if ($('.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"]:nth-child(4) .trlink.tooltip.candname')) {
                                     clearInterval(interval);
                                     let MyCandidatesTour = createTour(my_candidates_tour_steps);
                                     active_tour=MyCandidatesTour;
