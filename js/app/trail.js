@@ -346,7 +346,8 @@ var total_link_tour_steps={
           "Position" :'bottom',
           "CanClickTarget": true,
           "Trigger": true,
-          "NavigateTo" : "NextStep"
+          "NavigateTo" : "NextStep",
+          "CustomFunctionDuring": "scrollKanbanLeft"
         },
         {
           "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleright"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
@@ -358,8 +359,7 @@ var total_link_tour_steps={
           "Position" :'bottom',
           "CanClickTarget": true,
           "Trigger": true,
-          "NavigateTo" : "NextStep",
-          "CustomFunctionDuring": "scrollKanbanLeft"
+          "NavigateTo" : "NextStep"
         },
         {
             "Selector":false,
