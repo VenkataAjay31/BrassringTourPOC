@@ -287,13 +287,13 @@ var total_link_tour_steps = {
           "CanClickTarget": true,
           "Trigger": false,
           "NavigateTo" : "",
-          "CustomFunction" : "setBasedOnBubbleState"
+          "CustomFunctionBefore" : "setBasedOnBubbleState"
         },
         {
           "Selector":'#candidateresults div.widgetStatusCircleContainer [ng-click="selectWidgetStatus(status)"]',
           "Title":"Actionable Bubble",
           "HTMLText":"Click on a bubble to toggle its selection. Based on the selection, the candidates are filtered in or filtered out of the grid.",
-          "PreviousButton":true,
+          "PreviousButton":false,
           "NextButton":true,
           "FinishButton":false,
           "Position" :'bottom',
@@ -311,12 +311,12 @@ var total_link_tour_steps = {
           "Position" :'bottom',
           "CanClickTarget": true,
           "Trigger": true,
-          "NavigateTo" : ""
+          "NavigateTo" : ""           
         },
         {
-          "Selector":'div.kanbanStepButtons button[icon-btn="angleright"].icon-btn.icon-small',
-          "Title":"right arrow",
-          "HTMLText":"you can expand",
+          "Selector":'div.kanbanStepButtons  button[icon-btn="angleright"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
+          "Title":"Expand From HR Status",
+          "HTMLText":"Select this to expand the candidates in this status",
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":false,
@@ -326,9 +326,9 @@ var total_link_tour_steps = {
           "NavigateTo" : "NextStep"
         },
         {
-          "Selector":'div.kanbanStepButtons button[icon-btn="angleleft"].icon-btn.icon-small',
-          "Title":"left arrow",
-          "HTMLText":"you can compress",
+          "Selector":'div.kanbanStepButtons  button[icon-btn="angleleft"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
+          "Title":"Collapse By HR Status",
+          "HTMLText":"Select this to collapse by HR Status",
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":false,
@@ -337,55 +337,30 @@ var total_link_tour_steps = {
           "Trigger": true,
           "NavigateTo" : "NextStep"
         },
-        
-        // {
-        //   "Selector":'div[id="1655103910080-0-uiGrid-00HG-cell"]',
-        //   "Title":"About Requisitions page...",
-        //   "HTMLText":"you can search files according to their status",
-        //   "PreviousButton":true,
-        //   "NextButton":true,
-        //   "FinishButton":false,
-        //   "Position" :'bottom',
-        //   "CanClickTarget": true,
-        //   "Trigger": false,
-        //   "NavigateTo" : ""
-        // },
-        // {
-        //   "Selector":'div.gridActionButtons [icon-btn="card"]',
-        //   "Title":"About Requisitions page...",
-        //   "HTMLText":"you can search files according to their status",
-        //   "PreviousButton":true,
-        //   "NextButton":true,
-        //   "FinishButton":false,
-        //   "Position" :'bottom',
-        //   "CanClickTarget": true,
-        //   "Trigger": false,
-        //   "NavigateTo" : ""
-        // },
-        // {
-        //   "Selector":'div.kanbanStepButtons button[icon-btn="angleright"]',
-        //   "Title":"About Requisitions page...",
-        //   "HTMLText":"you can search files according to their status",
-        //   "PreviousButton":true,
-        //   "NextButton":true,
-        //   "FinishButton":false,
-        //   "Position" :'bottom',
-        //   "CanClickTarget": true,
-        //   "Trigger": false,
-        //   "NavigateTo" : ""
-        // },
-        // {
-        //   "Selector":'div.kanbanStepButtons button[icon-btn="angleleft"]',
-        //   "Title":"About Requisitions page...",
-        //   "HTMLText":"you can search files according to their status",
-        //   "PreviousButton":true,
-        //   "NextButton":true,
-        //   "FinishButton":false,
-        //   "Position" :'bottom',
-        //   "CanClickTarget": true,
-        //   "Trigger": false,
-        //   "NavigateTo" : ""
-        // },
+        {
+          "Selector":'div.kanbanStepButtons  button[icon-btn="angleright"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
+          "Title":"Expand to 2 column",
+          "HTMLText":"Select this to see the 2 column layout of candidates in HR Status",
+          "PreviousButton":false,
+          "NextButton":false,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : "NextStep"
+        },
+        {
+          "Selector":'div.kanbanStepButtons  button[icon-btn="angleleft"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
+          "Title":"Collapse to 1 column",
+          "HTMLText":"Select this to see the 1 column layout of candidates in HR Status",
+          "PreviousButton":false,
+          "NextButton":false,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : "NextStep"
+        },
         {
             "Selector":false,
             "Title":"End of requisition tour",
@@ -415,6 +390,58 @@ var total_link_tour_steps = {
     ],
     NextTour: "MyCandidatesTour"
 }
+
+var KanbanStep1 = {
+          "Selector":'div.kanbanStepButtons  button[icon-btn="angleright"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
+          "Title":"Expand From HR Status",
+          "HTMLText":"Select this to expand the candidates in this status",
+          "PreviousButton":false,
+          "NextButton":false,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : "NextStep"
+        }
+
+var KanbanStep2 = {
+          "Selector":'div.kanbanStepButtons  button[icon-btn="angleleft"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
+          "Title":"Collapse By HR Status",
+          "HTMLText":"Select this to collapse by HR Status",
+          "PreviousButton":false,
+          "NextButton":false,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : "NextStep"
+        }
+
+var KanbanStep3 = {
+          "Selector":'div.kanbanStepButtons  button[icon-btn="angleright"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
+          "Title":"Expand to 2 column",
+          "HTMLText":"Select this to see the 2 column layout of candidates in HR Status",
+          "PreviousButton":false,
+          "NextButton":false,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : "NextStep"
+        }
+
+var KanbanStep4 = {
+          "Selector":'div.kanbanStepButtons  button[icon-btn="angleleft"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
+          "Title":"Collapse to 1 column",
+          "HTMLText":"Select this to see the 1 column layout of candidates in HR Status",
+          "PreviousButton":false,
+          "NextButton":false,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": true,
+          "NavigateTo" : "NextStep"
+        }
 ////////////   My_candidates_tour_steps///////////
 
 var my_candidates_tour_steps={
@@ -660,31 +687,32 @@ var talent_record_tour_steps={
   }
 
 //////////////customizing the buttons according to the steps/////////////////
-function customFunction(customFunctionName,step)
+function customFunctionBefore(customFunctionName,allSteps,stepNumber)
 {
     switch(customFunctionName)
     {
-        case "setBasedOnBubbleState" : step = setBasedOnBubbleState(step); break;
+        case "setBasedOnBubbleState" : allSteps = setBasedOnBubbleState(allSteps,stepNumber); break;
     }
-    return step;
+    return allSteps;
 }
 
-  function setBasedOnBubbleState(step)
+  function setBasedOnBubbleState(allSteps,stepNumber)
   {
+      
         if(document.querySelector('.carbonUI .widgetStatusContainer.show')!=null)
         {
-          step['PreviousButton'] = true;
-          step['NextButton'] =  true;
-          step['CanClickTarget'] = false;
+          allSteps[stepNumber]['PreviousButton'] = true;
+          allSteps[stepNumber]['NextButton'] =  true;
+          allSteps[stepNumber]['CanClickTarget'] = false;
         }
         else
         {
-          step['PreviousButton'] = false;
-          step['NextButton'] =  false;
-          step['Trigger'] = true;
-          step['NavigateTo'] = 'NextStep';
+          allSteps[stepNumber]['PreviousButton'] = false;
+          allSteps[stepNumber]['NextButton'] =  false;
+          allSteps[stepNumber]['Trigger'] = true;
+          allSteps[stepNumber]['NavigateTo'] = 'NextStep';
         }
-        return step;
+        return allSteps;
   }
 
   function builtbuttons(tour,tour_steps,step_number)
@@ -692,7 +720,7 @@ function customFunction(customFunctionName,step)
     let custom_buttons=[];
     if(tour_steps[step_number]['CustomFunction'] != 'undefined' && tour_steps[step_number]['CustomFunction']!= "")
     {
-        tour_steps[step_number] = customFunction(tour_steps[step_number]['CustomFunction'],tour_steps[step_number]);
+        tour_steps[step_number] = customFunctionBefore(tour_steps[step_number]['CustomFunction'],tour_steps,step_number);
     }
         
     if(tour_steps[step_number]['PreviousButton'])//check the status of the button 
