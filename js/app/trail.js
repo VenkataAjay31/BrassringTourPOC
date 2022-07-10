@@ -319,7 +319,7 @@ var total_link_tour_steps={
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":false,
-          "Position" :'bottom',
+          "Position" :'top',
           "CanClickTarget": true,
           "Trigger": true,
           "NavigateTo" : "NextStep"
@@ -331,7 +331,7 @@ var total_link_tour_steps={
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":false,
-          "Position" :'bottom',
+          "Position" :'top',
           "CanClickTarget": true,
           "Trigger": true,
           "NavigateTo" : "NextStep"
@@ -343,7 +343,7 @@ var total_link_tour_steps={
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":false,
-          "Position" :'bottom',
+          "Position" :'top',
           "CanClickTarget": true,
           "Trigger": true,
           "NavigateTo" : "NextStep",
@@ -356,7 +356,7 @@ var total_link_tour_steps={
           "PreviousButton":false,
           "NextButton":false,
           "FinishButton":false,
-          "Position" :'bottom',
+          "Position" :'top',
           "CanClickTarget": true,
           "Trigger": true,
           "NavigateTo" : "NextStep"
