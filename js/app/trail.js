@@ -310,7 +310,7 @@ var total_link_tour_steps={
           "Position" :'bottom',
           "CanClickTarget": true,
           "Trigger": true,
-          "NavigateTo" : ""           
+          "NavigateTo" : "NextStep"           
         },
         {
           "Selector":'div.kanbanStepButtons  button[icon-btn="angleright"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
@@ -719,7 +719,7 @@ function customFunctionBefore(customFunctionName,allSteps,stepNumber)
     let custom_buttons=[];
     if(typeof tour_steps[step_number]['CustomFunctionBefore'] != 'undefined' && tour_steps[step_number]['CustomFunctionBefore']!= "")
     {
-        tour_steps = customFunctionBefore(tour_steps[step_number]['CustomFunction'],tour_steps,step_number);
+        tour_steps = customFunctionBefore(tour_steps[step_number]['customFunctionBefore'],tour_steps,step_number);
     }
         
     if(tour_steps[step_number]['PreviousButton'])//check the status of the button 
