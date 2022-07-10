@@ -718,7 +718,7 @@ function customFunctionBefore(customFunctionName,allSteps,stepNumber)
   function builtbuttons(tour,tour_steps,step_number)
   {
     let custom_buttons=[];
-    if(tour_steps[step_number]['CustomFunction'] != 'undefined' && tour_steps[step_number]['CustomFunction']!= "")
+    if(typeof tour_steps[step_number]['CustomFunction'] != 'undefined' && tour_steps[step_number]['CustomFunction']!= "")
     {
         tour_steps[step_number] = customFunctionBefore(tour_steps[step_number]['CustomFunction'],tour_steps,step_number);
     }
