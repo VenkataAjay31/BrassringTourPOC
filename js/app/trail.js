@@ -313,7 +313,7 @@ var total_link_tour_steps={
           "NavigateTo" : "NextStep"           
         },
         {
-          "Selector":'div.kanbanStepButtons  button[icon-btn="angleright"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
+          "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleright"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
           "Title":"Expand From HR Status",
           "HTMLText":"Select this to expand the candidates in this status",
           "PreviousButton":false,
@@ -325,7 +325,7 @@ var total_link_tour_steps={
           "NavigateTo" : "NextStep"
         },
         {
-          "Selector":'div.kanbanStepButtons  button[icon-btn="angleleft"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
+          "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleleft"][ng-click="collapseKanbanPane(step)"].icon-btn.icon-small',
           "Title":"Collapse By HR Status",
           "HTMLText":"Select this to collapse by HR Status",
           "PreviousButton":false,
@@ -337,7 +337,7 @@ var total_link_tour_steps={
           "NavigateTo" : "NextStep"
         },
         {
-          "Selector":'div.kanbanStepButtons  button[icon-btn="angleright"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
+          "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleright"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
           "Title":"Expand to 2 column",
           "HTMLText":"Select this to see the 2 column layout of candidates in HR Status",
           "PreviousButton":false,
@@ -349,7 +349,7 @@ var total_link_tour_steps={
           "NavigateTo" : "NextStep"
         },
         {
-          "Selector":'div.kanbanStepButtons  button[icon-btn="angleleft"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
+          "Selector":'div.kanbanStepButtons:not(.ng-hide)  button[icon-btn="angleleft"][ng-click="expandKanbanPane(step)"].icon-btn.icon-small',
           "Title":"Collapse to 1 column",
           "HTMLText":"Select this to see the 1 column layout of candidates in HR Status",
           "PreviousButton":false,
@@ -719,7 +719,7 @@ function customFunctionBefore(customFunctionName,allSteps,stepNumber)
     let custom_buttons=[];
     if(typeof tour_steps[step_number]['CustomFunctionBefore'] != 'undefined' && tour_steps[step_number]['CustomFunctionBefore']!= "")
     {
-        tour_steps = customFunctionBefore(tour_steps[step_number]['customFunctionBefore'],tour_steps,step_number);
+        tour_steps = customFunctionBefore(tour_steps[step_number]['CustomFunctionBefore'],tour_steps,step_number);
     }
         
     if(tour_steps[step_number]['PreviousButton'])//check the status of the button 
