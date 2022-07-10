@@ -359,7 +359,7 @@ var total_link_tour_steps={
           "CanClickTarget": true,
           "Trigger": true,
           "NavigateTo" : "NextStep",
-          "CustomFunctionBefore": "scrollKanbanLeft";
+          "CustomFunctionBefore": "scrollKanbanLeft"
         },
         {
             "Selector":false,
