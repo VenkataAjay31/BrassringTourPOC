@@ -147,32 +147,6 @@ var requisitions_tour_steps={
           "NavigateTo" : ""
         },
         {
-          "Selector":'.reqmaincontent #reqListGrid div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0',
-          "Title":"Single Row Actions",
-          "HTMLText":'Right Click anywhere on any row of the grid and a context menu appears. Various actions that you can take on that row are displayed. Also, actions are grouped into appropriate categories.',
-          "PreviousButton":true,
-          "NextButton":true,
-          "FinishButton":false,
-          "Position" :'bottom',
-          "CanClickTarget": true,
-          "Trigger": false,
-          "Question": false,
-          "NavigateTo" : ""
-        },
-        {
-          "Selector":'.reqmaincontent #reqListGrid div[role="grid"]:nth-child(1) .ui-grid-canvas .ui-grid-row.row-0',
-          "Title":"Multiple Row Actions",
-          "HTMLText":"Select either a single row or multiple rows to see the action header dynamically popping above the grid. This header displays all the actions you can take based on your selection (grouped into appropriate categories).",
-          "PreviousButton":true,
-          "NextButton":true,
-          "FinishButton":false,
-          "Position" :'bottom',
-          "CanClickTarget": true,
-          "Trigger": false,
-          "Question": false,
-          "NavigateTo" : ""
-        },
-        {
           "Selector":'.reqmaincontent div.gridFilterActions [icon-btn="filter"]:not(.ng-hide)',
           "Title":"Saved Filters",
           "HTMLText":"Click to Save, Manage and Apply your filters all in the same place.",
@@ -242,6 +216,32 @@ var requisitions_tour_steps={
           "Position" :'bottom',
           "CanClickTarget": false,
           "Trigger": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'.reqmaincontent #reqListGrid div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0',
+          "Title":"Single Row Actions",
+          "HTMLText":'Right Click anywhere on any row of the grid and a context menu appears. Various actions that you can take on that row are displayed. Also, actions are grouped into appropriate categories.',
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "Question": false,
+          "NavigateTo" : ""
+        },
+        {
+          "Selector":'.reqmaincontent #reqListGrid div[role="grid"]:nth-child(1) .ui-grid-canvas .ui-grid-row.row-0',
+          "Title":"Multiple Row Actions",
+          "HTMLText":"Select either a single row or multiple rows to see the action header dynamically popping above the grid. This header displays all the actions you can take based on your selection (grouped into appropriate categories).",
+          "PreviousButton":true,
+          "NextButton":true,
+          "FinishButton":false,
+          "Position" :'bottom',
+          "CanClickTarget": true,
+          "Trigger": false,
+          "Question": false,
           "NavigateTo" : ""
         },
         {
@@ -396,7 +396,7 @@ var total_link_tour_steps={
 var my_candidates_tour_steps={
   "Steps":[
       {
-          "Selector":'.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"]:nth-child(4) .trlink.tooltip.candname',
+          "Selector":'.ui-grid-contents-wrapper div[role=\"grid\"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role=\"gridcell\"] .trlink.tooltip.candname',
           "Title":"Talent Record link",
           "HTMLText":"Select a candidate's name to view redesigned talent record and its tour.",
           "PreviousButton":false,
