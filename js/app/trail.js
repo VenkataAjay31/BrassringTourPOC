@@ -422,20 +422,8 @@ var talent_record_tour_steps={
             "PreviousButton":true,
             "NextButton":true,
             "FinishButton":false,
-            "Position" :'bottom',
+            "Position" :'top',
             "CanClickTarget": false,
-            "Trigger": false,
-            "NavigateTo" : ""
-        },
-        {
-            "Selector":'personalizeWidgetContainer.personalizeColumnContainer.show',
-            "Title":"Welcome!!",
-            "HTMLText":'Edit Tabs',
-            "PreviousButton":true,
-            "NextButton":true,
-            "FinishButton":false,
-            "Position" :'bottom',
-            "CanClickTarget": true,
             "Trigger": false,
             "NavigateTo" : ""
         },
@@ -446,7 +434,7 @@ var talent_record_tour_steps={
             "PreviousButton":false,
             "NextButton":false,
             "FinishButton":false,
-            "Position" :'bottom',
+            "Position" :'top',
             "CanClickTarget": true,
             "Trigger": true,
             "NavigateTo" : "NextStep"
@@ -482,7 +470,7 @@ var talent_record_tour_steps={
             "PreviousButton":false,
             "NextButton":false,
             "FinishButton":false,
-            "Position" :'bottom',
+            "Position" :'top',
             "CanClickTarget": true,
             "Trigger": true,
             "NavigateTo" : "NextStep"
@@ -506,7 +494,7 @@ var talent_record_tour_steps={
             "PreviousButton":false,
             "NextButton":true,
             "FinishButton":false,
-            "Position" :'bottom',
+            "Position" :'top',
             "CanClickTarget": true,
             "Trigger": false,
             "NavigateTo" : ""
@@ -518,7 +506,7 @@ var talent_record_tour_steps={
             "PreviousButton":false,
             "NextButton":false,
             "FinishButton":false,
-            "Position" :'bottom',
+            "Position" :'top',
             "CanClickTarget": true,
             "Trigger": true,
             "NavigateTo" : "NextStep"
@@ -768,6 +756,7 @@ function createTour(steps)
 {
   var tour = new Shepherd.Tour({
     useModalOverlay: true,
+    keyboardNavigation:false,
     defaultStepOptions: {
     cancelIcon: {
       enabled: true
