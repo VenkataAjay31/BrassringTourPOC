@@ -81,7 +81,7 @@ var home_tour_steps={
         "NextButton":true,
         "FinishButton":false,
         "Position" :'bottom',
-        "CanClickTarget": true,
+        "CanClickTarget": false,
         "Trigger": false,
         "Question": false,
         "NavigateTo" : ""
