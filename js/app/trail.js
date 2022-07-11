@@ -879,7 +879,7 @@ while (step_number<definedSteps.Steps.length)
                                 console.log("yoooooo");
                                 console.log("bhyaaaaaa");
                                 var interval = setInterval(function () {
-                                if (document.querySelector('#candidateresults .gridRecordsTitle.ng-binding.ng-scope')) {
+                                if (document.querySelector('#candidateresults .gridRecordsTitle.ng-scope')) {
                                     console.log("heyyyyyyyy")
                                     clearInterval(interval);
                                     let TotalLinkTour = createTour(total_link_tour_steps);
