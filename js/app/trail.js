@@ -48,7 +48,7 @@ var home_tour_steps={
       "NavigateTo" : ""
       },
       {
-      "Selector":".pageHeaderTitle button[icon-btn="settings"].icon-btn",
+      "Selector":".pageHeaderTitle button[icon-btn=\"settings\"].icon-btn",
       "Title":"Handy Widgets",
       "HTMLText":'Select the widgets that you’d like to see on the homepage. Choose from existing widgets or customize.',
       "PreviousButton":true,
