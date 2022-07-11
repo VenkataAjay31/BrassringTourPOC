@@ -17,7 +17,7 @@
 }
 
 .SelectableStep::after{
-    content: "\f8cc";
+    content: "\f25a";
     font-family: 'FontAwesome';
     padding: 3px;
 }
