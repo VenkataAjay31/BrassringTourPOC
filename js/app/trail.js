@@ -16,7 +16,7 @@ var home_tour_steps={
       "NextButton":true,
       "FinishButton":false,
       "Position" :'bottom',
-      "CanClickTarget": true,
+      "CanClickTarget": false,
       "Trigger": false,
       "Question": false,
       "NavigateTo" : ""
@@ -29,7 +29,7 @@ var home_tour_steps={
       "NextButton":true,
       "FinishButton":false,
       "Position" :'bottom',
-      "CanClickTarget": true,
+      "CanClickTarget": false,
       "Trigger": false,
       "Question": false,
       "NavigateTo" : ""
@@ -42,7 +42,7 @@ var home_tour_steps={
       "NextButton":true,
       "FinishButton":false,
       "Position" :'bottom',
-      "CanClickTarget": true,
+      "CanClickTarget": false,
       "Trigger": false,
       "Question": false,
       "NavigateTo" : ""
@@ -67,7 +67,7 @@ var home_tour_steps={
         "PreviousButton":true,
         "NextButton":true,
         "FinishButton":false,
-        "Position" :'bottom',
+        "Position" :'right',
         "CanClickTarget": true,
         "Trigger": false,
         "Question": false,
@@ -423,7 +423,7 @@ var talent_record_tour_steps={
             "NextButton":true,
             "FinishButton":false,
             "Position" :'bottom',
-            "CanClickTarget": true,
+            "CanClickTarget": false,
             "Trigger": false,
             "NavigateTo" : ""
         },
@@ -459,7 +459,7 @@ var talent_record_tour_steps={
             "NextButton":true,
             "FinishButton":false,
             "Position" :'bottom',
-            "CanClickTarget": false,
+            "CanClickTarget": true,
             "Trigger": false,
             "NavigateTo" : ""
         },
@@ -542,7 +542,7 @@ var talent_record_tour_steps={
             "PreviousButton":true,
             "NextButton":true,
             "FinishButton":false,
-            "Position" :'bottom',
+            "Position" :'left',
             "CanClickTarget": true,
             "Trigger": false,
             "NavigateTo" : ""
