@@ -11,7 +11,7 @@ var home_tour_steps={
        {
       "Selector":"#xx",
       "Title":"Guided Tour",
-      "HTMLText":"We have redesigned the look feel of the application to make your life easy. Please continue the tour till the end to explore all the new features. <br/> <ul><li>For the steps which has the hand icon <span class="SelectableStep"></span> in the step header the highlighited item is actionable<span></li><li>While tour is in progress, you can use escape key or close icon to exit the tour</li><li>You can use Next and Previous buttons or Keyboard arrow keys to move back and forth in the tour.</li></ul>",
+      "HTMLText":"We have redesigned the look feel of the application to make your life easy. Please continue the tour till the end to explore all the new features. <br/> <ul><li>For the steps which has the hand icon <span class=\"SelectableStep\"></span> in the step header the highlighited item is actionable<span></li><li>While tour is in progress, you can use escape key or close icon to exit the tour</li><li>You can use Next and Previous buttons or Keyboard arrow keys to move back and forth in the tour.</li></ul>",
       "PreviousButton":false,
       "NextButton":true,
       "FinishButton":false,
@@ -42,7 +42,7 @@ var home_tour_steps={
       "NextButton":true,
       "FinishButton":false,
       "Position" :'bottom',
-      "CanClickTarget": false,
+      "CanClickTarget": true,
       "Trigger": false,
       "Question": false,
       "NavigateTo" : ""
@@ -55,7 +55,7 @@ var home_tour_steps={
       "NextButton":true,
       "FinishButton":false,
       "Position" :'bottom',
-      "CanClickTarget": true,
+      "CanClickTarget": false,
       "Trigger": false,
       "Question": false,
       "NavigateTo" : ""
