@@ -1,4 +1,18 @@
-$(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"HomeTour.start()\">Guided Tour</div>")
+$(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"triggerTour();\">Guided Tour</div>")
+
+function triggerTour()
+{
+    if(typeof active_tour!='undefined') 
+    {
+        active_tour.complete();
+    } 
+    
+    if(document.querySelector('.trpage .widgetTabData'))  { startTalentRecordTour(); }  
+    else if(document.querySelector('#candidateresults .gridRecordsTitle.ng-scope')) { startTotalLinkTour(); } 
+    else if(document.querySelector('a[ng-click="setWelcomeView(0)"].welcomeContentTabs.active')) { HomeTour.start() }
+    else if(document.querySelector('a[ng-click="setWelcomeView(1)"].welcomeContentTabs.active')) { startRequisitionsTour(); }
+    else if(document.querySelector('a[ng-click="setWelcomeView(2)"].welcomeContentTabs.active')) { startMyCandidatesTour(); }
+}
 
 ////////////objects that consist the data of the steps/////////////////////
 
@@ -850,59 +864,20 @@ while (step_number<definedSteps.Steps.length)
 
                   switch(definedSteps.NextTour)
                   {
-                      case "RequisitionsTour": 
-                              var interval = setInterval(function () {
-                              if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
-                                  clearInterval(interval);
-                                  let RequisitionsTour = createTour(requisitions_tour_steps);
-                                  active_tour=RequisitionsTour;
-                                  active_tour_steps=requisitions_tour_steps;
-                                  RequisitionsTour.start();
-                              }
-                          }, 100);
-                          break;
+                      case "RequisitionsTour": startRequisitionsTour(); break;
                       case "MyCandidatesTour" :  
                               if (navigate == "TotalLinkTour")
                               {
                                 tour.complete();
                                 console.log("yoooooo");
                                 console.log("bhyaaaaaa");
-                                var interval = setInterval(function () {
-                                if (document.querySelector('#candidateresults .gridRecordsTitle.ng-scope')) {
-                                    console.log("heyyyyyyyy")
-                                    clearInterval(interval);
-                                    let TotalLinkTour = createTour(total_link_tour_steps);
-                                    active_tour = TotalLinkTour;
-                                    active_tour_steps = total_link_tour_steps;
-                                    console.log('starting the tour');
-                                    console.log(total_link_tour_steps);
-                                    TotalLinkTour.start();
-                                  }
-                                }, 100);
+                                startTotalLinkTour();
                             }
                             else{ 
-                                var interval = setInterval(function () {
-                                if (document.querySelector('.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"] .trlink.tooltip.candname')) {
-                                    clearInterval(interval);
-                                    let MyCandidatesTour = createTour(my_candidates_tour_steps);
-                                    active_tour=MyCandidatesTour;
-                                    active_tour_steps=my_candidates_tour_steps;
-                                    MyCandidatesTour.start();
-                                }
-                              }, 100);
+                                startMyCandidatesTour();
                             }
                           break;  
-                      case "TalentRecordTour":
-                            var interval = setInterval(function () {
-                            if (document.querySelector('.widgetTabData')) {
-                                clearInterval(interval);
-                                let TalentRecordTour = createTour(talent_record_tour_steps);
-                                active_tour=TalentRecordTour;
-                                active_tour_steps=talent_record_tour_steps;
-                                TalentRecordTour.start();
-                            }
-                        }, 100);
-                        break;
+                      case "TalentRecordTour": startTalentRecordTour(); break;
                   } 
               }
             },{once:true}))
@@ -914,4 +889,56 @@ while (step_number<definedSteps.Steps.length)
   step_number++;
 }
 return tour;
+}
+
+function startRequisitionsTour(){
+    var interval = setInterval(function () {
+                                  if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
+                                  clearInterval(interval);
+                                  let RequisitionsTour = createTour(requisitions_tour_steps);
+                                  active_tour=RequisitionsTour;
+                                  active_tour_steps=requisitions_tour_steps;
+                                  RequisitionsTour.start();
+                              }
+                          }, 100);
+}
+
+function startTotalLinkTour(){
+    var interval = setInterval(function () {
+                                if (document.querySelector('#candidateresults .gridRecordsTitle.ng-scope')) {
+                                    console.log("heyyyyyyyy")
+                                    clearInterval(interval);
+                                    let TotalLinkTour = createTour(total_link_tour_steps);
+                                    active_tour = TotalLinkTour;
+                                    active_tour_steps = total_link_tour_steps;
+                                    console.log('starting the tour');
+                                    console.log(total_link_tour_steps);
+                                    TotalLinkTour.start();
+                                  }
+                                }, 100);
+}
+
+function startMyCandidatesTour(){
+     var interval = setInterval(function () {
+                                if (document.querySelector('.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"] .trlink.tooltip.candname')) {
+                                    clearInterval(interval);
+                                    let MyCandidatesTour = createTour(my_candidates_tour_steps);
+                                    active_tour=MyCandidatesTour;
+                                    active_tour_steps=my_candidates_tour_steps;
+                                    MyCandidatesTour.start();
+                                }
+                              }, 100);
+}
+
+function startTalentRecordTour()
+{
+   var interval = setInterval(function () {
+   if (document.querySelector('.widgetTabData')) {
+       clearInterval(interval);
+       let TalentRecordTour = createTour(talent_record_tour_steps);
+       active_tour=TalentRecordTour;
+       active_tour_steps=talent_record_tour_steps;
+       TalentRecordTour.start();
+   }
+  }, 100);                           
 }
