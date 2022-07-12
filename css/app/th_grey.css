@@ -32,6 +32,11 @@
     z-index: 9999999 !important;
 }
 
+.shepherd-enabled.shepherd-target a 
+{
+    pointer-events:none;
+}
+
 svg.shepherd-modal-is-visible.shepherd-modal-overlay-container
 {
     opacity: 0.6 !important;
