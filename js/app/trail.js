@@ -401,7 +401,7 @@ var my_candidates_tour_steps={
           "HTMLText":"Select a candidate's name to view redesigned talent record and its tour.",
           "PreviousButton":false,
           "NextButton":false,
-          "FinishButton":true,
+          "FinishButton":false,
           "Position" :'top',
           "CanClickTarget": true,
           "Trigger": true,
@@ -416,7 +416,7 @@ var my_candidates_tour_steps={
 var talent_record_tour_steps={
     "Steps":[
         {
-            "Selector":'.widgetTabData',
+            "Selector":'.trpage .widgetTabData',
             "Title":"All Tabs",
             "HTMLText":'We reimagined the entire set of tabs for a new look.',
             "PreviousButton":true,
