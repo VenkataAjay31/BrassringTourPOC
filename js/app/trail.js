@@ -1,4 +1,4 @@
-$(".welcomeContentTabContainer").append("<div class=\"GuidedTour\" onclick=\"triggerTour();\">Guided Tour</div>")
+$(".mainHeader .right").append("<div class=\"GuidedTour\" onclick=\"triggerTour();\">Guided Tour</div>")
 
 function triggerTour()
 {
