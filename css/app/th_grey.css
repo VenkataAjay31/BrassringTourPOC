@@ -1,13 +1,15 @@
 .GuidedTour {
     position: absolute;
-    right: 120px;
-    top: 10px;
+    right: 80px;
+    top: 4px;
     padding: 5px;
     border: 3px solid;
-    background-color: var(--cds-ui-04,#8d8d8d);
+    background-color: #161616;
     cursor: pointer;
- 
-    color: var(--cds-text-01,#161616);
+    height: 40px;
+    font-size: 14px;
+    width: 110px;
+    line-height: 25px;
 }
 
 .GuidedTour::after {
