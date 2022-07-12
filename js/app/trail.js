@@ -7,11 +7,11 @@ function triggerTour()
         active_tour.complete();
     } 
     
-    if(document.querySelector('.trpage .widgetTabData'))  { startTalentRecordTour(); }  
-    else if(document.querySelector('#candidateresults .gridRecordsTitle.ng-scope')) { startTotalLinkTour(); } 
-    else if(document.querySelector('a[ng-click="setWelcomeView(0)"].welcomeContentTabs.active')) { HomeTour.start() }
+    if(document.querySelector('a[ng-click="setWelcomeView(0)"].welcomeContentTabs.active')) { HomeTour.start() }
+    else if(document.querySelector('#candidateresults div.gridActionButtons [icon-btn="flow"]')) { startTotalLinkTour(); } 
+    else if(document.querySelector('.trpage .widgetTabData'))  { startTalentRecordTour(); }  
     else if(document.querySelector('a[ng-click="setWelcomeView(1)"].welcomeContentTabs.active')) { startRequisitionsTour(); }
-    else if(document.querySelector('a[ng-click="setWelcomeView(2)"].welcomeContentTabs.active')) { startMyCandidatesTour(); }
+    else if(document.querySelector('a[ng-click="setWelcomeView(2)"].welcomeContentTabs.active') && document.querySelector('#candidateresults .gridRecordsTitle.ng-scope')) { startMyCandidatesTour(); }
 }
 
 ////////////objects that consist the data of the steps/////////////////////
@@ -565,7 +565,7 @@ var talent_record_tour_steps={
             "Selector":'.workflowStepFilter .workflowJumpToField',
             "Title":'Jump within timeline view',
             "HTMLText":'Select any HR Status from here to scroll the actionlog timeline view to that HR Status',
-            "PreviousButton":true,
+            "PreviousButton":false,
             "NextButton":true,
             "FinishButton":false,
             "Position" :'bottom',
@@ -711,7 +711,7 @@ document.onkeydown = function(evt) {
     active_tour=HomeTour;
     active_tour_steps=home_tour_steps;
   }
-  if (evt.keyCode == 39) {
+  if (false && evt.keyCode == 39) {
       console.log('right arrow is pressed!!!');
       console.log(Shepherd.activeTour.steps.indexOf(Shepherd.activeTour.currentStep));
       let i=Shepherd.activeTour.steps.indexOf(Shepherd.activeTour.currentStep);// getting the current step index
@@ -737,7 +737,7 @@ document.onkeydown = function(evt) {
         active_tour.show(i);
       }
   }
-  if (evt.keyCode == 37) {
+  if (false && evt.keyCode == 37) {
     console.log('left arrow is pressed!!!');
     console.log(Shepherd.activeTour.steps.indexOf(Shepherd.activeTour.currentStep));
     let i=Shepherd.activeTour.steps.indexOf(Shepherd.activeTour.currentStep);// getting the current step index
@@ -864,20 +864,22 @@ while (step_number<definedSteps.Steps.length)
 
                   switch(definedSteps.NextTour)
                   {
-                      case "RequisitionsTour": startRequisitionsTour(); break;
+                      case "RequisitionsTour": 
+                            startRequisitionsTour();
+                            break;
                       case "MyCandidatesTour" :  
-                              if (navigate == "TotalLinkTour")
-                              {
+                            if (navigate == "TotalLinkTour")
+                            {
                                 tour.complete();
-                                console.log("yoooooo");
-                                console.log("bhyaaaaaa");
                                 startTotalLinkTour();
                             }
                             else{ 
                                 startMyCandidatesTour();
                             }
                           break;  
-                      case "TalentRecordTour": startTalentRecordTour(); break;
+                      case "TalentRecordTour":
+                            startTalentRecordTour();
+                            break;
                   } 
               }
             },{once:true}))
@@ -892,53 +894,31 @@ return tour;
 }
 
 function startRequisitionsTour(){
-    var interval = setInterval(function () {
-                                  if (document.querySelector('div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages')) {
-                                  clearInterval(interval);
-                                  let RequisitionsTour = createTour(requisitions_tour_steps);
-                                  active_tour=RequisitionsTour;
-                                  active_tour_steps=requisitions_tour_steps;
-                                  RequisitionsTour.start();
-                              }
-                          }, 100);
+        startTour(requisitions_tour_steps,'div[aria-hidden="false"].breadCrumbContainer.breadCrumbPages');
 }
 
 function startTotalLinkTour(){
-    var interval = setInterval(function () {
-                                if (document.querySelector('#candidateresults .gridRecordsTitle.ng-scope')) {
-                                    console.log("heyyyyyyyy")
-                                    clearInterval(interval);
-                                    let TotalLinkTour = createTour(total_link_tour_steps);
-                                    active_tour = TotalLinkTour;
-                                    active_tour_steps = total_link_tour_steps;
-                                    console.log('starting the tour');
-                                    console.log(total_link_tour_steps);
-                                    TotalLinkTour.start();
-                                  }
-                                }, 100);
+        startTour(total_link_tour_steps,'#candidateresults .gridRecordsTitle.ng-scope');
 }
 
 function startMyCandidatesTour(){
-     var interval = setInterval(function () {
-                                if (document.querySelector('.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"] .trlink.tooltip.candname')) {
-                                    clearInterval(interval);
-                                    let MyCandidatesTour = createTour(my_candidates_tour_steps);
-                                    active_tour=MyCandidatesTour;
-                                    active_tour_steps=my_candidates_tour_steps;
-                                    MyCandidatesTour.start();
-                                }
-                              }, 100);
+        startTour(my_candidates_tour_steps,'.ui-grid-contents-wrapper div[role="grid"]:nth-child(2) .ui-grid-canvas .ui-grid-row.row-0 div[role="gridcell"] .trlink.tooltip.candname');
 }
 
 function startTalentRecordTour()
 {
-   var interval = setInterval(function () {
-   if (document.querySelector('.widgetTabData')) {
-       clearInterval(interval);
-       let TalentRecordTour = createTour(talent_record_tour_steps);
-       active_tour=TalentRecordTour;
-       active_tour_steps=talent_record_tour_steps;
-       TalentRecordTour.start();
-   }
-  }, 100);                           
+        startTour(talent_record_tour_steps,'.widgetTabData');                         
+}
+
+function startTour(tour_steps,selectorBeforeTourStart)
+{
+         var interval = setInterval(function () {
+                                if (document.querySelector(selectorBeforeTourStart)) {
+                                    clearInterval(interval);
+                                    let Tour = createTour(tour_steps);
+                                    active_tour=Tour;
+                                    active_tour_steps=my_candidates_tour_steps;
+                                    Tour.start();
+                                }
+                              }, 100);
 }
